@@ -2,19 +2,2776 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rodolfo Silva · Manufacturing Engineer</title>
+<meta name="description" content="Manufacturing engineering portfolio of Rodolfo Silva: production flow, quality and reliability, CNC machining and CAM, CAD drawings and analysis, each backed by the evidence behind it.">
+<meta name="author" content="Rodolfo Silva">
+<link rel="canonical" href="https://rodolfosilva.engineer/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231D5C88'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3ERS%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rodolfo Silva · Manufacturing Engineer">
+<meta property="og:description" content="Manufacturing engineering portfolio of Rodolfo Silva: production flow, quality and reliability, CNC machining and CAM, CAD drawings and analysis, each backed by the evidence behind it.">
+<meta property="og:url" content="https://rodolfosilva.engineer/">
+<meta property="og:image" content="https://rodolfosilva.engineer/img/cam-face-turn-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #f7f7f5; color: #222; }
-  main { padding: 16px; text-align: center; }
-  h1 { font-weight: 600; margin: 0 0 8px; }
-  p { margin: 0; color: #555; }
+/* Layout: engineering-sheet grid. Sticky nav, single 1120px column, figures numbered like a drawing set, a title block closes each case study. */
+:root{
+  --bg:#F3F5F6; --surface:#FFFFFF; --ink:#1A2228; --muted:#56636D; --line:#D3DADE;
+  --accent:#1D5C88; --accent-soft:#DCE8F1; --safety:#E9B21C; --safety-soft:#FBF0CF; --safety-ink:#6B4F00;
+  --ok:#2D8644; --ok-soft:#DDEFE2; --warn:#B87B0C; --bad:#C1333B; --purple:#6E48AD; --purple-soft:#ECE6F7;
+  --z-queue:#3F5FC4; --z-move:#C1333B; --z-wet:#D9822B;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,"Courier New",monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1519; --surface:#161E24; --ink:#E4EAEE; --muted:#9AA8B2; --line:#2C3841;
+  --accent:#6AAEDD; --accent-soft:#1B3245; --safety:#E9B21C; --safety-soft:#3A3013; --safety-ink:#F3D27A;
+  --ok:#5CC27A; --ok-soft:#183324; --warn:#E0A63A; --bad:#EE6A71; --purple:#A98BE6; --purple-soft:#2A2340;
+  --z-queue:#6F8CF0; --z-move:#EE6A71; --z-wet:#F0A25A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1519; --surface:#161E24; --ink:#E4EAEE; --muted:#9AA8B2; --line:#2C3841;
+  --accent:#6AAEDD; --accent-soft:#1B3245; --safety:#E9B21C; --safety-soft:#3A3013; --safety-ink:#F3D27A;
+  --ok:#5CC27A; --ok-soft:#183324; --warn:#E0A63A; --bad:#EE6A71; --purple:#A98BE6; --purple-soft:#2A2340;
+  --z-queue:#6F8CF0; --z-move:#EE6A71; --z-wet:#F0A25A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--safety);outline-offset:2px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,3.4vw,38px)}
+h3{font-size:22px;font-weight:600}
+p{margin:0}
+.mono{font-family:var(--mono)}
+.eyebrow{font:500 12px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:18px;color:var(--muted);max-width:62ch}
+.page-h1{font-size:clamp(40px,6vw,60px);margin-top:8px}
+[id]{scroll-margin-top:84px}
+
+.mockbar .wrap{padding-block:8px;display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between}
+.note{border:1px dashed var(--warn);background:var(--safety-soft);color:var(--ink);padding:10px 14px;border-radius:4px;font-size:14px;line-height:1.5}
+.note b{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--safety-ink);margin-right:6px}
+.tbc{background:var(--safety-soft);border-bottom:1px dashed var(--warn);padding:0 3px;color:var(--ink)}
+
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+@media (max-width:700px){header.site{position:static}}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px;flex-wrap:wrap}
+.mark{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.mark strong{font:700 22px/1 var(--display);letter-spacing:.02em}
+.mark span{font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;flex-wrap:wrap;gap:2px 4px}
+nav.main a{font:500 15px/1 var(--body);color:var(--ink);text-decoration:none;padding:9px 10px;border-radius:3px}
+nav.main a:hover{background:var(--accent-soft)}
+nav.main a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--accent)}
+nav.main a.li{color:var(--accent);font-weight:600}
+
+main{padding-block:0 40px}
+section.band{padding-block:56px}
+section.band + section.band{border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:24px}
+
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--body);padding:13px 18px;border-radius:3px;text-decoration:none;border:2px solid var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--surface)}
+.btn.secondary{color:var(--accent);background:transparent}
+.btn.tertiary{border-color:var(--line);color:var(--ink);background:transparent}
+
+.hero{padding-block:48px 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.hero h1{font-size:clamp(52px,8vw,92px);letter-spacing:-.01em}
+.hero .title{font:600 clamp(22px,2.6vw,30px)/1.1 var(--display);color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.hero .lede{margin-top:18px}
+.hero .btns{margin-top:24px}
+
+figure{margin:0}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px 18px 14px}
+.fig-scroll{overflow-x:auto}
+.fig-scroll svg{display:block;width:100%;min-width:640px;height:auto}
+figcaption{margin-top:12px;font-size:14px;color:var(--muted);max-width:80ch}
+figcaption .fn{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-right:8px}
+figcaption .sk{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;color:var(--accent)}
+svg text{font-family:var(--mono)}
+.t-ink{fill:var(--ink)} .t-mut{fill:var(--muted)} .t-acc{fill:var(--accent)} .t-saf{fill:var(--safety-ink)}
+.f-acc{fill:var(--accent)} .f-accs{fill:var(--accent-soft)} .f-saf{fill:var(--safety)} .f-line{fill:var(--line)} .f-mut{fill:var(--muted)} .f-surf{fill:var(--surface)} .f-bg{fill:var(--bg)} .f-ink{fill:var(--ink)} .f-bad{fill:var(--bad)}
+.s-line{stroke:var(--line)} .s-ink{stroke:var(--ink)} .s-mut{stroke:var(--muted)} .s-acc{stroke:var(--accent)} .s-saf{stroke:var(--safety)}
+
+.badge{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border-radius:2px;white-space:nowrap;align-self:flex-start}
+.b-pro{color:var(--accent);background:var(--accent-soft)}
+.b-dep{color:var(--ok);background:var(--ok-soft)}
+.b-aca{color:var(--purple);background:var(--purple-soft)}
+.pill{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 7px;border-radius:2px;white-space:nowrap}
+.p-meas{background:var(--ok-soft);color:var(--ok)}
+.p-calc{background:var(--accent-soft);color:var(--accent)}
+.p-sim{background:var(--purple-soft);color:var(--purple)}
+.p-qual{background:var(--safety-soft);color:var(--safety-ink)}
+.p-dem{background:var(--ok-soft);color:var(--ok)}
+.p-app{background:var(--accent-soft);color:var(--accent)}
+.p-cw{background:var(--line);color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column;min-width:0}
+.card .thumb{aspect-ratio:16/9;max-width:100%;border-bottom:1px solid var(--line);background:var(--bg);display:block}
+.card .thumb svg{width:100%;height:100%;display:block}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.story{display:grid;grid-template-columns:76px minmax(0,1fr);gap:6px 10px;font-size:14px;margin:0}
+.story dt{font:500 11px/1.9 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.story dd{margin:0}
+.story dt.out{color:var(--ok)}
+.skills{display:flex;flex-wrap:wrap;gap:6px}
+.skills a{font:500 12px/1 var(--mono);padding:6px 8px;border:1px solid var(--line);border-radius:2px;color:var(--accent);text-decoration:none;background:var(--bg)}
+.skills a:hover{border-color:var(--accent)}
+.media{font:400 12px/1.4 var(--mono);color:var(--muted);margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.card .go{font-weight:600;text-decoration:none}
+.card.flag{border-top:4px solid var(--accent)}
+
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:1px solid var(--line);background:var(--surface);border-radius:4px}
+.cap{padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-width:0}
+.cap .num{font:500 12px/1 var(--mono);color:var(--muted)}
+.cap p{font-size:14px;color:var(--muted)}
+.cap .ev{font:400 12px/1.4 var(--mono);color:var(--ink)}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+.plain{list-style:none;margin:0;padding:0}
+.plain li{padding:12px 0;border-top:1px solid var(--line)}
+.plain strong{font-weight:600}
+.plain .sub{color:var(--muted);font-size:14px}
+
+.cta{background:var(--ink);color:var(--bg);border-radius:4px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.cta h2{color:var(--bg)}
+.cta .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.cta .btn.secondary{color:var(--bg);border-color:var(--bg)}
+.cta .btn.tertiary{color:var(--bg);border-color:var(--muted)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;align-items:center}
+.chip{font:500 13px/1 var(--mono);padding:9px 12px;border:1px solid var(--line);border-radius:2px;background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.count{font:400 13px/1 var(--mono);color:var(--muted)}
+
+.crumb{font:400 13px/1.4 var(--mono);color:var(--muted);margin-bottom:14px}
+.crumb a{color:var(--muted)}
+.cs-head h1{font-size:clamp(40px,6vw,64px);margin-top:12px}
+.cs-head .lede{margin-top:14px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin:24px 0 0}
+.meta div{padding:10px 12px 10px 0}
+.meta dt{font:500 11px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta dd{margin:0;font-size:15px}
+.arc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.arc div{padding:18px;border-right:1px solid var(--line);min-width:0;position:relative}
+.arc div:last-child{border-right:0}
+.arc .step{font:500 12px/1 var(--mono);color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.arc h3{font-size:20px;margin:8px 0 6px}
+.arc p{font-size:15px}
+.arc div.out{background:var(--ok-soft)}
+.arc div.out .step{color:var(--ok)}
+.prose{max-width:70ch;display:flex;flex-direction:column;gap:14px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.split > div{min-width:0}
+.figs{display:flex;flex-direction:column;gap:24px}
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:4px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th{font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--bg)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.lessons div{border-top:3px solid var(--line);padding-top:10px}
+.lessons h3{font-size:18px;margin-bottom:6px}
+.lessons p{font-size:14px;color:var(--muted)}
+.closenav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.titleblock{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:2px solid var(--ink);margin-top:40px;font-family:var(--mono);font-size:12px}
+.titleblock div{padding:8px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.titleblock span{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+
+.fam{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:24px;padding-block:28px;border-top:1px solid var(--line)}
+.sk-entry{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.sk-entry h3{font-size:20px}
+.sk-entry p{font-size:14px;color:var(--muted);grid-column:1/-1}
+.sk-entry .where{font:400 12px/1.5 var(--mono);grid-column:1/-1}
+.sk-entry .where b{font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:8px}
+.fam-note{font:400 12px/1.4 var(--mono);color:var(--muted);margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:12px 20px;font-size:14px;color:var(--muted);align-items:center}
+
+/* experience */
+.job{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;padding-block:28px;border-top:1px solid var(--line)}
+.job h2{font-size:30px}
+.job .org{font:500 13px/1.5 var(--mono);color:var(--muted);margin-top:6px}
+.job ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;max-width:70ch}
+.job .links{margin-top:12px;font-size:14px}
+.job.support h2{font-size:24px}
+
+/* education */
+.lvl{padding-block:24px;border-top:1px solid var(--line)}
+.lvl > .eyebrow{display:block;margin-bottom:10px}
+.cred{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;align-items:center;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:4px}
+.cred + .cred{margin-top:10px}
+.cred h3{font-size:21px}
+.cred .sub{font-size:14px;color:var(--muted)}
+.doc{font:500 13px/1 var(--mono);white-space:nowrap;text-decoration:none;padding:9px 12px;border:1px solid var(--accent);border-radius:2px;color:var(--accent)}
+.doc.soon{border:1px dashed var(--line);color:var(--muted)}
+
+/* résumé request */
+.req{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:start}
+form.rq{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea{font:16px/1.4 var(--body);padding:11px 12px;border:1px solid var(--line);border-radius:3px;background:var(--bg);color:var(--ink);width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.sent{border-left:4px solid var(--ok);background:var(--ok-soft);padding:14px 16px;border-radius:3px}
+.err{color:var(--bad);font-size:14px}
+
+footer.site{background:var(--surface);border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:24px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:14px}
+footer.site nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer.site a{color:var(--ink)}
+
+@media (max-width:720px){
+  .fam,.job{grid-template-columns:minmax(0,1fr);gap:10px}
+  .cred{grid-template-columns:minmax(0,1fr)}
+  .cred .doc{justify-self:start}
+  .arc div{border-right:0;border-bottom:1px solid var(--line)}
+  .hero{padding-block:32px 28px}
+  section.band{padding-block:40px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* v4: whole card clickable, photo figures, parts gallery */
+.card{position:relative;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card h3 a::after{content:"";position:absolute;inset:0;z-index:0}
+.card .skills a,.card .media a,.card .thumb{position:relative;z-index:1}
+.card .thumb{overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card .thumb img.contain{object-fit:contain;background:#fff}
+.fig img,.fig video{display:block;width:100%;height:auto;border-radius:2px;background:#fff}
+.fig figcaption{margin-top:10px}
+.fig-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:start}
+.parts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.part img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;display:block;border-bottom:1px solid var(--line)}
+.part > div{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.part h3{font-size:19px}
+.part p{font-size:14px;color:var(--muted);flex:1}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:8px}
+#p-bracket .fig-pair{grid-template-columns:minmax(0,1fr)}
+#p-bracket .fig img{max-width:560px;margin-inline:auto}
+.cats span{font:500 13px/1.3 var(--mono);padding:10px 12px;border:1px solid var(--line);border-radius:2px;background:var(--bg)}
+
+/* v8: detail panels for machined parts and drawings */
+[data-detail] img{cursor:zoom-in}
+.more{align-self:flex-start;margin-top:4px;font:600 14px/1 var(--body);color:var(--accent);background:none;border:1px solid var(--accent);border-radius:3px;padding:8px 12px;cursor:pointer}
+.more:hover{background:var(--accent-soft)}
+dialog.detail{width:min(1040px,calc(100vw - 32px));max-height:calc(100vh - 32px);padding:0;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+dialog.detail::backdrop{background:rgba(10,15,20,.6)}
+.dlg-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--line)}
+.dlg-head h2{font-size:28px}
+.dlg-x{font:600 22px/1 var(--body);background:none;border:1px solid var(--line);border-radius:3px;color:var(--ink);width:40px;height:40px;cursor:pointer;flex:none}
+.dlg-body{padding:18px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px;align-items:start}
+.dgrid .meta{margin-top:0}
+.dtext h3{font-size:19px;margin:18px 0 8px}
+.dtext ol,.dtext ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.dtext .tools li{font-family:var(--mono);font-size:13px}
+.dtext p{font-size:15px;margin-top:10px}
+.dmedia{display:flex;flex-direction:column;gap:16px}
+.dmedia .fig img{cursor:zoom-in}
+.media-h{font-size:19px;margin:4px 0 -6px}
+.prog{border:1px solid var(--line);border-radius:4px;background:var(--bg);overflow:hidden}
+.prog-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line);font:500 12px/1.4 var(--mono);color:var(--muted);background:var(--surface)}
+.prog-head a{font-weight:600}
+.code{margin:0;max-height:300px;overflow:auto;padding:10px 12px;font:12px/1.5 var(--mono);color:var(--ink);white-space:pre;tab-size:4}
 </style>
 </head>
 <body>
+
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="#home"><strong>RODOLFO SILVA</strong><span>Manufacturing Engineer</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#work" data-nav="work">Work Samples</a>
+      <a href="#skills" data-nav="skills">Skills &amp; Evidence</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#resume" data-nav="resume">Résumé</a>
+      <a class="li" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>Portfolio</h1>
-  <p>Coming soon.</p>
+
+<!-- ============================ HOME ============================ -->
+<section id="home" data-view>
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Manufacturing · Quality · Reliability</p>
+        <h1>Rodolfo Silva</h1>
+        <p class="title">Manufacturing Engineer</p>
+        <p class="lede">I go to the floor, measure where the time and material are going, and fix what the data points to. Each project here starts with a problem I found, the engineering tool I used to prove it, and what changed afterward.</p>
+        <div class="btns">
+          <a class="btn primary" href="#work">Explore Work Samples</a>
+          <a class="btn secondary" href="#resume">Request My Résumé</a>
+          <a class="btn tertiary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+        </div>
+      </div>
+      <figure class="fig">
+        <video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" autoplay muted loop playsinline aria-label="Toolpath simulation of a lathe part programmed in SolidWorks CAM"></video>
+        <figcaption><span class="fn">Fig. 1</span>A lathe part I programmed in SolidWorks CAM: face, rough and finish turn four diameters, cut off. I make these parts on manual, ProtoTRAK and Haas CNC machines, and program them as production jobs: setups, tools and operations. <a href="#p-machining">See the machining projects →</a><span class="sk">Skills: CNC programming · SolidWorks CAM · GD&amp;T drawings</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <div class="sec-head"><h2>Selected work</h2><a href="#work">All work samples →</a></div>
+    <div class="cards">
+      <article class="card flag">
+        <a class="thumb" href="#p-machining" aria-label="Machined parts and CAM programming"><img src="img/cam-face-turn-poster.jpg" alt="" loading="lazy"></a>
+        <div class="body">
+          <span class="badge b-pro">Training + personal project</span>
+          <h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Making parts by hand showed me how much of the result is decided by the setup plan.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 5 programmed in SolidWorks CAM; programs run on Haas CNC</dd></dl>
+          <div class="skills"><a href="#skill-cam">CNC / CAM</a><a href="#skill-solidworks">SolidWorks</a><a href="#skill-gdt">GD&amp;T prints</a></div>
+          <div class="media"><span>programs · drawings · simulations</span><a class="go" href="#p-machining">Read the story →</a></div>
+        </div>
+      </article>
+      <article class="card flag">
+        <a class="thumb" href="#flow-study" aria-label="Production line flow study"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="12" y="38" width="56" height="14" class="f-line"/><rect x="68" y="38" width="36" height="14" class="f-accs"/><rect x="104" y="38" width="44" height="14" class="f-line"/><rect x="68" y="34" width="2" height="22" class="f-saf"/><line x1="12" y1="26" x2="148" y2="26" class="s-ink" stroke-width=".6"/><text x="80" y="22" font-size="6" text-anchor="middle" class="t-ink">5.00 D</text><text x="70" y="66" font-size="6" class="t-saf">VA 0.26%</text></svg></a>
+        <div class="body">
+          <span class="badge b-pro">Professional project</span>
+          <h3><a href="#flow-study">Production Line Flow and Capacity Improvement</a></h3>
+          <dl class="story"><dt>Found</dt><dd>A value stream map showed drawers spent 89% of their floor time waiting in queues.</dd><dt class="out">Outcome</dt><dd>Daily output up 24% after rebalancing the line <span class="pill p-meas">measured</span></dd></dl>
+          <div class="skills"><a href="#skill-vsm">Value stream mapping</a><a href="#skill-time">Time study</a><a href="#skill-sim">Simulation</a></div>
+          <div class="media"><span>6 figures</span><a class="go" href="#flow-study">Read the story →</a></div>
+        </div>
+      </article>
+      <article class="card flag">
+        <a class="thumb" href="#p-defects" aria-label="Defect tracking"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="20" y="24" width="16" height="50" class="f-acc"/><rect x="40" y="40" width="16" height="34" class="f-acc"/><rect x="60" y="52" width="16" height="22" class="f-acc"/><rect x="80" y="60" width="16" height="14" class="f-acc"/><rect x="100" y="64" width="16" height="10" class="f-acc"/><rect x="120" y="68" width="16" height="6" class="f-acc"/><polyline points="28,24 48,14 68,9 88,6 108,4 128,3" fill="none" class="s-saf" stroke-width="2"/></svg></a>
+        <div class="body">
+          <span class="badge b-dep">In daily production use</span>
+          <h3><a href="#p-defects">Defect Tracking and Production Visibility</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Rework and scrap were invisible: defective drawers went to a rework cart with no record.</dd><dt class="out">Outcome</dt><dd>Every rework is now logged by type and station, so the line can act on trends <span class="pill p-meas">measured</span></dd></dl>
+          <div class="skills"><a href="#skill-trace">Defect traceability</a><a href="#skill-pareto">Pareto</a><a href="#skill-training">Training</a></div>
+          <div class="media"><span>process diagrams · card set</span><a class="go" href="#p-defects">Read the story →</a></div>
+        </div>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="sec-head"><h2>What I do, and where to see it</h2><a href="#skills">Skills &amp; Evidence →</a></div>
+    <div class="caps">
+      <div class="cap"><span class="num">01</span><h3>Production flow</h3><p>Map the line, time the work, find the constraint, and size the queues.</p><span class="ev">Seen in: production line · line balancing case</span><div class="skills"><a href="#skill-vsm">Value stream mapping</a><a href="#skill-wip">WIP analysis</a><a href="#skill-bottleneck">Bottlenecks</a></div></div>
+      <div class="cap"><span class="num">02</span><h3>Quality and reliability</h3><p>Make defects visible where they happen, rank them, and remove the cause.</p><span class="ev">Seen in: defect tracking · aircraft shaft · FMEA</span><div class="skills"><a href="#skill-trace">Traceability</a><a href="#skill-fmea">FMEA</a><a href="#skill-cap">Capability</a></div></div>
+      <div class="cap"><span class="num">03</span><h3>Analysis and statistics</h3><p>Design experiments, model the process, and say how confident the answer is.</p><span class="ev">Seen in: stent DMAIC · line simulation · bracket FEA</span><div class="skills"><a href="#skill-doe">DOE</a><a href="#skill-sim">Simulation</a><a href="#skill-fea">FEA</a></div></div>
+      <div class="cap"><span class="num">04</span><h3>Standards people follow</h3><p>Turn a fix into floor markings, picture cards and work instructions people follow.</p><span class="ev">Seen in: floor zones · reason cards · break calls</span><div class="skills"><a href="#skill-lean">Visual management</a><a href="#skill-training">Training</a><a href="#skill-cad">Drawings</a></div></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap two">
+    <div>
+      <div class="sec-head"><h2>Experience</h2><a href="#experience">More →</a></div>
+      <ul class="plain">
+        <li><strong>Manufacturing Engineer</strong><div class="sub">Eagle Woodworking · fully custom, made-to-order production line</div></li>
+        <li><strong>Production Expeditor</strong><div class="sub">Magellan Aerospace · AS9100</div></li>
+        <li><strong>Landing Gear Technician</strong><div class="sub">AeroRepair Corp · FAA Part 145</div></li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec-head"><h2>Education</h2><a href="#education">Credentials →</a></div>
+      <ul class="plain">
+        <li><strong>M.S. Engineering Management</strong><div class="sub">UMass Lowell · in progress</div></li>
+        <li><strong>Graduate Certificate, Design and Manufacturing</strong><div class="sub">UMass Lowell</div></li>
+        <li><strong>B.S. Mechanical Engineering</strong><div class="sub">UNILESTE</div></li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="cta">
+      <h2>See the work behind the résumé</h2>
+      <div class="btns"><a class="btn primary" href="#work">Review All Work Samples</a><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn tertiary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ WORK INDEX ============================ -->
+<section id="work" data-view hidden>
+  <div class="wrap" style="padding-block:44px 0">
+    <p class="eyebrow">Work samples</p>
+    <h1 class="page-h1">How I found the problem, and what changed</h1>
+    <p class="lede" style="margin-top:12px">Every project follows the same arc: what I noticed, the tool I used to prove it, why it was worth fixing, and the result. Each result says whether it was measured, calculated, simulated or only proposed.</p>
+  </div>
+  <section class="band" style="padding-top:28px"><div class="wrap">
+    <div class="chips" role="group" aria-label="Filter work samples">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All work</button>
+      <button class="chip" type="button" data-filter="professional" aria-pressed="false">Professional</button>
+      <button class="chip" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+      <button class="chip" type="button" data-filter="flow" aria-pressed="false">Production flow</button>
+      <button class="chip" type="button" data-filter="quality" aria-pressed="false">Quality &amp; reliability</button>
+      <button class="chip" type="button" data-filter="design" aria-pressed="false">Design &amp; analysis</button>
+      <button class="chip" type="button" data-filter="machining" aria-pressed="false">Machining &amp; CAM</button>
+      <span class="count" id="work-count" aria-live="polite">11 projects</span>
+    </div>
+    <div class="cards" id="work-cards">
+
+      <article class="card" data-tags="personal design machining">
+        <a class="thumb" href="#p-machining" aria-label="CNC machining and CAM programming"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="8" y1="50" x2="104" y2="50" class="s-mut" stroke-dasharray="8 2 2 2" stroke-width=".8"/><path d="M14 32 H44 V37 H64 V41 H84 V45 H98 V55 H84 V59 H64 V63 H44 V68 H14 Z" class="f-accs s-acc" stroke-width="1.2"/><rect x="112" y="40" width="38" height="34" class="f-accs s-acc" stroke-width="1.2"/><circle cx="131" cy="57" r="5" class="f-bg s-acc" stroke-width="1.2"/><rect x="125" y="12" width="12" height="22" class="f-saf"/><text x="80" y="84" font-size="6" text-anchor="middle" class="t-ink">LATHE · MILL · CAM</text></svg></a>
+        <div class="body"><span class="badge b-pro">Training + personal project</span><h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Making parts on manual, ProtoTRAK and CNC machines showed me how much of the result is decided by the setup plan.</dd><dt>Why</dt><dd>A manufacturing engineer has to judge a CNC program: its setups, tools and operations, not just the print.</dd><dt>Did</dt><dd>At home, I model each training part in SolidWorks and program it in SolidWorks CAM, then simulate the toolpaths.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 5 programmed; programs run on Haas CNC</dd></dl>
+          <div class="skills"><a href="#skill-cam">CNC / CAM</a><a href="#skill-solidworks">SolidWorks</a><a href="#skill-gdt">GD&amp;T prints</a></div>
+          <div class="media"><span>9 parts · 3 simulations</span><a class="go" href="#p-machining">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="professional flow">
+        <a class="thumb" href="#flow-study" aria-label="Production line flow study"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="12" y="38" width="56" height="14" class="f-line"/><rect x="68" y="38" width="36" height="14" class="f-accs"/><rect x="104" y="38" width="44" height="14" class="f-line"/><rect x="68" y="34" width="2" height="22" class="f-saf"/><line x1="12" y1="26" x2="148" y2="26" class="s-ink" stroke-width=".6"/><text x="80" y="22" font-size="6" text-anchor="middle" class="t-ink">5.00 D</text><text x="70" y="66" font-size="6" class="t-saf">VA 0.26%</text></svg></a>
+        <div class="body"><span class="badge b-pro">Professional project</span><h3><a href="#flow-study">Production Line Flow and Capacity Improvement</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Mapping the line showed 0.26% of the lead time was real work. One finishing station set the pace.</dd><dt>Why</dt><dd>The line kept missing its daily plan, and adding people would not fix a queue problem.</dd><dt>Did</dt><dd>Counted queues daily, logged every stop, simulated the line, then rebalanced labor with painted floor zones.</dd><dt class="out">Outcome</dt><dd>Daily output +24% <span class="pill p-meas">measured</span></dd></dl>
+          <div class="skills"><a href="#skill-vsm">Value stream mapping</a><a href="#skill-time">Time study</a><a href="#skill-wip">WIP analysis</a><a href="#skill-sim">Simulation</a></div>
+          <div class="media"><span>6 figures</span><a class="go" href="#flow-study">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="professional quality">
+        <a class="thumb" href="#p-defects" aria-label="Defect tracking"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="20" y="24" width="16" height="50" class="f-acc"/><rect x="40" y="40" width="16" height="34" class="f-acc"/><rect x="60" y="52" width="16" height="22" class="f-acc"/><rect x="80" y="60" width="16" height="14" class="f-acc"/><rect x="100" y="64" width="16" height="10" class="f-acc"/><rect x="120" y="68" width="16" height="6" class="f-acc"/><polyline points="28,24 48,14 68,9 88,6 108,4 128,3" fill="none" class="s-saf" stroke-width="2"/></svg></a>
+        <div class="body"><span class="badge b-dep">In daily production use</span><h3><a href="#p-defects">Defect Tracking and Production Visibility</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Rework and scrap had no traceability. Defective drawers went to a rework cart, and 78% of kickbacks had no reason recorded.</dd><dt>Why</dt><dd>Rework is non-value-added: it takes labor, floor space, material and capacity that could go to good drawers.</dd><dt>Did</dt><dd>Defined 8 defect categories as picture cards. Every rework is logged by type and station where it's found, and followed until it's closed.</dd><dt class="out">Outcome</dt><dd>Every rework logged; trends show before problems reach the customer <span class="pill p-meas">measured</span></dd></dl>
+          <div class="skills"><a href="#skill-trace">Defect traceability</a><a href="#skill-pareto">Pareto</a><a href="#skill-datacol">Data collection</a><a href="#skill-training">Training</a></div>
+          <div class="media"><span>process diagram · card set</span><a class="go" href="#p-defects">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="professional flow">
+        <a class="thumb" href="#p-breaks" aria-label="Break-time standardization"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="12" y1="34" x2="148" y2="34" class="s-line"/><line x1="12" y1="62" x2="148" y2="62" class="s-line"/><rect x="50" y="26" width="8" height="16" class="f-saf"/><rect x="86" y="26" width="16" height="16" class="f-saf"/><rect x="120" y="26" width="8" height="16" class="f-saf"/><rect x="60" y="54" width="8" height="16" class="f-saf"/><rect x="100" y="54" width="16" height="16" class="f-saf"/><rect x="130" y="54" width="8" height="16" class="f-saf"/><text x="12" y="24" font-size="6" class="t-mut">LINE A</text><text x="12" y="52" font-size="6" class="t-mut">LINE B</text><text x="12" y="84" font-size="6" class="t-ink">−50% BREAK LOSS</text></svg></a>
+        <div class="body"><span class="badge b-dep">In daily production use</span><h3><a href="#p-breaks">Break-Time Standardization</a></h3>
+          <dl class="story"><dt>Found</dt><dd>My time study showed the line stopping early and restarting late around breaks: about 14% of all interruption loss.</dd><dt>Why</dt><dd>It was one of the top three losses and almost free to fix.</dd><dt>Did</dt><dd>Brought the numbers to the team. We agreed on a scheduled call at the start and end of each break, and I set it up on both lines.</dd><dt class="out">Outcome</dt><dd>Break-related loss cut in half, and still falling <span class="pill p-meas">measured</span></dd></dl>
+          <div class="skills"><a href="#skill-time">Loss measurement</a><a href="#skill-lean">Visual management</a><a href="#skill-training">Team problem-solving</a></div>
+          <div class="media"><span>break timeline</span><a class="go" href="#p-breaks">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="professional quality">
+        <a class="thumb" href="#p-shaft" aria-label="Aircraft shaft reliability"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="30" y1="12" x2="30" y2="78" class="s-mut" stroke-dasharray="3 2"/><line x1="130" y1="12" x2="130" y2="78" class="s-mut" stroke-dasharray="3 2"/><path d="M14 76 C 50 76, 60 30, 80 30 S 110 76, 146 76" fill="none" class="s-mut" stroke-width="1.5"/><path d="M50 76 C 70 76, 72 16, 80 16 S 90 76, 110 76" fill="none" class="s-acc" stroke-width="2"/><text x="30" y="86" font-size="6" text-anchor="middle" class="t-mut">LSL</text><text x="130" y="86" font-size="6" text-anchor="middle" class="t-mut">USL</text></svg></a>
+        <div class="body"><span class="badge b-pro">Professional project</span><h3><a href="#p-shaft">Aircraft Shaft Reliability and Process Capability</a></h3>
+          <dl class="story"><dt>Found</dt><dd>A series reliability model of 9 operations put the line at 0.71. Moving final-inspection catches back to their source showed Grind caused 41% of failures.</dd><dt>Why</dt><dd>One shaft in three needed scrap or rework.</dd><dt>Did</dt><dd>FMEA and a capability study (Cp 0.50) showed the problem was variation, not the spec. Added in-process air gauging, a drift reaction plan, SOPs and training.</dd><dt class="out">Outcome</dt><dd>First-pass yield 84.4% → 97.75%; Cp 0.50 → 1.10</dd></dl>
+          <div class="skills"><a href="#skill-cap">Process capability</a><a href="#skill-fmea">FMEA</a><a href="#skill-rca">Root cause</a><a href="#skill-pareto">Pareto</a></div>
+          <div class="media"><span>reliability chain · capability</span><a class="go" href="#p-shaft">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="professional quality">
+        <a class="thumb" href="#p-fmea" aria-label="Forestry harvester hose FMEA"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g><rect x="40" y="14" width="18" height="14" class="f-line"/><rect x="60" y="14" width="18" height="14" class="f-accs"/><rect x="80" y="14" width="18" height="14" class="f-saf"/><rect x="100" y="14" width="18" height="14" class="f-bad"/><rect x="40" y="30" width="18" height="14" class="f-line"/><rect x="60" y="30" width="18" height="14" class="f-line"/><rect x="80" y="30" width="18" height="14" class="f-accs"/><rect x="100" y="30" width="18" height="14" class="f-saf"/><rect x="40" y="46" width="18" height="14" class="f-line"/><rect x="60" y="46" width="18" height="14" class="f-line"/><rect x="80" y="46" width="18" height="14" class="f-line"/><rect x="100" y="46" width="18" height="14" class="f-accs"/><rect x="40" y="62" width="18" height="14" class="f-line"/><rect x="60" y="62" width="18" height="14" class="f-line"/><rect x="80" y="62" width="18" height="14" class="f-line"/><rect x="100" y="62" width="18" height="14" class="f-line"/></g><text x="34" y="48" font-size="6" text-anchor="end" class="t-mut">SEV</text><text x="79" y="86" font-size="6" text-anchor="middle" class="t-mut">DETECTION →</text></svg></a>
+        <div class="body"><span class="badge b-pro">Internship · professional</span><h3><a href="#p-fmea">Forestry Harvester Hose FMEA</a></h3>
+          <dl class="story"><dt>Found</dt><dd>In the field, the crane's rotator hoses burst with no warning and stopped the machine.</dd><dt>Why</dt><dd>Every rupture meant unplanned downtime and oil on the ground, far from a shop.</dd><dt>Did</dt><dd>Ran the FMEA, scored every failure mode and traced the top risks to hose routing and poor detectability. Recommended rerouting, guards, a shift inspection item and operator retraining.</dd><dt class="out">Outcome</dt><dd>Completed FMEA with the critical components identified and ranked</dd></dl>
+          <div class="skills"><a href="#skill-fmea">FMEA</a><a href="#skill-rca">Root cause</a><a href="#skill-trace">Corrective action</a></div>
+          <div class="media"><span>FMEA table · field photo</span><a class="go" href="#p-fmea">Read the story →</a></div></div>
+      </article>
+
+
+      <article class="card" data-tags="academic quality">
+        <a class="thumb" href="#p-stent" aria-label="Medical stent DOE"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g fill="none" class="s-acc" stroke-width="1.5"><rect x="50" y="30" width="44" height="44"/><rect x="66" y="16" width="44" height="44"/><line x1="50" y1="30" x2="66" y2="16"/><line x1="94" y1="30" x2="110" y2="16"/><line x1="50" y1="74" x2="66" y2="60"/><line x1="94" y1="74" x2="110" y2="60"/></g><g class="f-saf"><circle cx="50" cy="30" r="3"/><circle cx="94" cy="30" r="3"/><circle cx="66" cy="16" r="3"/><circle cx="110" cy="16" r="3"/><circle cx="50" cy="74" r="3"/><circle cx="94" cy="74" r="3"/><circle cx="66" cy="60" r="3"/><circle cx="110" cy="60" r="3"/></g><circle cx="80" cy="45" r="3" class="f-ink"/></svg></a>
+        <div class="body"><span class="badge b-aca">Graduate · manufacturer data</span><h3><a href="#p-stent">Medical Stent DOE and Six Sigma Project</a></h3>
+          <dl class="story"><dt>Found</dt><dd>A designed experiment on manufacturer data showed barb retention was the weakest of three requirements.</dd><dt>Why</dt><dd>Retention keeps a stent from moving after it's placed, so it's a patient-safety requirement.</dd><dt>Did</dt><dd>Ran a 2⁴ factorial with center points, then carried it through a full DMAIC project: measurement plan, capability baseline, FMEA, control plan.</dd><dt class="out">Outcome</dt><dd>Two settings meet all three targets <span class="pill p-calc">predicted</span></dd></dl>
+          <div class="skills"><a href="#skill-doe">DOE</a><a href="#skill-lean">DMAIC</a><a href="#skill-minitab">Minitab</a></div>
+          <div class="media"><span>effects plots · optimizer</span><a class="go" href="#p-stent">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="academic flow">
+        <a class="thumb" href="#p-gvr" aria-label="Production flow and lead time"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g class="f-acc"><rect x="16" y="44" width="14" height="30"/><rect x="36" y="38" width="14" height="36"/><rect x="56" y="48" width="14" height="26"/><rect x="76" y="40" width="14" height="34"/><rect x="116" y="46" width="14" height="28"/></g><rect x="96" y="20" width="14" height="54" class="f-saf"/><line x1="10" y1="32" x2="150" y2="32" class="s-ink" stroke-dasharray="4 3"/><text x="150" y="28" font-size="6" text-anchor="end" class="t-ink">TAKT</text></svg></a>
+        <div class="body"><span class="badge b-aca">Graduate case · modeled</span><h3><a href="#p-gvr">Production Flow, Line Balancing and Lead Time</a></h3>
+          <dl class="story"><dt>Found</dt><dd>Takt math showed two stations over takt, one by 40%.</dd><dt>Why</dt><dd>The line needed overtime every day and lead time was about 9 weeks.</dd><dt>Did</dt><dd>Rebalanced the stations, compared cutting machining time against cutting its variation, and moved molding to daily batches.</dd><dt class="out">Outcome</dt><dd>No overtime needed; lead time −64% <span class="pill p-calc">projected</span></dd></dl>
+          <div class="skills"><a href="#skill-bottleneck">Line balancing</a><a href="#skill-wip">Batch &amp; WIP</a><a href="#skill-time">Takt time</a></div>
+          <div class="media"><span>balance chart · batch comparison</span><a class="go" href="#p-gvr">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="academic design">
+        <a class="thumb" href="#p-bracket" aria-label="Steel shelf bracket FEA"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="30" y1="8" x2="30" y2="84" class="s-ink" stroke-width="2"/><path d="M40 22 Q40 14 48 14 L132 14 L132 26 L58 26 Q52 26 52 32 L52 80 L40 80 Z" class="f-accs s-acc" stroke-width="1.2"/><circle cx="56" cy="30" r="5" class="f-saf"/><path d="M110 2 V11 M106 7 L110 11 L114 7" fill="none" class="s-ink" stroke-width="1.2"/><text x="64" y="46" font-size="6" class="t-saf">σ max · FoS 3.9</text></svg></a>
+        <div class="body"><span class="badge b-aca">Graduate project</span><h3><a href="#p-bracket">Steel Shelf Bracket FEA and Verification</a></h3>
+          <dl class="story"><dt>Found</dt><dd>In the mesh study, one stress peak kept climbing every time I refined the mesh, while deflection didn't move.</dd><dt>Why</dt><dd>Trusting that peak would have failed a part that was actually fine.</dd><dt>Did</dt><dd>Traced it to a rigid support edge, modeled the real screw supports, and checked the answer against hand calculations.</dd><dt class="out">Outcome</dt><dd>Factor of safety 3.9 vs 2 target, within 0.9% of theory</dd></dl>
+          <div class="skills"><a href="#skill-fea">FEA</a><a href="#skill-rca">Root cause</a><a href="#skill-gdt">ASME Y14.5 drawing</a></div>
+          <div class="media"><span>model · V&amp;V table</span><a class="go" href="#p-bracket">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="academic design">
+        <a class="thumb" href="#p-cad" aria-label="CAD models and drawings"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g fill="none" class="s-ink" stroke-width="1.4"><rect x="30" y="30" width="30" height="30"/><rect x="60" y="38" width="60" height="14"/></g><line x1="20" y1="45" x2="130" y2="45" stroke-dasharray="8 2 2 2" class="s-mut" stroke-width=".8"/><line x1="30" y1="72" x2="120" y2="72" class="s-acc"/><line x1="30" y1="68" x2="30" y2="76" class="s-acc"/><line x1="120" y1="68" x2="120" y2="76" class="s-acc"/><text x="75" y="82" font-size="6" text-anchor="middle" class="t-acc">Ø / LENGTH</text></svg></a>
+        <div class="body"><span class="badge b-aca">Coursework</span><h3><a href="#p-cad">CAD Models and Manufacturing Drawings</a></h3>
+          <dl class="story"><dt>Did</dt><dd>Four parts taken from 3D model to dimensioned drawing in SolidWorks and Fusion 360.</dd><dt class="out">Outcome</dt><dd>All 4 drawings released at Rev A</dd></dl>
+          <div class="skills"><a href="#skill-solidworks">SolidWorks</a><a href="#skill-fusion">Fusion 360</a><a href="#skill-cad">Drawings</a></div>
+          <div class="media"><span>4 drawings</span><a class="go" href="#p-cad">Read the story →</a></div></div>
+      </article>
+
+      <article class="card" data-tags="academic">
+        <a class="thumb" href="#p-schedule" aria-label="Product launch schedule"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g class="f-line"><rect x="14" y="16" width="30" height="8"/><rect x="40" y="30" width="44" height="8"/><rect x="60" y="58" width="40" height="8"/></g><g class="f-acc"><rect x="14" y="44" width="24" height="8"/><rect x="38" y="72" width="34" height="8"/><rect x="72" y="16" width="30" height="8"/><rect x="102" y="44" width="44" height="8"/></g><path d="M38 48 L38 76 M72 76 L72 20 M102 20 L102 48" fill="none" class="s-saf" stroke-width="1.5"/></svg></a>
+        <div class="body"><span class="badge b-aca">Coursework</span><h3><a href="#p-schedule">Product Launch Schedule: Critical Path</a></h3>
+          <dl class="story"><dt>Did</dt><dd>Built the network and Gantt chart for a 52-week launch across three departments, then found the critical path and the cheapest weeks to cut.</dd><dt class="out">Outcome</dt><dd>Critical path and crash plan <span class="pill p-calc">calculated</span></dd></dl>
+          <div class="skills"><a href="#skill-pm">Critical path</a><a href="#skill-excel">Excel</a></div>
+          <div class="media"><span>network · Gantt</span><a class="go" href="#p-schedule">Read the story →</a></div></div>
+      </article>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ CASE STUDY ============================ -->
+<section id="flow-study" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Production line flow</p>
+    <span class="badge b-pro">Professional project</span>
+    <h1>Production Line Flow and Capacity Improvement</h1>
+    <p class="lede">I mapped a fully custom, made-to-order production line, where every order is different, and found that almost all of its lead time was waiting. Rebalancing the line around its slowest station raised daily output by 24%.</p>
+    <dl class="meta">
+      <div><dt>Scope</dt><dd>Order release to shipping, 17 steps</dd></div>
+      <div><dt>Team</dt><dd>I led the study; the crew and managers ran the changes</dd></div>
+      <div><dt>Tools</dt><dd>Stopwatch time study, Excel, Siemens Plant Simulation</dd></div>
+      <div><dt>Where</dt><dd>Fully custom, made-to-order production line, Massachusetts</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>A map of where time goes</h3><p>I walked every order from release to shipping with a stopwatch and counted the drawers waiting at each handoff. Only 0.26% of the lead time changed the product.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>The plan kept slipping</h3><p>The line hit about 94% of its plan. One finishing station was 7% too slow for demand, and queues in front of it hid the real problem.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Measure, model, rebalance</h3><p>Daily queue counts and a stoppage log, a simulation to test the idea, then painted floor zones and simple move rules so people shift to where the work is.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>+24% daily output</h3><p>Measured in production after the change, against the capacity baseline from the study. The simulation shows room for more.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap split">
+    <div class="prose">
+      <h2>The line</h2>
+      <p>Solid-wood dovetail drawer boxes, every one built to order. Drawers pass through 17 steps: cutting and kitting, dovetail machining, assembly, three rounds of sanding, two coats of finish and final QC.</p>
+      <p>Putty needs 10 minutes to set and each coat needs 20 minutes to cure. Those waits are part of the process. Anything longer than that is a queue, and queues were where the time went.</p>
+    </div>
+    <div class="prose">
+      <h2>My part</h2>
+      <ul>
+        <li>Mapped the line and the paperwork that drives it.</li>
+        <li>Timed every station and separated real work from handling.</li>
+        <li>Built the Excel workbook the floor data went into.</li>
+        <li>Built the line in Siemens Plant Simulation.</li>
+        <li>Presented five improvement programs to the owners and managers.</li>
+      </ul>
+      <p>Operators explained the work and its exceptions. Managers picked the programs, and the crew made them stick.</p>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig" id="fig-route">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 700 300" role="img" aria-labelledby="f2t f2d">
+            <title id="f2t">Effective cycle time per drawer at each station</title>
+            <desc id="f2d">Bar chart of effective cycle time in seconds for 13 timed stations. Top Coat is highest at 59.8 seconds.</desc>
+            <g class="s-line" stroke-width="1"><line x1="40" y1="250" x2="690" y2="250"/><line x1="40" y1="180" x2="690" y2="180" stroke-dasharray="2 3"/><line x1="40" y1="110" x2="690" y2="110" stroke-dasharray="2 3"/><line x1="40" y1="40" x2="690" y2="40" stroke-dasharray="2 3"/></g>
+            <g font-size="11" class="t-mut" text-anchor="end"><text x="34" y="254">0</text><text x="34" y="184">20</text><text x="34" y="114">40</text><text x="34" y="44">60 s</text></g>
+            <g class="f-acc"><rect x="50" y="173" width="30" height="77"/><rect x="100" y="93.2" width="30" height="156.8"/><rect x="150" y="145.7" width="30" height="104.3"/><rect x="200" y="117.4" width="30" height="132.6"/><rect x="250" y="139.8" width="30" height="110.2"/><rect x="300" y="108.3" width="30" height="141.7"/><rect x="350" y="133.1" width="30" height="116.9"/><rect x="400" y="131" width="30" height="119"/><rect x="450" y="121.2" width="30" height="128.8"/><rect x="500" y="87.3" width="30" height="162.7"/><rect x="550" y="83.8" width="30" height="166.2"/><rect x="650" y="101.6" width="30" height="148.4"/></g>
+            <rect x="600" y="40.7" width="30" height="209.3" class="f-saf"/>
+            <g font-size="10" class="t-ink" text-anchor="middle"><text x="65" y="167">22.0</text><text x="115" y="87">44.8</text><text x="165" y="140">29.8</text><text x="215" y="111">37.9</text><text x="265" y="134">31.5</text><text x="315" y="102">40.5</text><text x="365" y="127">33.4</text><text x="415" y="125">34.0</text><text x="465" y="115">36.8</text><text x="515" y="81">46.5</text><text x="565" y="78">47.5</text><text x="615" y="34">59.8</text><text x="665" y="96">42.4</text></g>
+            <g font-size="10" class="t-mut" text-anchor="end"><text transform="translate(70 262) rotate(-40)">Bottoms</text><text transform="translate(120 262) rotate(-40)">Pick/kit</text><text transform="translate(170 262) rotate(-40)">Upcut</text><text transform="translate(220 262) rotate(-40)">Dovetail</text><text transform="translate(270 262) rotate(-40)">Dado</text><text transform="translate(320 262) rotate(-40)">Assembly</text><text transform="translate(370 262) rotate(-40)">Putty</text><text transform="translate(420 262) rotate(-40)">Side sand</text><text transform="translate(470 262) rotate(-40)">Top sand</text><text transform="translate(520 262) rotate(-40)">Seal coat</text><text transform="translate(570 262) rotate(-40)">Prep sand</text><text transform="translate(620 262) rotate(-40)" class="t-saf">Top coat</text><text transform="translate(670 262) rotate(-40)">N&amp;B</text></g>
+            <text x="376" y="22" font-size="10" class="t-mut">+10 min set after putty · +20 min cure after each coat</text>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 2</span>Time per drawer at each station (station time divided by the people on it), from my stopwatch study. Top coat was the slowest station and set the pace for the whole line, so every fix had to protect it.<span class="sk">Skills: time study · bottleneck identification</span></figcaption>
+      </figure>
+
+      <figure class="fig" id="fig-wip">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 640 300" role="img" aria-labelledby="f3t f3d">
+            <title id="f3t">Average WIP at seven handoffs against Little's Law target</title>
+            <desc id="f3d">Seal coat to Prep sanding averaged 68.4 drawers against a target of 24. Dado to Assembly averaged 25.8 against 1.</desc>
+            <g class="s-line"><line x1="180" y1="20" x2="180" y2="262"/><line x1="240" y1="20" x2="240" y2="262" stroke-dasharray="2 3"/><line x1="300" y1="20" x2="300" y2="262" stroke-dasharray="2 3"/><line x1="360" y1="20" x2="360" y2="262" stroke-dasharray="2 3"/><line x1="420" y1="20" x2="420" y2="262" stroke-dasharray="2 3"/><line x1="480" y1="20" x2="480" y2="262" stroke-dasharray="2 3"/><line x1="540" y1="20" x2="540" y2="262" stroke-dasharray="2 3"/><line x1="600" y1="20" x2="600" y2="262" stroke-dasharray="2 3"/></g>
+            <g font-size="10" class="t-mut" text-anchor="middle"><text x="180" y="278">0</text><text x="240" y="278">10</text><text x="300" y="278">20</text><text x="360" y="278">30</text><text x="420" y="278">40</text><text x="480" y="278">50</text><text x="540" y="278">60</text><text x="600" y="278">70</text><text x="390" y="296">drawers waiting (study average)</text></g>
+            <g font-size="11" class="t-ink" text-anchor="end"><text x="172" y="40">Dado → Assembly</text><text x="172" y="74">Putty → Side sand*</text><text x="172" y="108">Side → Top sand</text><text x="172" y="142">Top sand → Seal</text><text x="172" y="176" font-weight="500">Seal → Prep sand*</text><text x="172" y="210">Prep → Top coat</text><text x="172" y="244">Top coat → N&amp;B*</text></g>
+            <g class="f-acc"><rect x="180" y="29" width="154.8" height="14"/><rect x="180" y="63" width="134.4" height="14"/><rect x="180" y="97" width="111.6" height="14"/><rect x="180" y="131" width="68.4" height="14"/><rect x="180" y="199" width="159.6" height="14"/><rect x="180" y="233" width="163.2" height="14"/></g>
+            <rect x="180" y="165" width="410.4" height="14" class="f-saf"/>
+            <g class="f-ink"><rect x="185" y="25" width="2.5" height="22"/><rect x="251" y="59" width="2.5" height="22"/><rect x="185" y="93" width="2.5" height="22"/><rect x="185" y="127" width="2.5" height="22"/><rect x="323" y="161" width="2.5" height="22"/><rect x="191" y="195" width="2.5" height="22"/><rect x="323" y="229" width="2.5" height="22"/></g>
+            <g font-size="10" class="t-ink"><text x="340" y="40">25.8 · target 1</text><text x="320" y="74">22.4 · target 12</text><text x="297" y="108">18.6 · target 1</text><text x="254" y="142">11.4 · target 1</text><text x="596" y="176">68.4</text><text x="345" y="210">26.6 · target 2</text><text x="349" y="244">27.2 · target 24</text></g>
+            <text x="330" y="160" font-size="10" class="t-mut">target 24</text>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 3</span>Drawers waiting at each handoff, counted at the same times every day, against the minimum each queue needs (black marker, from Little's Law). * includes a required cure or set area. The queue before Prep sanding held almost three times what it needed, which told me upstream was pushing work, not protecting the line.<span class="sk">Skills: WIP analysis · Little's Law · Excel</span></figcaption>
+      </figure>
+
+      <figure class="fig" id="fig-loss">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 640 300" role="img" aria-labelledby="f4t f4d">
+            <title id="f4t">Share of lost line time by cause</title>
+            <desc id="f4d">Starvation 54 percent of lost time, blocking 15, late return from breaks 14, quality and rework 6, discussions 3, equipment downtime 3, walking and searching 2, helping another station 1, material handling under 1.</desc>
+            <g class="s-line"><line x1="180" y1="16" x2="180" y2="262"/><line x1="280" y1="16" x2="280" y2="262" stroke-dasharray="2 3"/><line x1="380" y1="16" x2="380" y2="262" stroke-dasharray="2 3"/><line x1="480" y1="16" x2="480" y2="262" stroke-dasharray="2 3"/><line x1="580" y1="16" x2="580" y2="262" stroke-dasharray="2 3"/></g>
+            <g font-size="10" class="t-mut" text-anchor="middle"><text x="180" y="278">0</text><text x="280" y="278">15%</text><text x="380" y="278">30%</text><text x="480" y="278">45%</text><text x="580" y="278">60%</text><text x="380" y="296">share of all lost line time</text></g>
+            <g font-size="11" class="t-ink" text-anchor="end"><text x="172" y="33">Starvation</text><text x="172" y="60">Blocking</text><text x="172" y="87">Late return from breaks</text><text x="172" y="114">Quality / rework</text><text x="172" y="141">Discussion</text><text x="172" y="168">Equipment downtime</text><text x="172" y="195">Walking / searching</text><text x="172" y="222">Helping other station</text><text x="172" y="249">Material handling</text></g>
+            <rect x="180" y="22" width="362.7" height="14" class="f-saf"/>
+            <g class="f-acc"><rect x="180" y="49" width="101.3" height="14"/><rect x="180" y="76" width="96" height="14"/><rect x="180" y="103" width="42.7" height="14"/><rect x="180" y="130" width="21.3" height="14"/><rect x="180" y="157" width="17.3" height="14"/><rect x="180" y="184" width="14" height="14"/><rect x="180" y="211" width="8.7" height="14"/><rect x="180" y="238" width="2.7" height="14"/></g>
+            <g font-size="10" class="t-ink"><text x="549" y="33">54%</text><text x="287" y="60">15% · all at one cure area</text><text x="282" y="87">14%</text><text x="229" y="114">6%</text><text x="207" y="141">3%</text><text x="203" y="168">3%</text><text x="200" y="195">2%</text><text x="195" y="222">1%</text><text x="189" y="249">&lt;1%</text></g>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 4</span>Every interruption in the time study, logged with its cause and length, shown as a share of all lost time. Stations waiting for work were more than half of it. Late returns from breaks were third, and that one became its own project: <a href="#p-breaks">Break-Time Standardization</a>.<span class="sk">Skills: loss analysis · Pareto</span></figcaption>
+      </figure>
+
+      <figure class="fig" id="fig-sim">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 640 210" role="img" aria-labelledby="f5t f5d">
+            <title id="f5t">Simulated time in each cure or set area against the required time</title>
+            <desc id="f5d">Putty set: 21.8 minutes against 10 required. Dry 1: 44.5 minutes against 20 required. Dry 2: 20.0 minutes against 20 required.</desc>
+            <g class="s-line"><line x1="180" y1="14" x2="180" y2="172"/><line x1="260" y1="14" x2="260" y2="172" stroke-dasharray="2 3"/><line x1="340" y1="14" x2="340" y2="172" stroke-dasharray="2 3"/><line x1="420" y1="14" x2="420" y2="172" stroke-dasharray="2 3"/><line x1="500" y1="14" x2="500" y2="172" stroke-dasharray="2 3"/><line x1="580" y1="14" x2="580" y2="172" stroke-dasharray="2 3"/></g>
+            <g font-size="10" class="t-mut" text-anchor="middle"><text x="180" y="188">0</text><text x="260" y="188">10</text><text x="340" y="188">20</text><text x="420" y="188">30</text><text x="500" y="188">40</text><text x="580" y="188">50</text><text x="380" y="205">minutes a drawer spends in the area</text></g>
+            <g font-size="11" class="t-ink" text-anchor="end"><text x="172" y="38">Putty set</text><text x="172" y="94" font-weight="500">Dry 1 (after seal)</text><text x="172" y="150">Dry 2 (after top coat)</text></g>
+            <g class="f-line"><rect x="180" y="22" width="80" height="12"/><rect x="180" y="78" width="160" height="12"/><rect x="180" y="134" width="160" height="12"/></g>
+            <rect x="180" y="38" width="174.6" height="12" class="f-acc"/>
+            <rect x="180" y="94" width="356" height="12" class="f-saf"/>
+            <rect x="180" y="150" width="159.7" height="12" class="f-acc"/>
+            <g font-size="10" class="t-mut"><text x="266" y="32">required 10</text><text x="346" y="88">required 20</text><text x="346" y="144">required 20</text></g>
+            <g font-size="10" class="t-ink"><text x="360" y="48">21.8 · +11.8 extra</text><text x="542" y="104">44.5</text><text x="346" y="160">20.0 · no extra</text></g>
+            <text x="542" y="118" font-size="10" class="t-saf">+24.5</text>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 5</span>I built the line in Siemens Plant Simulation to test the idea before changing anything on the floor. Drawers sat in the first cure area 24.5 minutes longer than they needed to, because Prep sanding couldn't take them. That pointed the fix at Prep sanding's pace.<span class="sk">Skills: discrete-event simulation</span></figcaption>
+      </figure>
+
+      <figure class="fig" id="fig-zones">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 680 230" role="img" aria-labelledby="f6t f6d">
+            <title id="f6t">Floor zone standard and the Seal coat rule</title>
+            <desc id="f6d">Five zone types: work, queue, overflow, move and wet. When all five cart spots in the cure area are full, the Seal coat operator moves to Prep sanding.</desc>
+            <g font-size="11" class="t-ink">
+              <rect x="10" y="14" width="22" height="16" class="f-surf s-ink" stroke-width="1"/><text x="40" y="26">WORK</text>
+              <rect x="110" y="14" width="22" height="16" fill="var(--z-queue)"/><text x="140" y="26">QUEUE</text>
+              <rect x="215" y="14" width="22" height="16" class="f-saf"/><text x="245" y="26">OVERFLOW</text>
+              <rect x="335" y="14" width="22" height="16" fill="var(--z-move)"/><text x="365" y="26">MOVE</text>
+              <rect x="430" y="14" width="22" height="16" fill="var(--z-wet)"/><text x="460" y="26">WET / CURING</text>
+            </g>
+            <g font-size="10" class="t-ink">
+              <rect x="10" y="80" width="54" height="16" fill="var(--z-queue)"/><rect x="70" y="80" width="54" height="16" fill="var(--z-queue)"/><rect x="130" y="80" width="54" height="16" fill="var(--z-queue)"/><rect x="190" y="80" width="54" height="16" fill="var(--z-queue)"/>
+              <rect x="250" y="80" width="40" height="16" class="f-saf"/>
+              <text x="10" y="72" class="t-mut">4 QUEUE SPOTS + OVERFLOW</text>
+              <rect x="300" y="64" width="90" height="48" class="f-surf s-ink" stroke-width="1.5"/><text x="345" y="92" text-anchor="middle">SEAL COAT</text>
+              <line x1="390" y1="88" x2="420" y2="88" class="s-ink" stroke-width="1.5"/><path d="M420 84 L428 88 L420 92 Z" class="f-ink"/>
+              <rect x="434" y="66" width="40" height="44" fill="var(--z-wet)"/><rect x="478" y="66" width="40" height="44" fill="var(--z-wet)"/><rect x="522" y="66" width="40" height="44" fill="var(--z-wet)"/><rect x="566" y="66" width="40" height="44" fill="var(--z-wet)"/><rect x="610" y="66" width="40" height="44" fill="var(--z-wet)"/>
+              <text x="434" y="58" class="t-mut">CURE AREA · 5 CART SPOTS · 20 MIN</text>
+            </g>
+            <rect x="10" y="140" width="660" height="70" rx="3" class="f-bg s-line" stroke-width="1"/>
+            <text x="24" y="164" font-size="12" class="t-ink" font-weight="500">THE RULE</text>
+            <text x="24" y="184" font-size="12" class="t-ink">All 5 cart spots full → the Seal coat operator goes to help at Prep sanding.</text>
+            <text x="24" y="201" font-size="12" class="t-mut">Nobody has to call it. The floor shows when to move.</text>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 6</span>The floor-zone standard I designed for finishing, redrawn here. Painted zones show what each spot is for, and a full cure area tells people where to go next. This is how the rebalancing actually happens on a busy day.<span class="sk">Skills: visual management · standard work</span></figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>What</th><th>Value</th><th>How I know</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Share of lead time that adds value</td><td class="num">0.26%</td><td>Time study and value stream map</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Queue before Prep sanding vs what it needs</td><td class="num">2.9×</td><td>Daily queue counts vs Little's Law</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Defects per 100 drawers, before</td><td class="num">3.5</td><td>Set-aside logging during the study</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Extra time in the first cure area</td><td class="num">+24.5 min</td><td>Plant Simulation model</td><td><span class="pill p-sim">simulated</span></td></tr>
+        <tr><td><b>Daily output after rebalancing</b></td><td class="num"><b>+24%</b></td><td>Production count vs the study's capacity baseline</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Long-term future state</td><td class="num">+48%</td><td>Plant Simulation future-state model</td><td><span class="pill p-sim">simulated</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Count, don't guess</h3><p>Counting queues at the same times every day turned "there's too much on the floor" into a number for each handoff.</p></div>
+      <div><h3>Partial data lies</h3><p>Counting only some queues made lead time look like hours. Counting all of them showed days.</p></div>
+      <div><h3>Fix the queue, not the people</h3><p>The line didn't need more people. It needed people at the right station at the right time.</p></div>
+      <div><h3>Test before you move</h3><p>The simulation proved the idea before anything changed on the floor, and it maps the path to the +48% future state.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-defects">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block">
+      <div><span>Sheet</span>Case study 1 of 11</div>
+      <div><span>Prepared by</span>R. Silva</div>
+      <div><span>Data</span>Time study, queue counts, simulation</div>
+      <div><span>Status</span>Released</div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: DEFECT TRACKING ============================ -->
+<section id="p-defects" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Defect tracking</p>
+    <span class="badge b-dep">In daily production use</span>
+    <h1>Defect Tracking and Production Visibility</h1>
+    <p class="lede">Rework and scrap were invisible: defective drawers went to a rework cart and nobody recorded why. I made every rework traceable by defect type and station, so the line can see what defects cost in time, space and material, and act on variation before it reaches the customer.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>I defined the categories, the workflow and the reports, and trained the operators</dd></div>
+      <div><dt>Where</dt><dd>Fully custom, made-to-order production line, Massachusetts</dd></div>
+      <div><dt>Tools</dt><dd>Defect categories, station logging, Pareto and trend reports</dd></div>
+      <div><dt>Status</dt><dd>In daily use on the drawer line</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>Rework with no record</h3><p>While mapping the line I followed the rework cart. 78% of kickbacks had no reason written down, and scrap wasn't traced at all.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Hidden non-value-added work</h3><p>Every rework repeats labor, holds floor space and uses material and capacity that should go to good drawers. Without data, nobody could say how much, or which problem to attack first.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Log every rework at the source</h3><p>I grouped the defects into 8 categories plus "Other" as picture cards. The station that finds a defect scans the card, then the drawer, and the case is followed until it's repaired or shipped.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>Rework is visible and measured</h3><p>Every rework is now logged with its type, station and time. Supervisors follow the trends and act on variation in the line before a problem reaches the customer.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 700 150" role="img" aria-label="How a defect is recorded and closed">
+            <g font-size="12" class="t-ink">
+              <rect x="6" y="40" width="120" height="56" rx="3" class="f-surf s-ink" stroke-width="1.3"/><text x="66" y="64" text-anchor="middle">Defect found</text><text x="66" y="82" text-anchor="middle" class="t-mut" font-size="11">at any station</text>
+              <rect x="146" y="40" width="120" height="56" rx="3" class="f-accs s-acc" stroke-width="1.3"/><text x="206" y="64" text-anchor="middle">Scan reason card</text><text x="206" y="82" text-anchor="middle" class="t-mut" font-size="11">1 of 9 pictures</text>
+              <rect x="286" y="40" width="120" height="56" rx="3" class="f-accs s-acc" stroke-width="1.3"/><text x="346" y="64" text-anchor="middle">Scan drawer label</text><text x="346" y="82" text-anchor="middle" class="t-mut" font-size="11">same station</text>
+              <rect x="426" y="40" width="120" height="56" rx="3" class="f-surf s-ink" stroke-width="1.3"/><text x="486" y="64" text-anchor="middle">Case opens</text><text x="486" y="82" text-anchor="middle" class="t-mut" font-size="11">rework queue</text>
+              <rect x="566" y="10" width="128" height="50" rx="3" class="f-surf s-line" stroke-width="1.3"/><text x="630" y="32" text-anchor="middle">Closed, repaired</text><text x="630" y="48" text-anchor="middle" class="t-mut" font-size="11">next good scan</text>
+              <rect x="566" y="78" width="128" height="50" rx="3" class="f-surf s-line" stroke-width="1.3"/><text x="630" y="100" text-anchor="middle">Closed, shipped</text><text x="630" y="116" text-anchor="middle" class="t-mut" font-size="11">order closed</text>
+            </g>
+            <g class="s-ink" stroke-width="1.4" fill="none"><path d="M126 68 H142"/><path d="M266 68 H282"/><path d="M406 68 H422"/><path d="M546 62 L562 38"/><path d="M546 74 L562 100"/></g>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 1</span>How a rework is recorded and closed, redrawn for this page. Two scans, and the drawer keeps moving.<span class="sk">Skills: process mapping · data collection</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="cats">
+          <span>1 · Replace part</span><span>2 · Scoop / customization</span><span>3 · Bottom fit / damage</span><span>4 · Defective / damaged wood</span><span>5 · Other</span><span>6 · Rough surface / sanding</span><span>7 · Joint gap / misalignment</span><span>8 · Staple</span><span>9 · Finish / putty / glue</span>
+        </div>
+        <figcaption><span class="fn">Fig. 2</span>The reason cards. Each one is a picture, so anyone on the line can log a defect at a glance.<span class="sk">Skills: visual management · operator training</span></figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>What</th><th>Value</th><th>How I know</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Kickbacks with no reason, before</td><td class="num">78%</td><td>Case records before the cards</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Defect categories in use</td><td class="num">8 + Other</td><td>Card set on every scan station and at QC</td><td><span class="pill p-qual">implemented</span></td></tr>
+        <tr><td><b>Rework logged with type and station, after</b></td><td class="num"><b>Every case</b></td><td>Same case records, after the cards</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Rework and material waste visible to supervisors</td><td class="num">In use</td><td>Live dashboard and trend reports</td><td><span class="pill p-qual">implemented</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What the visibility makes possible</h2>
+    <div class="lessons">
+      <div><h3>See rework and waste <span class="pill p-qual">in use</span></h3><p>Rework and material waste are now visible by category, showing the labor, floor space and material defects take from the line.</p></div>
+      <div><h3>Attack the biggest loss first</h3><p>A Pareto by defect type and station points improvement work where it pays most.</p></div>
+      <div><h3>Catch drift early</h3><p>Trends by station show when a process starts to vary, so it's corrected before defects reach the customer.</p></div>
+      <div><h3>A baseline for yield</h3><p>Defects tied to material waste give scrap and yield improvement a measured starting point.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Make the right thing fast</h3><p>If recording a defect takes longer than setting the drawer aside, it won't happen. Two scans was the limit.</p></div>
+      <div><h3>Pictures beat words</h3><p>A picture card is understood at a glance, by anyone on the line.</p></div>
+      <div><h3>"Source" is a lead, not a verdict</h3><p>The last station to touch a drawer is where to look first, not proof of the cause.</p></div>
+      <div><h3>Visibility comes first</h3><p>Rework you can't see can't be reduced. Logging it turned a cart in the corner into a number the line is managed by.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-breaks">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 2 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Professional</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: BREAK TIME ============================ -->
+<section id="p-breaks" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Break-time standardization</p>
+    <span class="badge b-dep">In daily production use</span>
+    <h1>Break-Time Standardization</h1>
+    <p class="lede">My time study showed the line losing time at every break: people stopped early and came back late. The team picked a fix, break-related loss dropped by half, and it keeps falling now that everyone can see it.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Measured the loss, brought it to the team, set up the solution</dd></div>
+      <div><dt>Where</dt><dd>Fully custom, made-to-order production line, Massachusetts</dd></div>
+      <div><dt>Tools</dt><dd>Time study, interruption log, scheduled break calls</dd></div>
+      <div><dt>Status</dt><dd>In daily use on two lines</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>The log showed a pattern</h3><p>During the flow study I logged every stop with its cause and length. Breaks kept showing up: the line stopped before the break and restarted late after it.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Top-three loss, low cost</h3><p>Late restarts were about 14% of all interruption loss, the third biggest cause, and needed no equipment to fix.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Team decided, I built it</h3><p>I showed the team the numbers. We agreed on a scheduled call at the start and end of each break, with an on-screen banner, on both lines.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>−50% break loss</h3><p>Measured with the same time study as the baseline. Since the loss became visible, it has kept going down.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 700 170" role="img" aria-label="Break timeline before and after">
+            <g font-size="12" class="t-ink">
+              <text x="6" y="44">Before</text><text x="6" y="124">After</text>
+              <rect x="90" y="30" width="590" height="22" class="f-line"/>
+              <rect x="250" y="30" width="34" height="22" class="f-saf"/><rect x="284" y="30" width="150" height="22" class="f-accs"/><rect x="434" y="30" width="44" height="22" class="f-saf"/>
+              <text x="267" y="72" text-anchor="middle" font-size="11" class="t-mut">early stop</text><text x="359" y="72" text-anchor="middle" font-size="11" class="t-mut">scheduled break</text><text x="456" y="72" text-anchor="middle" font-size="11" class="t-mut">late restart</text>
+              <rect x="90" y="110" width="590" height="22" class="f-line"/>
+              <rect x="284" y="110" width="150" height="22" class="f-accs"/><rect x="434" y="110" width="20" height="22" class="f-saf"/>
+              <text x="284" y="104" text-anchor="middle" font-size="11" class="t-acc">▼ call</text><text x="434" y="104" text-anchor="middle" font-size="11" class="t-acc">▼ call</text>
+              <text x="359" y="152" text-anchor="middle" font-size="11" class="t-mut">same break, one signal at the start and end</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 1</span>What the log showed and what changed. Illustration, not to scale.<span class="sk">Skills: loss measurement · standard work</span></figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>What</th><th>Value</th><th>How I know</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Share of interruption loss from breaks, before</td><td class="num">~14%</td><td>Time study and interruption log</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td><b>Break-related loss after the change</b></td><td class="num"><b>−50%</b></td><td>Same time study as the baseline</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Trend since</td><td class="num">Still falling</td><td>Ongoing interruption tracking</td><td><span class="pill p-meas">measured</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Small losses add up</h3><p>A few minutes per break looked like nothing until the log added them up across the line.</p></div>
+      <div><h3>Let the team pick</h3><p>The fix came from the team meeting, so nobody had to be sold on it.</p></div>
+      <div><h3>Same signal for all</h3><p>One call and one visual cue mean nobody depends on a coworker to know it's time.</p></div>
+      <div><h3>Visibility sustains it</h3><p>Once the loss was measured and shared, the crew kept pushing it down.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-shaft">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 3 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Professional</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: AIRCRAFT SHAFT ============================ -->
+<section id="p-shaft" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Aircraft shaft reliability</p>
+    <span class="badge b-pro">Professional project</span>
+    <h1>Aircraft Shaft Reliability and Process Capability</h1>
+    <p class="lede">One in three aircraft shafts needed scrap or rework. A reliability model of the whole line pointed at one grinding step, and a capability study showed the problem was process variation, not the drawing.</p>
+    <dl class="meta">
+      <div><dt>Product</dt><dd>High-precision aircraft shafts, 240 per year</dd></div>
+      <div><dt>Line</dt><dd>9 operations in sequence</dd></div>
+      <div><dt>Tools</dt><dd>Series reliability, Pareto, FMEA, Cp/Cpk, SPC</dd></div>
+      <div><dt>Fix</dt><dd>In-process air gauging, reaction plan, SOPs, training</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>Follow failures to the source</h3><p>Final inspection caught 35% of failures, but inspection doesn't make defects. Moving each catch back to the operation that caused it showed Grind behind 41% of all failures.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>80 of 240 shafts</h3><p>The line's overall reliability was 0.71. Grind ran at 0.86 while every other step was 0.95 to 0.97, so it capped the whole line.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Variation, not the spec</h3><p>FMEA ranked the ID grind highest (RPN 640). The capability study gave Cp 0.50 on a ±0.00025 in tolerance. I added an air gauge at the machine, a drift reaction plan, updated SOPs and operator training.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>84.4% → 97.75% first-pass</h3><p>Variation fell 54%. Line reliability rose from 0.71 to 0.80, and Cp more than doubled, from 0.50 to 1.10.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig"><img src="img/shaft-chain.jpg" alt="Series reliability chain with Grind at 0.86 and system reliability 0.71" loading="lazy">
+        <figcaption><span class="fn">Fig. 1</span>The series model. Line reliability is the product of each step, so one weak step drags the whole line down.<span class="sk">Skills: reliability modeling</span></figcaption></figure>
+      <div class="fig-pair">
+        <figure class="fig"><img src="img/shaft-before.jpg" alt="Capability before: Cp 0.50, yield 84.4%" loading="lazy">
+          <figcaption><span class="fn">Fig. 2</span>Before: the process spread is wider than the tolerance window.</figcaption></figure>
+        <figure class="fig"><img src="img/shaft-after.jpg" alt="Capability after: Cp 1.10, yield 97.75%" loading="lazy">
+          <figcaption><span class="fn">Fig. 3</span>After in-process gauging: a narrower spread inside the window.</figcaption></figure>
+      </div>
+      <figure class="fig"><img src="img/shaft-chain-after.jpg" alt="Reliability chain before and after the intervention" loading="lazy">
+        <figcaption><span class="fn">Fig. 4</span>Each operation before and after. Grind moved from 0.86 to 0.9775.<span class="sk">Skills: process capability · root cause</span></figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>What</th><th>Before</th><th>After</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Grind standard deviation</td><td class="num">0.000166 in</td><td class="num">0.000076 in</td><td><span class="pill p-meas">measured</span></td></tr>
+        <tr><td>Process capability (Cp)</td><td class="num">0.50</td><td class="num">1.10</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td><b>First-pass yield at Grind</b></td><td class="num">84.4%</td><td class="num"><b>97.75%</b></td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Rejects (PPM)</td><td class="num">155,731</td><td class="num">22,536</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Line reliability</td><td class="num">0.71</td><td class="num">0.80</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Grind failures per year</td><td class="num">33</td><td class="num">~6</td><td><span class="pill p-calc">projected</span></td></tr>
+        <tr><td>Annual savings vs cost</td><td class="num" colspan="2">~$810K vs $100K</td><td><span class="pill p-calc">projected</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Inspection is not a cause</h3><p>The biggest bar on the first Pareto was the inspection step. Re-assigning catches to their source changed the answer.</p></div>
+      <div><h3>Check the spread first</h3><p>When Cp is low, tightening the operator or the drawing won't help. The process itself has to get steadier.</p></div>
+      <div><h3>Control at the machine</h3><p>Measuring at the grinder, with a clear reaction plan, catches drift before the part moves on.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-fmea">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 4 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Professional</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: FORESTRY FMEA ============================ -->
+<section id="p-fmea" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Forestry harvester FMEA</p>
+    <span class="badge b-pro">Internship · professional</span>
+    <h1>Forestry Harvester Hose FMEA</h1>
+    <p class="lede">The crane's rotator hoses on a forestry harvester kept bursting in the field with no warning. An FMEA showed the real risk was that nobody could see a failure coming.</p>
+    <dl class="meta">
+      <div><dt>Machine</dt><dd>John Deere 1270D harvester, hydraulic crane</dd></div>
+      <div><dt>Component</dt><dd>Rotator hydraulic hoses, up to 41.5 MPa</dd></div>
+      <div><dt>Tools</dt><dd>FMEA, RPN scoring, root-cause analysis, field data</dd></div>
+      <div><dt>Context</dt><dd>John Deere internship and senior project in reliability-centered maintenance</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>Sudden ruptures</h3><p>Rotator hoses failed by impact from the harvester head and from trees, by snagging, and by rubbing against each other. Each one stopped the crane.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Downtime far from a shop</h3><p>A burst hose means a stopped machine in the forest, emergency repair and hydraulic oil on the ground.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Score, then attack detection</h3><p>I scored each failure mode for severity, occurrence and detection. The top RPNs (160) came from poor detection: hoses show almost no warning before they burst.</p></div>
+      <div class="out"><span class="step">4 · What I delivered</span><h3>Critical components identified</h3><p>A completed FMEA that ranks every hose failure mode by risk and names the critical components, with a recommended control for each.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <div class="fig-pair">
+        <figure class="fig"><img src="img/fmea-hoses.jpg" alt="Harvester head with the rotator hoses circled" loading="lazy">
+          <figcaption><span class="fn">Fig. 1</span>The rotator hoses in the field (circled). Exposed to the head, to trees and to each other.</figcaption></figure>
+        <figure class="fig">
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Failure mode</th><th>S</th><th>O</th><th>D</th><th>RPN</th></tr></thead>
+            <tbody>
+              <tr><td>Impact from harvester head</td><td class="num">4</td><td class="num">5</td><td class="num">8</td><td class="num"><b>160</b></td></tr>
+              <tr><td>Impact from trees</td><td class="num">4</td><td class="num">5</td><td class="num">8</td><td class="num"><b>160</b></td></tr>
+              <tr><td>Snagging / entanglement</td><td class="num">4</td><td class="num">4</td><td class="num">8</td><td class="num">128</td></tr>
+              <tr><td>Hose-to-hose wear</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num">100</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption><span class="fn">Fig. 2</span>The FMEA. Detection scores of 8 drive the top risks.<span class="sk">Skills: FMEA · RPN prioritization</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">My recommendations</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Risk</th><th>Control</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Impact (head, trees)</td><td>Reroute and secure hoses, heavy-duty sleeve, deflectors</td><td><span class="pill p-qual">recommended</span></td></tr>
+        <tr><td>Snagging</td><td>Routing check added to the pre- and post-shift inspection</td><td><span class="pill p-qual">recommended</span></td></tr>
+        <tr><td>Wear</td><td>Abrasion sleeves and a written wear limit</td><td><span class="pill p-qual">recommended</span></td></tr>
+        <tr><td>Operator pressure</td><td>Retraining on speed limits and risk awareness</td><td><span class="pill p-qual">recommended</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Detection is a design choice</h3><p>When a part gives no warning, the inspection plan has to create one.</p></div>
+      <div><h3>People are part of the system</h3><p>Production targets pushed operators to work faster near the hoses. Training belongs in the fix.</p></div>
+      <div><h3>Rank before you spend</h3><p>The RPN ranking shows where inspection time and money should go first.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-machining">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 5 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Internship</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: MACHINING + CAM ============================ -->
+<section id="p-machining" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Machined parts and CAM</p>
+    <span class="badge b-pro">Training + personal project</span>
+    <h1>Machined Parts and CAM Programming</h1>
+    <p class="lede">In my machining training I make these parts on manual, ProtoTRAK and Haas CNC machines. At home I program the same parts in SolidWorks CAM, to plan each one as a CNC job: setups, tools and operations.</p>
+    <dl class="meta">
+      <div><dt>Training</dt><dd>AMTEP, Essex North Shore Agricultural &amp; Technical School, Danvers, MA</dd></div>
+      <div><dt>Machines</dt><dd>Haas Mini Mill, TM-1, VF-2, TL-1 and TL lathe; ProtoTRAK; manual engine lathes</dd></div>
+      <div><dt>At home</dt><dd>SolidWorks models and SolidWorks CAM programs</dd></div>
+      <div><dt>Materials</dt><dd>Aluminum, brass and steel</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>The setup decides the part</h3><p>Making a part by hand, every choice shows: how to hold it, which surface to cut first, where a tolerance can be lost when you flip it.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Read a program like a print</h3><p>Production runs on CNC. A manufacturing engineer needs to judge a CAM plan, its setups, tools and operations, as well as the drawing.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Model, program, simulate</h3><p>For each training print I build the SolidWorks model, set the stock and workholding in SolidWorks CAM, pick tools and operations, simulate the toolpaths and post the G-code.</p></div>
+      <div class="out"><span class="step">4 · Where it stands</span><h3>9 parts, 5 programmed</h3><p>Every training part is modeled. Five have CAM programs and toolpath simulations, and my programs have run on the school's Haas CNC machines.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Toolpath simulations</h2>
+    <div class="fig-pair">
+      <figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none"></video>
+        <figcaption><span class="fn">Video 1</span>Face and Turn, lathe: face, rough and finish turn, cut-off.</figcaption></figure>
+      <figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none"></video>
+        <figcaption><span class="fn">Video 2</span>Reamed Cube, mill: square the block, then spot, drill and ream on two faces.</figcaption></figure>
+      <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video>
+        <figcaption><span class="fn">Video 3</span>Simple Cylinder, lathe.</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The parts</h2>
+    <div class="parts">
+      <article class="part" data-detail="d-face-turn"><img src="img/mfg-face-turn.jpg" alt="Face and Turn part model" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>Face and Turn</h3><p>Four stepped diameters, Ø0.950 to Ø0.675. Program: face, rough and finish turn, cut-off, with 80° and 55° inserts.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
+      <article class="part" data-detail="d-cylinder"><img src="img/cam-cylinder-poster.jpg" alt="Simple Cylinder in the CAM simulation" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>Simple Cylinder</h3><p>Turned cylinder, first lathe exercise.</p><span><span class="pill p-sim">simulated</span></span></div></article>
+      <article class="part" data-detail="d-taper"><img src="img/mfg-taper.jpg" alt="OD and ID Taper part model" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>OD &amp; ID Taper</h3><p>Outside and inside tapers with a Ø1.200 bore held concentric to the OD. Program: 11 operations, from facing through drilling, boring and cut-off.</p><span><span class="pill p-app">CAM programmed</span></span></div></article>
+      <article class="part" data-detail="d-clamp-end"><img src="img/mfg-clamp-end.jpg" alt="C-Clamp End part model" loading="lazy"><div><span class="eyebrow">Lathe · Brass</span><h3>C-Clamp End</h3><p>Turned end for the C-clamp assembly.</p><span><span class="pill p-cw">modeled</span></span></div></article>
+      <article class="part" data-detail="d-cube"><img src="img/mfg-cube.jpg" alt="Reamed Cube part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>Reamed Cube</h3><p>0.900 in cube with Ø0.248 reamed holes on two faces. Two setups: end mill, spot drill, drill, reamer.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
+      <article class="part" data-detail="d-step-bar"><img src="img/mfg-step-bar.jpg" alt="Milled Step Bar part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>Milled Step Bar</h3><p>Stepped bar with a reamed Ø0.250 hole. Two setups: end mill, center drill, drill, reamer.</p><span><span class="pill p-app">CAM programmed</span></span></div></article>
+      <article class="part" data-detail="d-tslot"><img src="img/mfg-tslot.jpg" alt="T-Slot Nut part model" loading="lazy"><div><span class="eyebrow">Mill · Steel</span><h3>T-Slot Nut</h3><p>Milled T-profile with a tapped hole.</p><span><span class="pill p-cw">modeled</span></span></div></article>
+      <article class="part" data-detail="d-clamp-body"><img src="img/mfg-clamp-body.jpg" alt="C-Clamp Body part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>C-Clamp Body</h3><p>3.50 × 2.00 in U-body with a 7/16-14 tapped hole held square to datum B.</p><span><span class="pill p-cw">modeled</span></span></div></article>
+      <article class="part" data-detail="d-bore-slot"><img src="img/mfg-bore-slot.jpg" alt="Bore and Slot Block part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>Bore &amp; Slot Block</h3><p>Block with a bored hole and a milled slot.</p><span><span class="pill p-cw">modeled</span></span></div></article>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I'm learning</h2>
+    <div class="lessons">
+      <div><h3>Same print, different plan</h3><p>The order of cuts that works on a manual mill isn't always the best order for a CNC program.</p></div>
+      <div><h3>Datums drive setups</h3><p>Where the drawing puts its datums decides how the part is held and when it gets flipped.</p></div>
+      <div><h3>Measure what you cut</h3><p>Calipers, micrometers, height gauges and indicators on every part, against GD&amp;T callouts.</p></div>
+      <div><h3>Plan it like production</h3><p>Programming each part makes me plan it as a production job: fewest setups, the right tools and safe toolpaths.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-stent">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 6 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Training + personal</div><div><span>Status</span>In progress</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: STENT DOE ============================ -->
+<section id="p-stent" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Medical stent DOE</p>
+    <span class="badge b-aca">Graduate · manufacturer data</span>
+    <h1>Medical Stent DOE and Six Sigma Project</h1>
+    <p class="lede">Using a medical manufacturer's test data, I ran a designed experiment on a stent's barb geometry and found settings that meet all three strength targets at once, then built the full DMAIC project around it.</p>
+    <dl class="meta">
+      <div><dt>Data</dt><dd>Provided by a medical device manufacturer, with Prof. Sammy Shina</dd></div>
+      <div><dt>Design</dt><dd>2⁴ full factorial, 4 center points, 20 runs</dd></div>
+      <div><dt>Tools</dt><dd>Minitab, ANOVA, regression, desirability</dd></div>
+      <div><dt>Framework</dt><dd>Six Sigma DMAIC</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>Three targets, one design</h3><p>Barb depth, barb length, overlap and orientation all affect tensile strength, compression and barb retention, and they pull in different directions.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Retention is safety</h3><p>Barb retention keeps the stent from moving after it's placed. It was the hardest of the three to hit.</p></div>
+      <div><span class="step">3 · What I did</span><h3>DOE inside DMAIC</h3><p>Defined retention as the critical requirement, planned the measurement, ran the factorial and checked each model, optimized all three responses together, then wrote the FMEA and control plan.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>Desirability 1.00</h3><p>Two settings meet all three targets. Predicted retention 0.327 against a 0.250 target.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <div class="fig-pair">
+        <figure class="fig"><img src="img/stent-pareto.jpg" alt="Pareto chart of standardized effects for tensile" loading="lazy">
+          <figcaption><span class="fn">Fig. 1</span>Which factors matter for tensile strength. Bars past the red line are significant.</figcaption></figure>
+        <figure class="fig"><img src="img/stent-retention.jpg" alt="Main effects plot for barb retention" loading="lazy">
+          <figcaption><span class="fn">Fig. 2</span>Barb retention rises with depth and length, the opposite of what tensile wants.</figcaption></figure>
+      </div>
+      <figure class="fig"><img src="img/stent-optimizer.jpg" alt="Response optimizer reaching composite desirability 1.0" loading="lazy">
+        <figcaption><span class="fn">Fig. 3</span>The optimizer: one setting that satisfies all three responses.<span class="sk">Skills: DOE · multi-response optimization</span></figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Response</th><th>Model fit (R² / predicted)</th><th>Target</th><th>Predicted at best setting</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Tensile</td><td class="num">98.3% / 93.0%</td><td class="num">1.250</td><td class="num">1.445</td><td><span class="pill p-calc">predicted</span></td></tr>
+        <tr><td>Compression</td><td class="num">65.4% / weak</td><td class="num">0.075</td><td class="num">0.0875</td><td><span class="pill p-calc">predicted</span></td></tr>
+        <tr><td><b>Barb retention</b></td><td class="num">96.4% / 88.3%</td><td class="num">0.250</td><td class="num"><b>0.327</b></td><td><span class="pill p-calc">predicted</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Trade-offs are visible</h3><p>Depth helps retention and hurts tensile. The DOE put a number on that instead of an argument.</p></div>
+      <div><h3>Say when a model is weak</h3><p>The compression model wasn't significant (p = 0.079). It stayed in, flagged, instead of being trusted.</p></div>
+      <div><h3>Optimize together</h3><p>Tuning one response at a time would have broken another. Optimizing all three at once found settings that satisfy every target.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-gvr">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 7 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Graduate</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: PRODUCTION FLOW (GVR) ============================ -->
+<section id="p-gvr" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Production flow and lead time</p>
+    <span class="badge b-aca">Graduate case · modeled</span>
+    <h1>Production Flow, Line Balancing and Lead Time</h1>
+    <p class="lede">A line that couldn't reach 28 units a day without overtime, and a 9-week lead time. Takt math, a variation study and a batch-size change fixed both on paper without new equipment.</p>
+    <dl class="meta">
+      <div><dt>Case</dt><dd>Graduate operations case, assembly, machining and molding</dd></div>
+      <div><dt>Demand</dt><dd>28 units per day</dd></div>
+      <div><dt>Tools</dt><dd>Takt time, line balancing, variation analysis, batch sizing</dd></div>
+      <div><dt>Result type</dt><dd>Modeled and projected</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>Two stations over takt</h3><p>Takt is 1,029 s. Electronics took 1,440 s (40% over) and one assembly station 1,152 s. Every other station had spare time.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Overtime and a long wait</h3><p>The line needed overtime every day, and inventory made total lead time about 9 weeks.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Three fixes, three areas</h3><p>Moved work off the two slow stations. In machining, compared a faster process against a steadier one. In molding, cut batches from weekly to daily.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>No overtime, −64% lead time</h3><p>Balanced labor content is 999 s per unit, under takt with the same 10 people. Lead time drops from ~9 to ~3.2 weeks.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 640 260" role="img" aria-label="Station cycle times against takt">
+            <g font-size="11" class="t-ink">
+              <line x1="60" y1="20" x2="60" y2="220" class="s-line"/><line x1="60" y1="220" x2="620" y2="220" class="s-line"/>
+              <text x="54" y="224" text-anchor="end" class="t-mut">0</text><text x="54" y="124" text-anchor="end" class="t-mut">800</text><text x="54" y="44" text-anchor="end" class="t-mut">1,440</text>
+              <rect x="90" y="100" width="120" height="120" class="f-acc" opacity=".35"/><rect x="90" y="100" width="120" height="30" class="f-acc"/>
+              <text x="150" y="240" text-anchor="middle">WS 1, 2, 4, 7, 8</text><text x="150" y="94" text-anchor="middle" class="t-mut">720–960 s</text>
+              <rect x="260" y="76" width="90" height="144" class="f-acc"/><text x="305" y="240" text-anchor="middle">WS 3</text><text x="305" y="70" text-anchor="middle">1,152 s</text>
+              <rect x="400" y="40" width="90" height="180" class="f-saf"/><text x="445" y="240" text-anchor="middle">WS 6</text><text x="445" y="34" text-anchor="middle">1,440 s</text>
+              <line x1="60" y1="91" x2="620" y2="91" class="s-ink" stroke-dasharray="6 4" stroke-width="1.4"/><text x="616" y="85" text-anchor="end">TAKT 1,029 s</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><span class="fn">Fig. 1</span>Cycle time by station against takt. Two stations are over; the rest have room to take work.<span class="sk">Skills: line balancing · takt time</span></figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Area</th><th>Before</th><th>After</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Assembly</td><td>Overtime to reach 28/day</td><td>28/day, no overtime</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Machining buffer (cut variation 50%)</td><td class="num">2 weeks</td><td class="num">1 week</td><td><span class="pill p-calc">projected</span></td></tr>
+        <tr><td>Molding (weekly → daily batches)</td><td class="num">7.0 weeks</td><td class="num">2.2 weeks</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td><b>Total lead time</b></td><td class="num">~9 weeks</td><td class="num"><b>~3.2 weeks</b></td><td><span class="pill p-calc">projected</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Steady beats fast</h3><p>In machining, halving the variation did more for lead time than cutting the average time by 10%.</p></div>
+      <div><h3>Batch size is lead time</h3><p>More setups cost a little scrap but freed five weeks of inventory.</p></div>
+      <div><h3>Balance before you buy</h3><p>The line met demand with the same 10 people by moving work between stations, not by adding equipment.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-bracket">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 8 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Graduate case</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: BRACKET FEA ============================ -->
+<section id="p-bracket" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Steel shelf bracket FEA</p>
+    <span class="badge b-aca">Graduate project</span>
+    <h1>Steel Shelf Bracket FEA and Verification</h1>
+    <p class="lede">Checking a formed steel shelf bracket against a safety factor of 2, I found a stress peak that was a modeling error, not a real stress. Fixing the supports gave a result that matched hand calculations within 0.9%.</p>
+    <dl class="meta">
+      <div><dt>Part</dt><dd>ASTM A36 bracket, 0.250 in plate, 6 × 4 × 2 in</dd></div>
+      <div><dt>Load</dt><dd>50 lbf on the shelf, factor-of-safety target 2</dd></div>
+      <div><dt>Tools</dt><dd>Abaqus/Standard, SOLIDWORKS, hand calculations</dd></div>
+      <div><dt>Drawing</dt><dd>ASME Y14.5-2018, third-angle</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · How I found it</span><h3>A peak that kept growing</h3><p>Across four meshes, deflection changed less than 0.25%, but the peak stress at the fixed edge climbed from 11,461 to 19,350 psi.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>A false failure</h3><p>Taken at face value, that peak would have rejected a bracket that is actually safe.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Find the cause, then verify</h3><p>Traced it to a rigid support edge (a singularity). Replaced it with screw patches and wall bearing, then checked equilibrium, three meshes and beam theory.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>FoS 3.9, verified</h3><p>The real governing stress is at the inner bend: 9,233 psi, within 0.9% of curved-beam theory.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <div class="fig-pair">
+        <figure class="fig"><img src="img/bracket-iso.jpg" alt="Steel shelf bracket model, shelf on top and leg down the wall" loading="lazy">
+          <figcaption><span class="fn">Fig. 1</span>The bracket as installed: shelf on top, leg against the wall. The governing stress is at the inside of the bend.</figcaption></figure>
+        <figure class="fig">
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Check</th><th>Model</th><th>Reference</th></tr></thead>
+            <tbody>
+              <tr><td>Vertical equilibrium</td><td class="num">50.0000 lbf</td><td class="num">50 lbf applied</td></tr>
+              <tr><td>Bend stress, 3 meshes</td><td class="num">9,220–9,287 psi</td><td>within 0.7%</td></tr>
+              <tr><td>Bend vs curved-beam theory</td><td class="num">9,233 psi</td><td class="num">9,317 psi (−0.9%)</td></tr>
+              <tr><td>Leg stress below bend</td><td class="num">7,561 psi</td><td class="num">7,500 psi (+0.8%)</td></tr>
+              <tr><td>Shelf-tip deflection</td><td class="num">0.0265 in</td><td class="num">0.025–0.027 in</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption><span class="fn">Fig. 2</span>Verification checks. Every model result has an independent reference.<span class="sk">Skills: FEA · V&amp;V</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>What</th><th>Value</th><th>How I know</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Governing stress (inner bend)</td><td class="num">9,233 psi</td><td>Three meshes and curved-beam theory</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td><b>Factor of safety</b></td><td class="num"><b>3.9</b></td><td>Yield 36,259 psi ÷ governing stress (target 2)</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Material that could come out</td><td>Lower leg and shelf tip</td><td>Topology study, 70% volume limit</td><td><span class="pill p-sim">simulated</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">What I learned</h2>
+    <div class="lessons">
+      <div><h3>Converge or question</h3><p>A stress that grows with every refinement is a warning about the model, not the part.</p></div>
+      <div><h3>Check the reactions</h3><p>A reaction-force review caught a support placed in the wrong spot.</p></div>
+      <div><h3>Verify every number</h3><p>Each model result was checked against an independent reference: equilibrium, a mesh study and hand calculations.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-cad">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 9 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Graduate</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: CAD DRAWINGS ============================ -->
+<section id="p-cad" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / CAD models and drawings</p>
+    <span class="badge b-aca">Coursework</span>
+    <h1>CAD Models and Manufacturing Drawings</h1>
+    <p class="lede">Four parts taken from a 3D model to a dimensioned drawing a shop could quote and make from: section views, detail views, tolerances and geometric controls.</p>
+    <dl class="meta">
+      <div><dt>Parts</dt><dd>Bezel plate, flanged shaft hub, hub, hydraulic fitting</dd></div>
+      <div><dt>Tools</dt><dd>SolidWorks (3), Fusion 360 (1)</dd></div>
+      <div><dt>Standards</dt><dd>ASME Y14.5 dimensioning and tolerancing</dd></div>
+      <div><dt>Status</dt><dd>All four released at Rev A</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The drawings</h2>
+    <div class="fig-pair">
+      <figure class="fig" data-detail="d-cad-bezel"><img src="img/cad-bezel.jpg" alt="Bezel plate drawing" loading="lazy"><figcaption><span class="fn">Sheet 1</span>Bezel plate: section and detail views; cylindricity on the bore, flatness on the base and perpendicularity to datum A. SolidWorks, Rev A.</figcaption></figure>
+      <figure class="fig" data-detail="d-cad-flanged"><img src="img/cad-flanged-shaft.jpg" alt="Flanged shaft hub drawing" loading="lazy"><figcaption><span class="fn">Sheet 2</span>Flanged shaft hub: five-hole bolt-circle flange, section A-A and an M16x1.5 tapped bore. Fusion 360, Rev A.</figcaption></figure>
+      <figure class="fig" data-detail="d-cad-hub"><img src="img/cad-hub.jpg" alt="Hub drawing" loading="lazy"><figcaption><span class="fn">Sheet 3</span>Hub: six holes equally spaced on a Ø88 bolt circle, section C-C and a detail of the relief grooves. SolidWorks, Rev A.</figcaption></figure>
+      <figure class="fig" data-detail="d-cad-fitting"><img src="img/cad-fitting.jpg" alt="Hydraulic fitting drawing" loading="lazy"><figcaption><span class="fn">Sheet 4</span>Hydraulic fitting: section A-A and detail B of the seal groove. SolidWorks, Rev A.</figcaption></figure>
+    </div>  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-schedule">Next project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 10 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Coursework</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ PROJECT: LAUNCH SCHEDULE ============================ -->
+<section id="p-schedule" data-view hidden>
+  <div class="wrap cs-head" style="padding-block:40px 0">
+    <p class="crumb"><a href="#work">Work samples</a> / Product launch schedule</p>
+    <span class="badge b-aca">Coursework</span>
+    <h1>Product Launch Schedule: Critical Path</h1>
+    <p class="lede">A new-product launch with 25 activities across R&amp;D, marketing and advertising. I built the network and Gantt chart, found the 11 activities that set the launch date, and priced the cheapest way to finish sooner.</p>
+    <dl class="meta">
+      <div><dt>Scope</dt><dd>25 activities, three departments</dd></div>
+      <div><dt>Tools</dt><dd>Activity-on-node network, Gantt chart, crash analysis in Excel</dd></div>
+      <div><dt>Schedule</dt><dd>52 weeks, earliest finish</dd></div>
+      <div><dt>Result type</dt><dd>Calculated</dd></div>
+    </dl>
+  </div>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">The story</h2>
+    <div class="arc">
+      <div><span class="step">1 · The question</span><h3>When can we launch?</h3><p>Three departments, many hand-offs, and a launch date nobody could defend.</p></div>
+      <div><span class="step">2 · Why it mattered</span><h3>Know what can't slip</h3><p>Only some tasks decide the date. Managers need to know which ones to protect.</p></div>
+      <div><span class="step">3 · What I did</span><h3>Network, then crash</h3><p>Forward and backward pass for every activity, slack for each, then cost per week saved for the activities that could be shortened.</p></div>
+      <div class="out"><span class="step">4 · Result</span><h3>52 weeks, or 46 for $14,200</h3><p>11 zero-slack activities set the date. Cutting 4 weeks costs $7,200; the full 6 weeks costs $14,200.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Evidence</h2>
+    <div class="figs">
+      <figure class="fig"><img src="img/plan-gantt.jpg" alt="Gantt chart with critical path tasks in red" loading="lazy"><figcaption><span class="fn">Fig. 1</span>Gantt chart. Critical-path tasks are marked red.<span class="sk">Skills: scheduling · critical path</span></figcaption></figure>
+      <figure class="fig"><img src="img/plan-aon.jpg" alt="Activity-on-node network and crash analysis" loading="lazy"><figcaption><span class="fn">Fig. 2</span>Activity-on-node network and the crash-cost table.</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Results</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Option</th><th>Duration</th><th>Added cost</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Earliest-finish schedule</td><td class="num">52 weeks</td><td class="num">—</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Crash 4 weeks</td><td class="num">48 weeks</td><td class="num">$7,200</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Crash 5 weeks</td><td class="num">47 weeks</td><td class="num">$10,700</td><td><span class="pill p-calc">calculated</span></td></tr>
+        <tr><td>Crash 6 weeks (maximum)</td><td class="num">46 weeks</td><td class="num">$14,200</td><td><span class="pill p-calc">calculated</span></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="closenav">
+      <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#flow-study">First project →</a></div>
+      <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <div class="titleblock" aria-label="Document title block"><div><span>Sheet</span>Case study 11 of 11</div><div><span>Prepared by</span>R. Silva</div><div><span>Type</span>Coursework</div><div><span>Status</span>Released</div></div>
+  </div></section>
+</section>
+
+<!-- ============================ SKILLS ============================ -->
+<section id="skills" data-view hidden>
+  <div class="wrap" style="padding-block:44px 0">
+    <p class="eyebrow">Skills &amp; evidence</p>
+    <h1 class="page-h1">Every skill, and where I used it</h1>
+    <p class="lede" style="margin-top:12px">Each skill on my résumé, linked to the projects and jobs where I used it.</p>
+  </div>
+  <section class="band" style="padding-top:28px"><div class="wrap">
+    <div class="fam">
+      <div><h2>Quality engineering</h2><p class="fam-note">Core skills from my résumé</p></div>
+      <div>
+        <div class="sk-entry" id="skill-gdt"><h3>Blueprint reading / GD&amp;T (ASME Y14.5)</h3><p>Datums decide how I hold and flip a part; my drawings carry tolerances, the GD&amp;T standard and ASME Y14.5 practice.</p><span class="where"><b>Projects</b><a href="#p-machining">Machined parts and CAM</a> · <a href="#p-cad">CAD drawings</a> · <a href="#p-bracket">Bracket FEA</a></span><span class="where"><b>Jobs</b><a href="#job-aerorepair">AeroRepair</a> · <a href="#job-hpm">HPM Machining</a></span></div>
+        <div class="sk-entry" id="skill-inspect"><h3>Inspection data review / quality trends</h3><p>Moved final-inspection catches back to the operation that caused them; rework trends by type and station.</p><span class="where"><b>Projects</b><a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-defects">Defect tracking</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a> · <a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-rca"><h3>Root cause analysis / 5 Whys</h3><p>Grind variation behind shaft rejects; hose routing behind field ruptures; a rigid support behind a false FEA stress.</p><span class="where"><b>Projects</b><a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-fmea">Forestry hose FMEA</a> · <a href="#p-bracket">Bracket FEA</a></span><span class="where"><b>Jobs</b><a href="#job-deere">John Deere</a> · <a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-trace"><h3>Corrective action / traceability</h3><p>Every rework logged and followed until it is closed; gauging, a reaction plan and SOPs at the grinder; a control for each top hose risk.</p><span class="where"><b>Projects</b><a href="#p-defects">Defect tracking</a> · <a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-fmea">Forestry hose FMEA</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a> · <a href="#job-deere">John Deere</a> · <a href="#job-aerorepair">AeroRepair</a> · <a href="#job-hpm">HPM Machining</a></span></div>
+        <div class="sk-entry" id="skill-fmea"><h3>FMEA / PFMEA</h3><p>Scored failure modes by severity, occurrence and detection, with a control for each top risk (ID grind, RPN 640).</p><span class="where"><b>Projects</b><a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-fmea">Forestry hose FMEA</a> · <a href="#p-stent">Stent DOE and Six Sigma</a></span><span class="where"><b>Jobs</b><a href="#job-deere">John Deere</a> · <a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-msa"><h3>Measurement system analysis (MSA)</h3><p>Planned the measurement before the experiment; moved measurement to the grinder with in-process air gauging.</p><span class="where"><b>Projects</b><a href="#p-stent">Stent DOE and Six Sigma</a> · <a href="#p-shaft">Aircraft shaft reliability</a></span></div>
+        <div class="sk-entry" id="skill-spc"><h3>Statistical process control (SPC) / control charts</h3><p>A drift reaction plan at the grinder and a control plan to hold the stent settings.</p><span class="where"><b>Projects</b><a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-stent">Stent DOE and Six Sigma</a></span></div>
+        <div class="sk-entry" id="skill-cap"><h3>Process capability (Cp/Cpk)</h3><p>Capability study showed variation, not the spec, drove rejects: Cp 0.50 to 1.10. Capability baseline for the stent.</p><span class="where"><b>Projects</b><a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-stent">Stent DOE and Six Sigma</a></span><span class="where"><b>Jobs</b><a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-metro"><h3>Metrology / precision inspection</h3><p>Calipers, micrometers, height gauges and indicators against GD&amp;T callouts; precision tolerance checks and final inspection.</p><span class="where"><b>Projects</b><a href="#p-machining">Machined parts and CAM</a> · <a href="#p-shaft">Aircraft shaft reliability</a></span><span class="where"><b>Jobs</b><a href="#job-aerorepair">AeroRepair</a> · <a href="#job-hpm">HPM Machining</a></span></div>
+      </div>
+    </div>
+    <div class="fam">
+      <div><h2>Improvement and design</h2><p class="fam-note">Core skills from my résumé</p></div>
+      <div>
+        <div class="sk-entry" id="skill-pareto"><h3>Pareto analysis / KPI dashboards</h3><p>Lost time ranked by cause; failures ranked by source; rework and waste on a live dashboard with trend reports.</p><span class="where"><b>Projects</b><a href="#fig-loss">Production line flow, Fig. 4</a> · <a href="#p-defects">Defect tracking</a> · <a href="#p-shaft">Aircraft shaft reliability</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-doe"><h3>DOE / ANOVA</h3><p>2⁴ full factorial with center points, ANOVA and multi-response optimization.</p><span class="where"><b>Projects</b><a href="#p-stent">Stent DOE and Six Sigma</a></span></div>
+        <div class="sk-entry" id="skill-lean"><h3>Continuous improvement / Lean / Six Sigma / 5S</h3><p>Value stream map, painted floor zones and break calls; a full DMAIC project; 5S at the bench.</p><span class="where"><b>Projects</b><a href="#fig-zones">Production line flow, Fig. 6</a> · <a href="#p-breaks">Break-time standardization</a> · <a href="#p-gvr">Line balancing and lead time</a> · <a href="#p-stent">Stent DOE and Six Sigma</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a> · <a href="#job-aerorepair">AeroRepair</a></span></div>
+        <div class="sk-entry" id="skill-improve"><h3>Manufacturing process improvement</h3><p>Daily output +24%; first-pass yield 84.4% to 97.75%; break-related loss cut in half.</p><span class="where"><b>Projects</b><a href="#flow-study">Production line flow</a> · <a href="#p-shaft">Aircraft shaft reliability</a> · <a href="#p-breaks">Break-time standardization</a> · <a href="#p-defects">Defect tracking</a> · <a href="#p-gvr">Line balancing and lead time</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a> · <a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-cad"><h3>Mechanical design / 3D CAD</h3><p>SolidWorks and Fusion 360 models taken to released drawings; nine training parts modeled.</p><span class="where"><b>Projects</b><a href="#p-cad">CAD drawings</a> · <a href="#p-machining">Machined parts and CAM</a> · <a href="#p-bracket">Bracket FEA</a></span></div>
+      </div>
+    </div>
+    <div class="fam">
+      <div><h2>Technical tools</h2><p class="fam-note">From my résumé</p></div>
+      <div>
+        <div class="sk-entry" id="skill-minitab"><h3>Minitab</h3><p>Factorial design, ANOVA, regression and desirability optimization.</p><span class="where"><b>Projects</b><a href="#p-stent">Stent DOE and Six Sigma</a></span></div>
+        <div class="sk-entry" id="skill-excel"><h3>Microsoft Excel</h3><p>Queue counts, loss log, Little's Law targets and a dashboard that updates itself; crash analysis for a launch schedule.</p><span class="where"><b>Projects</b><a href="#fig-wip">Production line flow, Fig. 3</a> · <a href="#p-schedule">Launch schedule</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-solidworks"><h3>SOLIDWORKS</h3><p>Part models, SolidWorks CAM programs with simulated toolpaths, and Rev A drawings.</p><span class="where"><b>Projects</b><a href="#p-machining">Machined parts and CAM</a> · <a href="#p-cad">CAD drawings</a> · <a href="#p-bracket">Bracket FEA</a></span></div>
+        <div class="sk-entry" id="skill-fusion"><h3>Fusion 360</h3><p>Flanged shaft hub model and drawing.</p><span class="where"><b>Projects</b><a href="#p-cad">CAD drawings</a></span></div>
+        <div class="sk-entry" id="skill-sim"><h3>Siemens Tecnomatix Plant Simulation</h3><p>Discrete-event model of a 17-step line with cure buffers and real starting queues.</p><span class="where"><b>Projects</b><a href="#fig-sim">Production line flow, Fig. 5</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-ansys"><h3>ANSYS Mechanical</h3><p>Used in MECH 5120 Applied FEA, a UMass Lowell graduate course, starting with a beam study. The course's final project, the steel bracket, was solved in Abaqus.</p><span class="where"><b>Projects</b><a href="#p-bracket">Bracket FEA</a></span><span class="where"><b>Course</b><a href="#cred-dm">MECH 5120 Applied FEA, Graduate Certificate in Design and Manufacturing</a></span></div>
+      </div>
+    </div>
+    <div class="fam">
+      <div><h2>More from the projects</h2></div>
+      <div>
+        <div class="sk-entry" id="skill-vsm"><h3>Value stream mapping</h3><p>Mapped a 17-step line from order to shipping, with every queue and wait.</p><span class="where"><b>Projects</b><a href="#flow-study">Production line flow</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-time"><h3>Time study / cycle-time analysis</h3><p>Timed every station and separated real work from handling; logged lost time by cause.</p><span class="where"><b>Projects</b><a href="#fig-route">Production line flow, Fig. 2</a> · <a href="#p-breaks">Break-time standardization</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-bottleneck"><h3>Bottleneck identification / line balancing</h3><p>Found the constraint from cycle times, confirmed it in simulation, and rebalanced labor around it.</p><span class="where"><b>Projects</b><a href="#fig-sim">Production line flow, Fig. 5</a> · <a href="#p-gvr">Line balancing and lead time</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-wip"><h3>WIP analysis</h3><p>Sized each queue with Little's Law and separated required cure time from extra waiting.</p><span class="where"><b>Projects</b><a href="#fig-wip">Production line flow, Fig. 3</a> · <a href="#p-gvr">Line balancing and lead time</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-cam"><h3>CNC machining and CAM programming</h3><p>Parts made on Haas CNC, ProtoTRAK and manual machines, and programmed in SolidWorks CAM.</p><span class="where"><b>Projects</b><a href="#p-machining">Machined parts and CAM</a></span></div>
+        <div class="sk-entry" id="skill-fea"><h3>Finite element analysis</h3><p>Mesh convergence, equilibrium check and agreement with hand calculations within 0.9% (Abaqus).</p><span class="where"><b>Projects</b><a href="#p-bracket">Bracket FEA</a></span></div>
+        <div class="sk-entry" id="skill-pm"><h3>Project scheduling</h3><p>Network diagram, Gantt chart, slack and crash plan for a 52-week launch.</p><span class="where"><b>Projects</b><a href="#p-schedule">Launch schedule</a></span><span class="where"><b>Jobs</b><a href="#job-magellan">Magellan Aerospace</a></span></div>
+        <div class="sk-entry" id="skill-datacol"><h3>Manufacturing data collection</h3><p>Each drawer counted at each station from a label scan, so progress is known without walking the floor.</p><span class="where"><b>Projects</b><a href="#p-defects">Defect tracking</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a></span></div>
+        <div class="sk-entry" id="skill-training"><h3>Operator training and team problem-solving</h3><p>Picture cards anyone can read at a glance; loss data taken to the team to pick the fix; SOPs and training at the grinder.</p><span class="where"><b>Projects</b><a href="#p-defects">Defect tracking</a> · <a href="#p-breaks">Break-time standardization</a> · <a href="#p-shaft">Aircraft shaft reliability</a></span><span class="where"><b>Jobs</b><a href="#job-eagle">Eagle Woodworking</a> · <a href="#job-deere">John Deere</a></span></div>
+      </div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section id="experience" data-view hidden>
+  <div class="wrap" style="padding-block:44px 0">
+    <p class="eyebrow">Experience</p>
+    <h1 class="page-h1">Where I've worked</h1>
+    <p class="lede" style="margin-top:12px">Manufacturing and aerospace first, then the roles that taught me to run a team and keep a shop moving.</p>
+  </div>
+  <section class="band" style="padding-top:28px"><div class="wrap">
+    <div class="job" id="job-eagle">
+      <div><h2>Manufacturing Engineer</h2><p class="org">Eagle Woodworking · fully custom, made-to-order production line · Massachusetts</p></div>
+      <div>
+        <ul>
+          <li>Mapped the drawer line and found most of its lead time was waiting; rebalanced it and raised daily output 24%.</li>
+          <li>Made rework and scrap traceable: every defect is logged by type and station where it's found, so the line can act on trends.</li>
+          <li>Measured late restarts after breaks and, with the team, put in scheduled break calls, cutting that loss in half.</li>
+          <li>Designed painted floor zones and simple rules so people move to where the work is without being told.</li>
+        </ul>
+        <p class="links">Case studies: <a href="#flow-study">Production line flow</a> · <a href="#p-defects">Defect tracking</a> · <a href="#p-breaks">Break-time standardization</a></p>
+      </div>
+    </div>
+    <div class="job" id="job-magellan">
+      <div><h2>Production Expeditor</h2><p class="org">Magellan Aerospace · AS9100 machine shop</p></div>
+      <div>
+        <ul>
+          <li>Kept aerospace parts moving through production, tracking work in progress and raising bottlenecks before they made parts late.</li>
+          <li>Worked routing delays with planning, manufacturing engineering and quality.</li>
+          <li>Kept ERP and MRP records accurate so the schedule matched the floor.</li>
+        </ul>
+        <p class="links">Case study: <a href="#p-shaft">Aircraft shaft reliability and process capability</a></p>
+      </div>
+    </div>
+    <div class="job" id="job-aerorepair">
+      <div><h2>Landing Gear Technician</h2><p class="org">AeroRepair Corp · FAA Part 145 repair station</p></div>
+      <div>
+        <ul>
+          <li>Took apart, repaired and rebuilt aircraft landing gear to the manual.</li>
+          <li>Precision measurement and tolerance checks, hydraulic testing, corrosion protection, and exposure to non-destructive testing.</li>
+          <li>Kept the bench organized with 5S and every step traceable in the maintenance records.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job" id="job-hpm">
+      <div><h2>Mechanical Engineer</h2><p class="org">HPM Machining Services · repair and machining</p></div>
+      <div>
+        <ul>
+          <li>Inspected damaged components, set the repair scope and picked the repair method by cost, reliability and what production needed.</li>
+          <li>Wrote the work orders and process documents, and did the final inspection before release against safety and Certificate of Conformance requirements.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job" id="job-deere">
+      <div><h2>Mechanical Engineer Intern</h2><p class="org">John Deere · forestry equipment · Brazil</p></div>
+      <div>
+        <ul>
+          <li>Investigated equipment failures with inspection findings, 5 Whys and FMEA, and supported the corrective actions.</li>
+          <li>Wrote installation and maintenance SOPs and helped roll out a new winch installation across teams.</li>
+        </ul>
+        <p class="links">Case study: <a href="#p-fmea">Forestry harvester hose FMEA</a></p>
+      </div>
+    </div>
+    <div class="job support" id="job-guard">
+      <div><h2>Air Traffic Controller</h2><p class="org">Massachusetts National Guard</p></div>
+      <div><ul><li>Procedure discipline, safety, equipment checks and clear communication when the timing matters.</li></ul></div>
+    </div>
+    <div class="job support" id="job-realauto">
+      <div><h2>General Manager</h2><p class="org">Real Auto Shop</p></div>
+      <div><ul><li>Ran the shop day to day: led the team, scheduled the work, bought parts, managed the budget and grew the business.</li></ul></div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ EDUCATION ============================ -->
+<section id="education" data-view hidden>
+  <div class="wrap" style="padding-block:44px 0">
+    <p class="eyebrow">Education</p>
+    <h1 class="page-h1">Education, certificates and memberships</h1>
+    <p class="lede" style="margin-top:12px">From graduate engineering to hands-on machining, plus professional memberships. Copies of certificates and diplomas are available on request.</p>
+  </div>
+  <section class="band" style="padding-top:28px"><div class="wrap">
+    <div class="lvl">
+      <span class="eyebrow">Master's degree</span>
+      <div class="cred"><div><h3>M.S. Engineering Management</h3><p class="sub">UMass Lowell · in progress</p></div></div>
+    </div>
+    <div class="lvl">
+      <span class="eyebrow">Graduate certificates</span>
+      <div class="cred"><div><h3>Maintenance Engineering and Management</h3><p class="sub">UCAM, Brazil · 600-hour graduate program</p></div></div>
+      <div class="cred" id="cred-dm"><div><h3>Certificate of Graduate Achievement, Design and Manufacturing</h3><p class="sub">UMass Lowell · design of experiments, quality engineering, design for reliability, FEA, plastics product design</p></div></div>
+    </div>
+    <div class="lvl">
+      <span class="eyebrow">Bachelor's degree</span>
+      <div class="cred"><div><h3>B.S. Mechanical Engineering</h3><p class="sub">UNILESTE, Brazil · evaluated as equivalent to a U.S. bachelor's in mechanical engineering</p></div></div>
+    </div>
+    <div class="lvl">
+      <span class="eyebrow">Certificates</span>
+      <div class="cred"><div><h3>Advanced Manufacturing Training and Expansion Program (AMTEP)</h3><p class="sub">Essex North Shore Agricultural &amp; Technical School, Danvers, MA · 400 hours, hands-on: Haas Mini Mill, TM-1, VF-2, TL-1 and TL lathe; ProtoTRAK mills and lathes; manual engine lathes; G-code, setup and tooling; precision measurement; blueprint reading and GD&amp;T</p></div></div>
+      <div class="cred"><div><h3>NIMS Level 1, CNC Milling Operations</h3><p class="sub">National Institute for Metalworking Skills</p></div></div>
+      <div class="cred"><div><h3>Contextualized Machining Mathematics Certificate</h3><p class="sub">North Shore Community College, Danvers, MA</p></div></div>
+      <div class="cred"><div><h3>OSHA 10-Hour General Industry</h3><p class="sub">Occupational Safety and Health Administration</p></div></div>
+      <div class="cred"><div><h3>3D Geometric Dimensioning and Tolerancing (GD&amp;T)</h3><p class="sub">Geomiq Academy · Mastering 3D GD&amp;T: symbols, datums and tolerances for manufacturing, inspection and quality control</p></div></div>
+      <div class="cred"><div><h3>Finite Element Analysis: Convergence and Mesh Independence</h3><p class="sub">Coursera project</p></div></div>
+      <div class="cred"><div><h3>Six Sigma Black Belt Specialization</h3><p class="sub">DMAIC, statistical process control, design for Six Sigma</p></div></div>
+      <div class="cred"><div><h3>Construction Management Specialization</h3><p class="sub">Project planning, scheduling and cost control</p></div></div>
+    </div>
+    <div class="lvl" id="memberships">
+      <span class="eyebrow">Professional memberships</span>
+      <div class="cred"><div><h3>ASME, American Society of Mechanical Engineers</h3><p class="sub">Student member</p></div></div>
+      <div class="cred"><div><h3>ASQ, American Society for Quality</h3><p class="sub">Member</p></div></div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ RESUME REQUEST ============================ -->
+<section id="resume" data-view hidden>
+  <div class="wrap" style="padding-block:44px 0">
+    <p class="eyebrow">Résumé</p>
+    <h1 class="page-h1">Request my résumé</h1>
+  </div>
+  <section class="band" style="padding-top:28px"><div class="wrap req">
+    <div class="prose">
+      <p class="lede">Email me and I'll send the current version of my résumé, matched to the role if you tell me which one.</p>
+      <p>You can also message me on LinkedIn.</p>
+    </div>
+    <div>
+      <div class="rq">
+        <p class="mono" style="font-size:14px;color:var(--muted)">Email</p>
+        <p style="font-size:20px;font-weight:600" id="rq-addr">rodolfodente [at] gmail [dot] com</p>
+        <div class="btns">
+          <a class="btn primary" id="rq-mail" href="#resume">Email me for my résumé</a>
+          <a class="btn tertiary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+        </div>
+        <p style="font-size:14px;color:var(--muted)">The button opens your email program with the subject filled in.</p>
+      </div>
+    </div>
+  </div></section>
+</section>
+
+<!-- ============================ DETAIL PANELS (machined parts, drawings) ============================ -->
+<dialog class="detail" id="detail-dlg" aria-labelledby="dlg-title">
+  <div class="dlg-head"><h2 id="dlg-title"></h2><button class="dlg-x" type="button" aria-label="Close">×</button></div>
+  <div class="dlg-body"></div>
+</dialog>
+
+<template id="d-face-turn" data-title="Face and Turn">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Haas TL lathe</dd></div><div><dt>Material</dt><dd>6061 aluminum</dd></div><div><dt>Setups</dt><dd>1</dd></div><div><dt>Spindle</dt><dd>Speeds checked for 6061, max 1,800 RPM</dd></div></dl>
+    <h3>What the part is</h3><p>Four stepped diameters from Ø0.950 to Ø0.675 in, sharp edges broken .005–.015.</p>
+    <h3>My CAM program</h3><ol><li>Face the end: rough with the 80° insert, finish with the 55°.</li><li>Turn the four diameters: rough with the 80° insert, finish with the 55°.</li><li>Cut off to length.</li></ol>
+    <h3>Tools</h3><ul class="tools"><li>T01 · CNMG 431 80° holder</li><li>T03 · DNMG 431 55° holder</li><li>T10 · 0.118 in cut-off blade</li></ul>
+  <h3>Machine and programming techniques</h3><ul><li>Haas TL CNC lathe, one setup in the chuck, work offset G54.</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96) with the spindle capped by G50 at 1,800 RPM; feed per revolution (G99).</li><li>Roughing and finishing split between two inserts: 80° for stock removal, 55° for the finish profile.</li><li>Coolant on (M08) and an optional stop (M01) after each tool so the part can be checked.</li></ul>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-face-turn.jpg" target="_blank" rel="noopener"><img src="img/dwg-face-turn.jpg" alt="Drawing RS-2001" loading="lazy"></a><figcaption><span class="fn">RS-2001 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2001-face-turn.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 145 lines</span><a href="prog/face-and-turn.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">O0001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 1800 RPM - HAAS TL LATHE)
+N1 (CNMG 431 80DEG SQR HOLDER)
+N2 T0101
+N3 B90.
+G50 S1800
+N4 G00 G96 S1800 M03
+
+N5 ( Face Rough1 )
+N6 G54 G00 Z.2571 M08
+N7 X1.2141
+N8 G99 G01 X1. Z.15 F.0161
+N9 X-.0314
+N10 X-.0455 Z.1571
+N11 G00 Z.2571
+N12 X1.0141
+N13 Z.1171
+N14 G01 X1. Z.11
+N15 X-.0314
+N16 X-.0455 Z.1171
+N17 G00 Z.2171
+N18 X1.0141
+N19 Z.0171
+N20 G01 X1. Z.01
+N21 X-.0314
+N22 X-.0455 Z.0171
+N23 G00 Z.3343
+N24 X20. Z5. M09
+N25 M01
+
+N26 (DNMG 431 55DEG SQR HOLDER)
+N27 T0303
+N28 B90.
+G50 S1800
+N29 G00 G96 S1800 M03
+
+N30 ( Face Finish1 )
+N31 G54 G00 Z.1071 M08
+N32 X1.1827
+N33 G01 X.9686 Z0 F.0161
+N34 X-.0314
+N35 X-.0455 Z.0071
+N36 G00 X20. Z5. M09
+N37 M01
+
+N38 (CNMG 431 80DEG SQR HOLDER)
+N39 T0101
+N40 B90.
+G50 S1800
+N41 G00 G96 S1800 M03
+
+N42 ( Turn Rough1 )
+N43 G54 G00 Z.1071 M08
+N44 X1.0141
+N45 G01 X.8 Z0 F.0161
+N46 Z-.969
+N47 G03 X.87 Z-1.0207 R.0557
+N48 G01 Z-1.9653
+N49 G03 X.97 Z-2.0207 R.0557
+N50 G01 Z-2.9742
+N51 G03 X1. Z-2.9889 R.0557
+N52 G01 X1.0197 Z-2.9906
+N53 X1.0497
+N54 G00 X1.2197
+N55 Z.009
+N56 X.7457
+N57 G01 X.7371 Z0
+N58 X.7386 Z-.0021
+N59 G03 X.745 Z-.0207 R.0557
+N60 G01 Z-.965
+N61 X.7586
+N62 G03 X.8 Z-.969 R.0557
+N63 G01 X.8184 Z-.9651
+N64 Z-.93
+N65 G00 Z-.0014
+N66 X.7001
+N67 G01 X.6915 Z-.0105
+N68 G03 X.695 Z-.0207 R.0307
+N69 G01 Z-.99
+N70 X.7586
+N71 G03 X.82 Z-1.0207 R.0307
+N72 G01 Z-1.99
+N73 X.8586
+N74 G03 X.92 Z-2.0207 R.0307
+N75 G01 Z-2.9905
+N76 G03 X.97 Z-3.0207 R.0307
+N77 G01 Z-4.5107
+N78 G03 X.9695 Z-4.5144 R.0307
+N79 G01 X.9692 Z-4.5157
+N80 X.9815 Z-4.5236
+N81 G00 X1.1815
+N82 X20. Z5. M09
+N83 M01
+
+N84 (DNMG 431 55DEG SQR HOLDER)
+N85 T0303
+N86 B90.
+G50 S1800
+N87 G00 G96 S1800 M03
+
+N88 ( Turn Finish1 )
+N89 G54 G00 Z.1071 M08
+N90 X.8195
+N91 G01 X.6195 Z.0071 F.0161
+N92 X.6336 Z0
+N93 G03 X.675 Z-.0207 R.0207
+N94 G01 Z-1.
+N95 X.7586
+N96 G03 X.8 Z-1.0207 R.0207
+N97 G01 Z-2.
+N98 X.8586
+N99 G03 X.9 Z-2.0207 R.0207
+N100 G01 Z-3.
+N101 X.9086
+N102 G03 X.95 Z-3.0207 R.0207
+N103 G01 Z-4.5107
+N104 G03 X.9478 Z-4.5174 R.0207
+N105 G01 X.9566 Z-4.5263
+N106 X.9686
+N107 G00 X1.1566
+N108 X20. Z5. M09
+N109 M01
+
+N110 (0.118W CUT-OFF BLADE)
+N111 T1010
+N112 B90.
+G50 S1800
+N113 G00 G96 S1037 M03
+
+N114 ( Cut Off1 )
+N115 G54 G00 Z-4.518 M08
+N116 X1.356
+N117 G01 Z-4.618 F.0036
+N118 X.756
+N119 G00 X.956
+N120 G01 X.556
+N121 G00 X.756
+N122 G01 X.356
+N123 G00 X.556
+N124 G01 X.156
+N125 G00 X.356
+N126 G01 X-.016
+N127 G00 X1.34
+N128 X20. Z5. M09
+N129 M30</pre></div>
+    <figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cylinder" data-title="Simple Cylinder">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Lathe</dd></div><div><dt>Material</dt><dd>Aluminum</dd></div><div><dt>Status</dt><dd>Toolpaths simulated</dd></div></dl>
+    <h3>What the part is</h3><p>A turned cylinder with a drilled and bored inside diameter: the first lathe exercise.</p>
+    <h3>Process</h3><ol><li>Saw the bar to length.</li><li>Face and turn the outside diameter.</li><li>Drill from the tailstock, then bore the inside diameter to size.</li></ol>
+  <h3>Machine and programming techniques</h3><ul><li>Lathe. The toolpaths are simulated in SolidWorks CAM; no program was posted for this part.</li></ul>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-cylinder.jpg" target="_blank" rel="noopener"><img src="img/dwg-cylinder.jpg" alt="Drawing RS-2002" loading="lazy"></a><figcaption><span class="fn">RS-2002 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2002-cylinder.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-taper" data-title="OD &amp; ID Taper">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Haas TL lathe</dd></div><div><dt>Material</dt><dd>6061 aluminum</dd></div><div><dt>Program</dt><dd>11 operations, one setup</dd></div><div><dt>Spindle</dt><dd>Max 1,800 RPM</dd></div></dl>
+    <h3>What the part is</h3><p>Outside and inside tapers with a Ø1.200 in bore held concentric to the outside diameter.</p>
+    <h3>My CAM program</h3><ol><li>Face and turn the outside diameter and taper: rough 80°, finish 55°.</li><li>Center drill, then drill in two steps (19/32 in and 1/2 in).</li><li>Bore the inside diameter and taper: rough 80°, finish 55° boring bar.</li><li>Cut off to length.</li></ol>
+    <h3>Tools</h3><ul class="tools"><li>T01 · CNMG 431 80° holder</li><li>T03 · DNMG 431 55° holder</li><li>T05 · #3 60° center drill</li><li>T02 · 19/32 in drill</li><li>T11 · 1/2 in drill</li><li>T04 · CNMG 431 80° boring bar</li><li>T06 · DNMG 431 55° boring bar</li><li>T10 · 0.118 in cut-off blade</li></ul>
+  <h3>Machine and programming techniques</h3><ul><li>Haas TL CNC lathe, one setup, work offset G54, XZ plane (G18).</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96, capped by G50) for turning and boring; fixed RPM (G97) for drilling.</li><li>Center drilled with the G74 peck cycle before drilling, so the drill starts on center and the bore stays concentric to the outside.</li><li>Inside diameter and taper cut with boring bars: rough with the 80°, finish with the 55°.</li><li>Optional stop (M01) between tools.</li></ul>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-taper.jpg" target="_blank" rel="noopener"><img src="img/dwg-taper.jpg" alt="Drawing RS-2003" loading="lazy"></a><figcaption><span class="fn">RS-2003 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2003-taper.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 298 lines</span><a href="prog/od-id-taper.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O0001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 1800 RPM - HAAS TL LATHE)
+G00 G18 G40 G80 G97 G99
+
+N1 ( Face Rough1 )
+G54
+T0101 (CNMG 431 80DEG SQR HOLDER)
+G97 S1000 M03
+G99 G18 G00 Z.1171
+M08
+G50 S1800
+G96 S1800
+X2.3141
+G01 X2.1 Z.01 F.0161
+X-.0314
+X-.0455 Z.0171
+G00 Z.1343
+X20. Z5. M09
+M01
+
+N2 ( Face Finish1 )
+G54
+T0303 (DNMG 431 55DEG SQR HOLDER)
+G97 S1000 M03
+G99 G18 G00 Z.1071
+M08
+G50 S1800
+G96 S1800
+X2.2827
+G01 X2.0686 Z0 F.0161
+X-.0314
+X-.0455 Z.0071
+G00 X20. Z5. M09
+M01
+
+N3 ( Turn Rough1 )
+G54
+T0101 (CNMG 431 80DEG SQR HOLDER)
+G97 S1000 M03
+G99 G18 G00 Z.1071
+M08
+G50 S1800
+G96 S1800
+X2.1922
+G01 X1.978 Z0 F.0161
+Z-.0563
+X2.0698 Z-.7122
+G03 X2.07 Z-.7157 R.0507
+G01 Z-1.9907
+X2.1
+X2.1141 Z-1.9836
+X2.1441
+G00 X2.3141
+Z.0075
+X1.9833
+G01 X1.9702 Z0
+X1.978 Z-.0563
+X1.9931 Z-.0629
+G00 Z.0086
+X1.933
+G01 X1.9199 Z.0011
+X2.0199 Z-.7139
+G03 X2.02 Z-.7157 R.0257
+G01 Z-2.0157
+X2.0686
+X2.0827 Z-2.0086
+G00 X2.2827
+X20. Z5. M09
+M01
+
+N4 ( Turn Finish1 )
+G54
+T0303 (DNMG 431 55DEG SQR HOLDER)
+G97 S1000 M03
+G99 G18 G00 Z.0929
+M08
+G50 S1800
+G96 S1800
+X2.1151
+G01 X1.9151 Z-.0071 F.0161
+X1.902 Z-.0146
+X1.9999 Z-.7146
+G03 X2. Z-.7157 R.0157
+G01 Z-2.0168
+X2.0141 Z-2.0238
+X2.0686
+G00 X2.2141
+X20. Z5. M09
+M01
+
+N5 ( Center Drill3 )
+G54
+T0505 (#3 60DEG HSS CENTERDRILL)
+G97 S1800 M03
+G98 G18 G00 Z.1
+M08
+X0
+G74 Z-.1 F4.3204
+M01
+
+N6 ( Drill3 )
+G54
+T0202 (19/32 SCREW MACH DRILL)
+G97 S1600 M03
+G99 G18 G00 Z.1774
+Z.0774
+G01 Z-2. F.0053
+G00 Z.0774
+X20. Z5. M09
+M01
+
+N7 ( Center Drill4 )
+G54
+T0505 (#3 60DEG HSS CENTERDRILL)
+G97 S1800 M03
+G98 G18 G00 X0
+M08
+G74 Z-.1 F4.3204
+M01
+
+N8 ( Drill4 )
+G54
+T1111 (1/2 SCREW MACH DRILL)
+G97 S1800 M03
+G98 G18 G00 Z.1
+G01 Z-.1 F9.0013
+G00 Z.1
+Z0
+G01 Z-.2
+G00 Z.1
+Z-.1
+G01 Z-.3
+G00 Z.1
+Z-.2
+G01 Z-.4
+G00 Z.1
+Z-.3
+G01 Z-.5
+G00 Z.1
+Z-.4
+G01 Z-.6
+G00 Z.1
+Z-.5
+G01 Z-.7
+G00 Z.1
+Z-.6
+G01 Z-.8
+G00 Z.1
+Z-.7
+G01 Z-.9
+G00 Z.1
+Z-.8
+G01 Z-1.
+G00 Z.1
+Z-.9
+G01 Z-1.1
+G00 Z.1
+Z-1.
+G01 Z-1.2
+G00 Z.1
+Z-1.1
+G01 Z-1.3
+G00 Z.1
+Z-1.2
+G01 Z-1.4
+G00 Z.1
+Z-1.3
+G01 Z-1.5
+G00 Z.1
+Z-1.4
+G01 Z-1.6
+G00 Z.1
+Z-1.5
+G01 Z-1.7
+G00 Z.1
+Z-1.6
+G01 Z-1.8
+G00 Z.1
+Z-1.7
+G01 Z-1.9
+G00 Z.1
+Z-1.8
+G01 Z-2.
+G00 Z.1
+X20. Z5. M09
+M01
+
+N9 ( Bore Rough5 )
+G54
+T0404 (CNMG 431 80DEG BORE BAR)
+G97 S1000 M03
+G99 G18 G00 X.5797
+M08
+G50 S1800
+G96 S1800
+Z.1071
+G01 X.7938 Z0 F.0161
+Z-1.4008
+X.6314
+G02 X.5938 Z-1.4022 R.1257
+G01 X.5777 Z-1.3962
+G00 X.3777
+Z.0071
+X.9721
+G01 X.9862 Z0
+Z-.6847
+X.9824 Z-.6982
+G02 X.98 Z-.7157 R.1257
+G01 Z-1.4008
+X.7938
+X.7797 Z-1.3937
+X.7497
+G00 X.5797
+Z.008
+X1.1667
+G01 X1.1787 Z0
+X.9862 Z-.6847
+X.9703 Z-.6907
+G00 Z.01
+X1.3692
+G01 X1.3812 Z.002
+X1.1805 Z-.7121
+G02 X1.18 Z-.7157 R.0257
+G01 Z-1.5008
+X.6314
+G02 X.6155 Z-1.502 R.0257
+G01 X.5976 Z-1.4975
+G00 X.3145
+Z-1.8728
+X.5659
+G01 X.58 Z-1.8799
+Z-2.0157
+X.0314
+X.0173 Z-2.0086
+G00 X-.1827
+Z-2.0032
+X-.3827
+Z.1
+X20. Z5. M09
+M01
+
+N10 ( Bore Finish1 )
+G54
+T0606 (DNMG 431 55DEG BORE BAR)
+G97 S1000 M03
+G99 G18 G00 Z.0945
+M08
+G50 S1800
+G96 S1800
+X1.185
+G01 X1.385 Z-.0055 F.0161
+X1.3971 Z-.0135
+X1.2003 Z-.7135
+G02 X1.2 Z-.7157 R.0157
+G01 Z-1.5108
+X.6314
+G02 X.6 Z-1.5265 R.0157
+G01 Z-2.0168
+X.5859 Z-2.0238
+X.3859
+G00 Z.1
+X20. Z5. M09
+M01
+
+N11 ( Cut Off1 )
+G54
+T1010 (0.118W CUT-OFF BLADE)
+G97 S1000 M03
+G99 G18 G00 Z-2.018
+M08
+G50 S1800
+G96 S1037
+X2.416
+G01 Z-2.118 F.0036
+X1.816
+G00 X2.016
+G01 X1.616
+G00 X1.816
+G01 X1.416
+G00 X1.616
+G01 X1.216
+G00 X1.416
+G01 X1.016
+G00 X1.216
+G01 X.816
+G00 X1.016
+G01 X.616
+G00 X.816
+G01 X.584
+G00 X2.4
+X20. Z5. M09
+M01
+
+M05
+/ M99
+M30
+%</pre></div>
+  </div></div>
+</template>
+
+<template id="d-clamp-end" data-title="C-Clamp End">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Lathe</dd></div><div><dt>Material</dt><dd>Brass</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
+    <h3>What the part is</h3><p>The turned end of the C-clamp assembly: a chamfered head on a stepped shank that fits the clamp screw.</p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-clamp-end.jpg" target="_blank" rel="noopener"><img src="img/dwg-clamp-end.jpg" alt="Drawing RS-2004" loading="lazy"></a><figcaption><span class="fn">RS-2004 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2004-clamp-end.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cube" data-title="Reamed Cube">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machines</dt><dd>Haas TM-1, Mini Mill or VF-2</dd></div><div><dt>Material</dt><dd>6061 aluminum</dd></div><div><dt>Setups</dt><dd>2</dd></div><div><dt>Spindle</dt><dd>Max 4,000 RPM</dd></div></dl>
+    <h3>What the part is</h3><p>A 0.900 in cube with Ø0.248 in reamed holes on two faces.</p>
+    <h3>My CAM program</h3><ol><li>Setup 1: square the block with the end mill; spot, drill and ream the first hole; then the second.</li><li>Setup 2: flip the part and finish the last face to size.</li></ol>
+    <h3>Tools</h3><ul class="tools"><li>T01 · 3/4 in carbide end mill, 2 flute</li><li>T03 · 1/4 in 90° spot drill</li><li>T04 · 6.1 mm drill</li><li>T05 · 0.2480 in reamer</li></ul>
+  <h3>Machine and programming techniques</h3><ul><li>Haas vertical mill (TM-1, Mini Mill or VF-2), part held in a vise on parallels.</li><li>Program built in SolidWorks CAM and posted to Haas G-code, one program per setup.</li><li>A separate work offset for each setup: G54 for Setup 1, G55 for the flipped part in Setup 2.</li><li>Tool length compensation (G43 H) on every tool and cutter radius compensation (G41 D) on the profile, so size can be tuned at the machine.</li><li>Inch units (G20), absolute positioning (G90), feed per minute (G94); Z sent to machine home (G53) before each tool change.</li><li>Canned cycles: G82 spot drill with dwell, G81 drill, G85 ream (feeds in and out for a clean bore); G98 returns to the start plane between holes.</li></ul>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-cube.jpg" target="_blank" rel="noopener"><img src="img/dwg-cube.jpg" alt="Drawing RS-2005" loading="lazy"></a><figcaption><span class="fn">RS-2005 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2005-cube.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Setup 1 · 137 lines</span><a href="prog/reamed-cube-setup1.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O00001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
+N5 G20 G17 G40 G80 G90
+N10 T01 M06 (3/4 EM CRB 2FL 1-1/2 LOC)
+N15 G54 G90 G94
+N20 S4000 M03
+N25 G00 G90 X.4125 Y.4125
+N30 G43 H01 Z.1 M08
+N35 G01 Z-.04 F6.0123
+N40 X.5875 F24.0491
+N45 Y.5875
+N50 X.4125
+N55 Y.4125
+N60 X.1125 Y.1125
+N65 X.8875
+N70 Y.8875
+N75 X.1125
+N80 Y.1125
+N85 X-.1875 Y-.1875
+N90 X1.1875
+N95 Y1.1875
+N100 X-.1875
+N105 Y-.1875
+N110 G00 Z.1
+N115 G90 G54 X.4125 Y.4125
+N120 Z.06
+N125 G01 Z-.05 F6.0123
+N130 X.5875 F24.0491
+N135 Y.5875
+N140 X.4125
+N145 Y.4125
+N150 X.1125 Y.1125
+N155 X.8875
+N160 Y.8875
+N165 X.1125
+N170 Y.1125
+N175 X-.1875 Y-.1875
+N180 X1.1875
+N185 Y1.1875
+N190 X-.1875
+N195 Y-.1875
+N200 G00 Z.1
+N205 Z1.
+N210 S3677
+N215 G90 G54 X1.6227 Y.8663
+N220 Z.1
+N225 G01 Z-.425 F4.0448
+N230 G90 G41 X1.347 Y.5905 D01 F12.1345
+N235 G03 X1.325 Y.5375 I.053 J-.053
+N240 G01 Y-.325 F16.1793
+N245 X-.325
+N250 Y1.325
+N255 X1.325
+N260 Y.4625
+N265 G03 X1.347 Y.4095 I.075 J0
+N270 G40 G01 X1.6227 Y.1337
+N275 G00 Z.1
+N280 G90 G54 X1.6227 Y.8663
+N285 Z-.325
+N290 G01 Z-.715 F4.0448
+N295 G90 G41 X1.347 Y.5905 D01 F12.1345
+N300 G03 X1.325 Y.5375 I.053 J-.053
+N305 G01 Y-.325 F16.1793
+N310 X-.325
+N315 Y1.325
+N320 X1.325
+N325 Y.4625
+N330 G03 X1.347 Y.4095 I.075 J0
+N335 G40 G01 X1.6227 Y.1337
+N340 G00 Z.1
+N345 G90 G54 X1.6227 Y.8663
+N350 Z-.615
+N355 G01 Z-1.005 F4.0448
+N360 G90 G41 X1.347 Y.5905 D01 F12.1345
+N365 G03 X1.325 Y.5375 I.053 J-.053
+N370 G01 Y-.325 F16.1793
+N375 X-.325
+N380 Y1.325
+N385 X1.325
+N390 Y.4625
+N395 G03 X1.347 Y.4095 I.075 J0
+N400 G40 G01 X1.6227 Y.1337
+N405 G00 Z.1
+N410 Z10. M09
+N415 G00 G90 G53 G49 H0 Z0 M05
+N420 T03 M06 (1/4 X 90DEG CBT SPOT DRILL)
+N425 G54 G90 G94
+N430 S4000 M03
+N435 G90 X-.5 Y.5
+N440 G43 H03 Z1. M08
+N445 G98 G82 Z-.08 R.05 P00 F14.4275
+N450 G80 Z1. M09
+N455 G00 G90 G53 G49 H0 Z0 M05
+N460 T04 M06 (6.1MM SCREW MACH DRILL)
+N465 G54 G90 G94
+N470 S4000 M03
+N475 G90
+N480 G43 H04 Z1. M08
+N485 G98 G81 Z-.9997 R.05 F14.4202
+N490 G80 Z1. M09
+N495 G00 G90 G53 G49 H0 Z0 M05
+N500 T05 M06 (0.2480 HSS REAMER)
+N505 G54 G90 G94
+N510 S2000 M03
+N515 G90
+N520 G43 H05 Z1. M08
+N525 G98 G85 Z-.96 R.05 F10.4017
+N530 G80 Z10. M09
+N535 G00 G90 G53 G49 H0 Z0 M05
+N540 T03 M06 (1/4 X 90DEG CBT SPOT DRILL)
+N545 G54 G90 G94
+N550 S4000 M03
+N555 G90 Y.5131
+N560 G43 H03 Z2. M08
+N565 G98 G82 Z.92 R1.05 P00 F14.4275
+N570 G80 Z2. M09
+N575 G00 G90 G53 G49 H0 Z0 M05
+N580 T04 M06 (6.1MM SCREW MACH DRILL)
+N585 G54 G90 G94
+N590 S4000 M03
+N595 G90
+N600 G43 H04 Z2. M08
+N605 G98 G81 Z.0003 R1.05 F14.4202
+N610 G80 Z2. M09
+N615 G00 G90 G53 G49 H0 Z0 M05
+N620 T05 M06 (0.2480 HSS REAMER)
+N625 G54 G90 G94
+N630 S2000 M03
+N635 G90
+N640 G43 H05 Z2. M08
+N645 G98 G85 Z.04 R1.05 F10.4017
+N650 G80 Z2. M09
+N655 G00 G90 G53 G49 H0 Z0 M05
+N660 G54 X0 Y0
+N665 M30
+%</pre></div><div class="prog"><div class="prog-head"><span>Setup 2 · 89 lines</span><a href="prog/reamed-cube-setup2.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O00001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
+N5 G20 G17 G40 G80 G90
+N10 T01 M06 (3/4 EM CRB 2FL 1-1/2 LOC)
+N15 G55 G90 G94
+N20 S4000 M03
+N25 G00 G90 X-.7875 Y-.3
+N30 G43 H01 Z.1 M08
+N35 G01 Z-.05 F11.4286
+N40 X0 F99.6
+N45 X1. F132.8
+N50 X1.4125
+N55 G02 Y-.7 I0 J-.2
+N60 G01 X1.
+N65 X0
+N70 X-.7875 F99.6
+N75 G00 Z.1
+N80 G90 G55 X-.7875 Y-.3
+N85 Z.05
+N90 G01 Z-.148 F11.4286
+N95 X0 F99.6
+N100 X1. F132.8
+N105 X1.4125
+N110 G02 Y-.7 I0 J-.2
+N115 G01 X1.
+N120 X0
+N125 X-.7875 F99.6
+N130 G00 Z.1
+N135 G90 G55 X-.7875 Y-.3
+N140 Z-.048
+N145 G01 Z-.246 F11.4286
+N150 X0 F99.6
+N155 X1. F132.8
+N160 X1.4125
+N165 G02 Y-.7 I0 J-.2
+N170 G01 X1.
+N175 X0
+N180 X-.7875 F99.6
+N185 G00 Z.1
+N190 G90 G55 X-.7875 Y-.3
+N195 Z-.146
+N200 G01 Z-.344 F11.4286
+N205 X0 F99.6
+N210 X1. F132.8
+N215 X1.4125
+N220 G02 Y-.7 I0 J-.2
+N225 G01 X1.
+N230 X0
+N235 X-.7875 F99.6
+N240 G00 Z.1
+N245 G90 G55 X-.7875 Y-.3
+N250 Z-.244
+N255 G01 Z-.442 F11.4286
+N260 X0 F99.6
+N265 X1. F132.8
+N270 X1.4125
+N275 G02 Y-.7 I0 J-.2
+N280 G01 X1.
+N285 X0
+N290 X-.7875 F99.6
+N295 G00 Z.1
+N300 G90 G55 X-.7875 Y-.3
+N305 Z-.342
+N310 G01 Z-.54 F11.4286
+N315 X0 F99.6
+N320 X1. F132.8
+N325 X1.4125
+N330 G02 Y-.7 I0 J-.2
+N335 G01 X1.
+N340 X0
+N345 X-.7875 F99.6
+N350 G00 Z.1
+N355 G90 G55 X-.7875 Y-.3
+N360 Z-.44
+N365 G01 Z-.55 F11.4286
+N370 X0 F99.6
+N375 X1. F132.8
+N380 X1.4125
+N385 G02 Y-.7 I0 J-.2
+N390 G01 X1.
+N395 X0
+N400 X-.7875 F99.6
+N405 G00 Z.1
+N410 Z1. M09
+N415 G00 G90 G53 G49 H0 Z0 M05
+N420 G55 X0 Y0
+N425 M30
+%</pre></div>
+    <figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-step-bar" data-title="Milled Step Bar">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machines</dt><dd>Haas TM-1, Mini Mill or VF-2</dd></div><div><dt>Material</dt><dd>6061 aluminum</dd></div><div><dt>Setups</dt><dd>2</dd></div><div><dt>Spindle</dt><dd>Max 4,000 RPM</dd></div></dl>
+    <h3>What the part is</h3><p>A stepped bar with a Ø0.250 in reamed hole.</p>
+    <h3>My CAM program</h3><ol><li>Setup 1: mill the steps; center drill, drill and ream the hole.</li><li>Setup 2: flip and finish the bar to size.</li></ol>
+    <h3>Tools</h3><ul class="tools"><li>T04 · 3/4 in carbide end mill, 2 flute</li><li>T05 · #3 60° center drill</li><li>T24 · letter B drill</li><li>T23 · 0.2500 in reamer</li></ul>
+  <h3>Machine and programming techniques</h3><ul><li>Haas vertical mill (TM-1, Mini Mill or VF-2), part held in a vise on parallels.</li><li>Program built in SolidWorks CAM and posted to Haas G-code, one program per setup, both on work offset G54.</li><li>Tool length compensation (G43 H) on every tool and cutter radius compensation (G41 D) on the profile, so size can be tuned at the machine.</li><li>Inch units (G20), absolute positioning (G90), feed per minute (G94); Z sent to machine home (G53) before each tool change.</li><li>Canned cycles: G82 center drill with a 1-second dwell, G81 drill, G85 ream; G98 returns to the start plane.</li></ul>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-step-bar.jpg" target="_blank" rel="noopener"><img src="img/dwg-step-bar.jpg" alt="Drawing RS-2006" loading="lazy"></a><figcaption><span class="fn">RS-2006 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2006-step-bar.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Setup 1 · 124 lines</span><a href="prog/milled-step-bar-setup1.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O00001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
+N5 G20 G17 G40 G80 G90
+N10 T04 M06 (3/4 EM CRB 2FL 1-1/2 LOC)
+N15 G54 G90 G94
+N20 S4000 M03
+N25 G00 G90 X-.8875 Y1.725
+N30 G43 H04 Z.25 M08
+N35 G01 Z.1 F2.3447
+N40 X-.1 F99.6083
+N45 X2.6 F132.811
+N50 X3.0125
+N55 G02 Y1.2417 I0 J-.2417
+N60 G01 X2.6
+N65 X-.1
+N70 X-.5125
+N75 G03 Y.7583 I0 J-.2417
+N80 G01 X-.1
+N85 X2.6
+N90 X3.0125
+N95 G02 Y.275 I0 J-.2417
+N100 G01 X2.6
+N105 X-.1
+N110 X-.8875 F99.6083
+N115 G00 Z.25
+N120 G90 G54 X-.8875 Y1.725
+N125 Z.2
+N130 G01 Z.05 F2.3447
+N135 X-.1 F99.6083
+N140 X2.6 F132.811
+N145 X3.0125
+N150 G02 Y1.2417 I0 J-.2417
+N155 G01 X2.6
+N160 X-.1
+N165 X-.5125
+N170 G03 Y.7583 I0 J-.2417
+N175 G01 X-.1
+N180 X2.6
+N185 X3.0125
+N190 G02 Y.275 I0 J-.2417
+N195 G01 X2.6
+N200 X-.1
+N205 X-.8875 F99.6083
+N210 G00 Z.25
+N215 G90 G54 X-.8875 Y1.725
+N220 Z.15
+N225 G01 Z0 F2.3447
+N230 X-.1 F99.6083
+N235 X2.6 F132.811
+N240 X3.0125
+N245 G02 Y1.2417 I0 J-.2417
+N250 G01 X2.6
+N255 X-.1
+N260 X-.5125
+N265 G03 Y.7583 I0 J-.2417
+N270 G01 X-.1
+N275 X2.6
+N280 X3.0125
+N285 G02 Y.275 I0 J-.2417
+N290 G01 X2.6
+N295 X-.1
+N300 X-.8875 F99.6083
+N305 G00 Z.25
+N310 Z1.15
+N315 S3677
+N320 G90 G54 X1.6163 Y-.6727
+N325 Z.25
+N330 G01 Z-.375 F4.0448
+N335 G90 G41 X1.3405 Y-.397 D04 F12.1345
+N340 G03 X1.2875 Y-.375 I-.053 J-.053
+N345 G01 X-.375 F16.1793
+N350 Y2.375
+N355 X2.875
+N360 Y-.375
+N365 X1.2125
+N370 G03 X1.1595 Y-.397 I0 J-.075
+N375 G40 G01 X.8837 Y-.6727
+N380 G00 Z.25
+N385 G90 G54 X1.6163 Y-.6727
+N390 Z-.275
+N395 G01 Z-.5 F4.0448
+N400 G90 G41 X1.3405 Y-.397 D04 F12.1345
+N405 G03 X1.2875 Y-.375 I-.053 J-.053
+N410 G01 X-.375 F16.1793
+N415 Y2.375
+N420 X2.875
+N425 Y-.375
+N430 X1.2125
+N435 G03 X1.1595 Y-.397 I0 J-.075
+N440 G40 G01 X.8837 Y-.6727
+N445 G00 Z.25
+N450 Z1.15 M09
+N455 G00 G90 G53 G49 H0 Z0 M05
+N460 T05 M06 (#3 60DEG HSS CENTERDRILL)
+N465 G54 G90 G94
+N470 S4000 M03
+N475 G90 X.5 Y1.5
+N480 G43 H05 Z1.15 M08
+N485 G98 G82 Z-.1445 R.1 P1000 F9.6
+N490 Y.5
+N495 G80 Z1.15 M09
+N500 G00 G90 G53 G49 H0 Z0 M05
+N505 T24 M06 (B SCREW MACH DRILL)
+N510 G54 G90 G94
+N515 S4000 M03
+N520 G90 Y1.5
+N525 G43 H24 Z1.15 M08
+N530 G98 G81 Z-.5992 R.1 F14.4
+N535 Y.5
+N540 G80 Z1.15 M09
+N545 G00 G90 G53 G49 H0 Z0 M05
+N550 T23 M06 (0.2500 HSS REAMER)
+N555 G54 G90 G94
+N560 S2200 M03
+N565 G90 Y1.5
+N570 G43 H23 Z1.15 M08
+N575 G98 G85 Z-.55 R.1 F11.4408
+N580 Y.5
+N585 G80 Z1.15 M09
+N590 G00 G90 G53 G49 H0 Z0 M05
+N595 G54 X0 Y0
+N600 M30
+%</pre></div><div class="prog"><div class="prog-head"><span>Setup 2 · 139 lines</span><a href="prog/milled-step-bar-setup2.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O00001
+(SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
+N5 G20 G17 G40 G80 G90
+N10 T04 M06 (3/4 EM CRB 2FL 1-1/2 LOC)
+N15 G54 G90 G94
+N20 S4000 M03
+N25 G00 G90 X-.8875 Y-.275
+N30 G43 H04 Z.15 M08
+N35 G01 Z0 F2.3447
+N40 X-.1 F99.6083
+N45 X2.6 F132.811
+N50 X3.0125
+N55 G02 Y-.7583 I0 J-.2417
+N60 G01 X2.6
+N65 X-.1
+N70 X-.5125
+N75 G03 Y-1.2417 I0 J-.2417
+N80 G01 X-.1
+N85 X2.6
+N90 X3.0125
+N95 G02 Y-1.725 I0 J-.2417
+N100 G01 X2.6
+N105 X-.1
+N110 X-.8875 F99.6083
+N115 G00 Z.15
+N120 Z1.05
+N125 G90 G54 X2.3 Y-2.7875
+N130 Z.15
+N135 G01 Z0 F2.3447
+N140 Y-2. F99.6083
+N145 Y0 F132.811
+N150 Y.7875 F99.6083
+N155 G00 Z.15
+N160 G90 G54 X2.3 Y-2.7875
+N165 Z.1
+N170 G01 Z-.05 F2.3447
+N175 Y-2. F99.6083
+N180 Y0 F132.811
+N185 Y.7875 F99.6083
+N190 G00 Z.15
+N195 G90 G54 X2.3 Y-2.7875
+N200 Z.05
+N205 G01 Z-.1 F2.3447
+N210 Y-2. F99.6083
+N215 Y0 F132.811
+N220 Y.7875 F99.6083
+N225 G00 Z.15
+N230 G90 G54 X2.3 Y-2.7875
+N235 Z0
+N240 G01 Z-.15 F2.3447
+N245 Y-2. F99.6083
+N250 Y0 F132.811
+N255 Y.7875 F99.6083
+N260 G00 Z.15
+N265 G90 G54 X2.3 Y-2.7875
+N270 Z-.05
+N275 G01 Z-.2 F2.3447
+N280 Y-2. F99.6083
+N285 Y0 F132.811
+N290 Y.7875 F99.6083
+N295 G00 Z.15
+N300 G90 G54 X2.3 Y-2.7875
+N305 Z-.1
+N310 G01 Z-.25 F2.3447
+N315 Y-2. F99.6083
+N320 Y0 F132.811
+N325 Y.7875 F99.6083
+N330 G00 Z.15
+N335 G90 G54 X2.3 Y-2.7875
+N340 Z-.15
+N345 G01 Z-.3 F2.3447
+N350 Y-2. F99.6083
+N355 Y0 F132.811
+N360 Y.7875 F99.6083
+N365 G00 Z.15
+N370 Z1.05
+N375 G90 G54 X1.8 Y-2.7875
+N380 Z.15
+N385 G01 Z0 F2.3447
+N390 Y-2. F99.6083
+N395 Y0 F132.811
+N400 Y.7875 F99.6083
+N405 G00 Z.15
+N410 G90 G54 X1.8 Y-2.7875
+N415 Z.1
+N420 G01 Z-.05 F2.3447
+N425 Y-2. F99.6083
+N430 Y0 F132.811
+N435 Y.7875 F99.6083
+N440 G00 Z.15
+N445 G90 G54 X1.8 Y-2.7875
+N450 Z.05
+N455 G01 Z-.1 F2.3447
+N460 Y-2. F99.6083
+N465 Y0 F132.811
+N470 Y.7875 F99.6083
+N475 G00 Z.15
+N480 G90 G54 X1.8 Y-2.7875
+N485 Z0
+N490 G01 Z-.15 F2.3447
+N495 Y-2. F99.6083
+N500 Y0 F132.811
+N505 Y.7875 F99.6083
+N510 G00 Z.15
+N515 G90 G54 X1.8 Y-2.7875
+N520 Z-.05
+N525 G01 Z-.2 F2.3447
+N530 Y-2. F99.6083
+N535 Y0 F132.811
+N540 Y.7875 F99.6083
+N545 G00 Z.15
+N550 Z1.05
+N555 G90 G54 X1.3 Y-2.7875
+N560 Z.15
+N565 G01 Z0 F2.3447
+N570 Y-2. F99.6083
+N575 Y0 F132.811
+N580 Y.7875 F99.6083
+N585 G00 Z.15
+N590 G90 G54 X1.3 Y-2.7875
+N595 Z.1
+N600 G01 Z-.05 F2.3447
+N605 Y-2. F99.6083
+N610 Y0 F132.811
+N615 Y.7875 F99.6083
+N620 G00 Z.15
+N625 G90 G54 X1.3 Y-2.7875
+N630 Z.05
+N635 G01 Z-.1 F2.3447
+N640 Y-2. F99.6083
+N645 Y0 F132.811
+N650 Y.7875 F99.6083
+N655 G00 Z.15
+N660 Z1.05 M09
+N665 G00 G90 G53 G49 H0 Z0 M05
+N670 G54 X0 Y0
+N675 M30
+%</pre></div>
+  </div></div>
+</template>
+
+<template id="d-tslot" data-title="T-Slot Nut">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Plain carbon steel</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
+    <h3>What the part is</h3><p>The T-slot nut of a work-stop clamp: a milled T-profile with a 5/16-18 tapped hole, flatness .005 on two surfaces and the hole positioned within Ø.02 to datums A, B and C.</p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-tslot.jpg" target="_blank" rel="noopener"><img src="img/dwg-tslot.jpg" alt="Drawing RS-2007" loading="lazy"></a><figcaption><span class="fn">RS-2007 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2007-tslot.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-clamp-body" data-title="C-Clamp Body">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Aluminum</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
+    <h3>What the part is</h3><p>A 3.50 × 2.00 in U-body with R.125 inside corners and a 7/16-14 tapped hole held perpendicular to datum B within .005.</p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-clamp-body.jpg" target="_blank" rel="noopener"><img src="img/dwg-clamp-body.jpg" alt="Drawing RS-2008" loading="lazy"></a><figcaption><span class="fn">RS-2008 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2008-clamp-body.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-bore-slot" data-title="Bore &amp; Slot Block">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Aluminum</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
+    <h3>What the part is</h3><p>A block with a bored hole and a milled slot, both located from the datum edges, with edges deburred.</p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/dwg-bore-slot.jpg" target="_blank" rel="noopener"><img src="img/dwg-bore-slot.jpg" alt="Drawing RS-2009" loading="lazy"></a><figcaption><span class="fn">RS-2009 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2009-bore-slot.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cad-bezel" data-title="Bezel Plate · RS-1001 Rev A">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Tool</dt><dd>SolidWorks</dd></div><div><dt>Material</dt><dd>Chrome stainless steel</dd></div><div><dt>Units</dt><dd>Millimeters</dd></div><div><dt>Standard</dt><dd>ASME Y14.5-2018</dd></div></dl>
+    <h3>What the drawing controls</h3><ul><li>Section and detail views of the plate and its bore.</li><li>Cylindricity on the Ø34 bore, flatness on the base, perpendicularity to datum A.</li></ul>
+    <h3>What I corrected for Rev A</h3><ul><li>Flatness on a round bore is not a valid control; changed to cylindricity.</li><li>The units note said inches on a millimeter drawing; corrected.</li><li>Filled in general tolerances, title block and drawing number.</li></ul>
+    <p><a class="btn secondary" href="pdf/RS-1001-bezel.pdf" target="_blank" rel="noopener">Open the PDF</a></p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/cad-bezel-lg.jpg" target="_blank" rel="noopener"><img src="img/cad-bezel-lg.jpg" alt="Bezel plate drawing, full sheet" loading="lazy"></a><figcaption>Full sheet. Opens full size to zoom.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cad-hub" data-title="Hub · RS-1002 Rev A">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Tool</dt><dd>SolidWorks</dd></div><div><dt>Material</dt><dd>AISI 1020 steel</dd></div><div><dt>Units</dt><dd>Millimeters</dd></div><div><dt>Scale</dt><dd>1:2, detail 1:1</dd></div></dl>
+    <h3>What the drawing controls</h3><ul><li>Ø108 flange with six Ø8 holes equally spaced on a Ø88 bolt circle.</li><li>Section C-C: Ø72 bosses, Ø48 bore, 4×45° chamfers.</li><li>Detail D: the R4 relief grooves at the flange.</li></ul>
+    <h3>What I corrected for Rev A</h3><ul><li>The model was built in inches with millimeter values, so the sheet read 1:48. Converted the model to true millimeters and rescaled the drawing to 1:2.</li><li>Added the missing bolt-circle diameter.</li><li>Filled in general tolerances, title block and drawing number.</li></ul>
+    <p><a class="btn secondary" href="pdf/RS-1002-hub.pdf" target="_blank" rel="noopener">Open the PDF</a></p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/cad-hub-lg.jpg" target="_blank" rel="noopener"><img src="img/cad-hub-lg.jpg" alt="Hub drawing, full sheet" loading="lazy"></a><figcaption>Full sheet. Opens full size to zoom.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cad-fitting" data-title="Hydraulic Fitting · RS-1003 Rev A">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Tool</dt><dd>SolidWorks</dd></div><div><dt>Material</dt><dd>1060 aluminum</dd></div><div><dt>Units</dt><dd>Inches</dd></div><div><dt>Standard</dt><dd>ASME Y14.5-2018</dd></div></dl>
+    <h3>What the drawing controls</h3><ul><li>Section A-A through the fitting body.</li><li>Detail B of the seal groove.</li></ul>
+    <h3>What I corrected for Rev A</h3><ul><li>Filled in the blank general tolerances and the GD&amp;T standard.</li><li>Replaced the template placeholders, title block and drawing number.</li></ul>
+    <p><a class="btn secondary" href="pdf/RS-1003-fitting.pdf" target="_blank" rel="noopener">Open the PDF</a></p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/cad-fitting-lg.jpg" target="_blank" rel="noopener"><img src="img/cad-fitting-lg.jpg" alt="Hydraulic fitting drawing, full sheet" loading="lazy"></a><figcaption>Full sheet. Opens full size to zoom.</figcaption></figure>
+  </div></div>
+</template>
+
+<template id="d-cad-flanged" data-title="Flanged Shaft Hub · RS-1004 Rev A">
+  <div class="dgrid"><div class="dtext">
+    <dl class="meta"><div><dt>Tool</dt><dd>Fusion 360</dd></div><div><dt>Material</dt><dd>Steel, painted</dd></div><div><dt>Units</dt><dd>Millimeters</dd></div><div><dt>Standard</dt><dd>ASME Y14.5-2018</dd></div></dl>
+    <h3>What the drawing controls</h3><ul><li>Ø90 flange with five Ø8.9 holes 72° apart on a Ø70 bolt circle.</li><li>Section A-A: tapered bore, 6× R2 fillets and an M16x1.5 tapped bore.</li></ul>
+    <h3>What I corrected for Rev A</h3><ul><li>The thread callout read M380x6, a unit error; corrected to M16x1.5 - 6H.</li><li>Added the units and general-tolerance note.</li><li>Filled in the title block, drawing number and part number.</li></ul>
+    <p><a class="btn secondary" href="pdf/RS-1004-flanged-shaft.pdf" target="_blank" rel="noopener">Open the PDF</a></p>
+  </div><div class="dmedia">
+    <figure class="fig"><a href="img/cad-flanged-shaft-lg.jpg" target="_blank" rel="noopener"><img src="img/cad-flanged-shaft-lg.jpg" alt="Flanged shaft hub drawing, full sheet" loading="lazy"></a><figcaption>Full sheet. Opens full size to zoom.</figcaption></figure>
+  </div></div>
+</template>
+
 </main>
-</body>
-</html>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="#work">Work Samples</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#resume">Request Résumé</a><a href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">LinkedIn Profile</a></nav>
+    <span class="mono" style="color:var(--muted);font-size:13px">© 2026 Rodolfo Silva</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var views=[].slice.call(document.querySelectorAll('[data-view]'));
+  var navLinks=[].slice.call(document.querySelectorAll('nav.main a[data-nav]'));
+  function route(){
+    var id=(location.hash||'#home').slice(1);
+    var el=id?document.getElementById(id):null;
+    var view=el?(el.hasAttribute('data-view')?el:el.closest('[data-view]')):null;
+    if(!view){view=document.getElementById('home');el=null;}
+    views.forEach(function(v){v.hidden=(v!==view);});
+    navLinks.forEach(function(a){
+      if(a.getAttribute('data-nav')===view.id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    if(el&&el!==view){requestAnimationFrame(function(){el.scrollIntoView({block:'start'});});}
+    else{window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route);
+  route();
+
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var cards=[].slice.call(document.querySelectorAll('#work-cards .card'));
+  var count=document.getElementById('work-count');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var f=c.getAttribute('data-filter'),n=0;
+      chips.forEach(function(x){x.setAttribute('aria-pressed',String(x===c));});
+      cards.forEach(function(card){
+        var show=f==='all'||card.getAttribute('data-tags').split(' ').indexOf(f)>-1;
+        card.hidden=!show; if(show)n++;
+      });
+      count.textContent=n+(n===1?' project':' projects');
+    });
+  });
+
+  // résumé request: the address is assembled here so it is not plain text in the page source (spam bots)
+  var addr=['rodolfodente','gmail.com'].join('@');
+  document.getElementById('rq-addr').textContent=addr;
+  document.getElementById('rq-mail').href='mailto:'+addr+'?subject='+encodeURIComponent('Résumé request')+
+    '&body='+encodeURIComponent('Hi Rodolfo,\n\nPlease send me your résumé.\n\nRole:\nCompany:\n');
+
+  // detail panels: every [data-detail] card or figure gets a button and opens its <template> in the dialog
+  var dlg=document.getElementById('detail-dlg');
+  var dlgTitle=document.getElementById('dlg-title'), dlgBody=dlg.querySelector('.dlg-body');
+  var opener=null;
+  function openDetail(id,from){
+    var t=document.getElementById(id); if(!t)return;
+    dlgTitle.textContent=t.getAttribute('data-title');
+    dlgBody.innerHTML=''; dlgBody.appendChild(t.content.cloneNode(true));
+    opener=from;
+    if(dlg.showModal)dlg.showModal(); else dlg.setAttribute('open','');
+    dlgBody.scrollTop=0;
+  }
+  function closeDetail(){
+    dlgBody.querySelectorAll('video').forEach(function(v){v.pause();});
+    if(dlg.close)dlg.close(); else dlg.removeAttribute('open');
+  }
+  dlg.addEventListener('close',function(){ if(opener)opener.focus(); });
+  dlg.querySelector('.dlg-x').addEventListener('click',closeDetail);
+  dlg.addEventListener('click',function(e){ if(e.target===dlg)closeDetail(); });
+  [].slice.call(document.querySelectorAll('[data-detail]')).forEach(function(el){
+    var id=el.getAttribute('data-detail');
+    var b=document.createElement('button');
+    b.type='button'; b.className='more'; b.textContent='See details';
+    b.setAttribute('aria-haspopup','dialog');
+    (el.querySelector('.part > div')||el.querySelector('figcaption')||el).appendChild(b);
+    b.addEventListener('click',function(){openDetail(id,b);});
+    var img=el.querySelector('img'); if(img)img.addEventListener('click',function(){openDetail(id,b);});
+  });
+})();
+</script>
+
+</body></html>
