@@ -1,6 +1,6 @@
 # Project resume
 
-Next action: Rodolfo reviews the live site; open items below.
+Next action: Clean copies of the certificates and diplomas for the Education page (ID numbers removed); Rodolfo decides the shaft case-study label.
 
 Last update: 2026-11-11, Claude Code.
 
