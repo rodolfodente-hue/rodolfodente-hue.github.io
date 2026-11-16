@@ -266,6 +266,7 @@ footer.site a{color:var(--ink)}
 .part p{font-size:14px;color:var(--muted);flex:1}
 .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:8px}
 #p-bracket .fig-pair{grid-template-columns:minmax(0,1fr)}
+.fig-pair.grid-2x2{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
 #p-bracket .fig img{max-width:560px;margin-inline:auto}
 .cats span{font:500 13px/1.3 var(--mono);padding:10px 12px;border:1px solid var(--line);border-radius:2px;background:var(--bg)}
 
@@ -343,7 +344,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
         <div class="body">
           <span class="badge b-pro">Training + personal project</span>
           <h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
-          <dl class="story"><dt>Found</dt><dd>Making parts by hand showed me how much of the result is decided by the setup plan.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 5 programmed in SolidWorks CAM; programs run on Haas CNC</dd></dl>
+          <dl class="story"><dt>Found</dt><dd>Making parts by hand showed me how much of the result is decided by the setup plan.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 6 programmed in SolidWorks CAM; programs run on Haas CNC</dd></dl>
           <div class="skills"><a href="#skill-cam">CNC / CAM</a><a href="#skill-solidworks">SolidWorks</a><a href="#skill-gdt">GD&amp;T prints</a></div>
           <div class="media"><span>programs · drawings · simulations</span><a class="go" href="#p-machining">Read the story →</a></div>
         </div>
@@ -431,7 +432,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <article class="card" data-tags="personal design machining">
         <a class="thumb" href="#p-machining" aria-label="CNC machining and CAM programming"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="8" y1="50" x2="104" y2="50" class="s-mut" stroke-dasharray="8 2 2 2" stroke-width=".8"/><path d="M14 32 H44 V37 H64 V41 H84 V45 H98 V55 H84 V59 H64 V63 H44 V68 H14 Z" class="f-accs s-acc" stroke-width="1.2"/><rect x="112" y="40" width="38" height="34" class="f-accs s-acc" stroke-width="1.2"/><circle cx="131" cy="57" r="5" class="f-bg s-acc" stroke-width="1.2"/><rect x="125" y="12" width="12" height="22" class="f-saf"/><text x="80" y="84" font-size="6" text-anchor="middle" class="t-ink">LATHE · MILL · CAM</text></svg></a>
         <div class="body"><span class="badge b-pro">Training + personal project</span><h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
-          <dl class="story"><dt>Found</dt><dd>Making parts on manual, ProtoTRAK and CNC machines showed me how much of the result is decided by the setup plan.</dd><dt>Why</dt><dd>A manufacturing engineer has to judge a CNC program: its setups, tools and operations, not just the print.</dd><dt>Did</dt><dd>At home, I model each training part in SolidWorks and program it in SolidWorks CAM, then simulate the toolpaths.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 5 programmed; programs run on Haas CNC</dd></dl>
+          <dl class="story"><dt>Found</dt><dd>Making parts on manual, ProtoTRAK and CNC machines showed me how much of the result is decided by the setup plan.</dd><dt>Why</dt><dd>A manufacturing engineer has to judge a CNC program: its setups, tools and operations, not just the print.</dd><dt>Did</dt><dd>At home, I model each training part in SolidWorks and program it in SolidWorks CAM, then simulate the toolpaths.</dd><dt class="out">Outcome</dt><dd>9 parts modeled, 6 programmed; programs run on Haas CNC</dd></dl>
           <div class="skills"><a href="#skill-cam">CNC / CAM</a><a href="#skill-solidworks">SolidWorks</a><a href="#skill-gdt">GD&amp;T prints</a></div>
           <div class="media"><span>9 parts · 3 simulations</span><a class="go" href="#p-machining">Read the story →</a></div></div>
       </article>
@@ -1229,19 +1230,21 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><span class="step">1 · How I found it</span><h3>The setup decides the part</h3><p>Making a part by hand, every choice shows: how to hold it, which surface to cut first, where a tolerance can be lost when you flip it.</p></div>
       <div><span class="step">2 · Why it mattered</span><h3>Read a program like a print</h3><p>Production runs on CNC. A manufacturing engineer needs to judge a CAM plan, its setups, tools and operations, as well as the drawing.</p></div>
       <div><span class="step">3 · What I did</span><h3>Model, program, simulate</h3><p>For each training print I build the SolidWorks model, set the stock and workholding in SolidWorks CAM, pick tools and operations, simulate the toolpaths and post the G-code.</p></div>
-      <div class="out"><span class="step">4 · Where it stands</span><h3>9 parts, 5 programmed</h3><p>Every training part is modeled. Five have CAM programs and toolpath simulations, and my programs have run on the school's Haas CNC machines.</p></div>
+      <div class="out"><span class="step">4 · Where it stands</span><h3>9 parts, 6 programmed</h3><p>Every training part is modeled. Six have CAM programs and toolpath simulations, and my programs have run on the school's Haas CNC machines.</p></div>
     </div>
   </div></section>
 
   <section class="band"><div class="wrap">
     <h2 style="margin-bottom:18px">Toolpath simulations</h2>
-    <div class="fig-pair">
+    <div class="fig-pair grid-2x2">
       <figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none"></video>
         <figcaption><span class="fn">Video 1</span>Face and Turn, lathe: face, rough and finish turn, cut-off.</figcaption></figure>
       <figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none"></video>
         <figcaption><span class="fn">Video 2</span>Reamed Cube, mill: square the block, then spot, drill and ream on two faces.</figcaption></figure>
       <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video>
         <figcaption><span class="fn">Video 3</span>Simple Cylinder, lathe.</figcaption></figure>
+      <figure class="fig"><video src="img/cam-clamp-end.mp4" poster="img/cam-clamp-end-poster.jpg" controls muted playsinline preload="none"></video>
+        <figcaption><span class="fn">Video 4</span>C-Clamp End, lathe: face, profile the cone with the grooving blade, drill, cut off.</figcaption></figure>
     </div>
   </div></section>
 
@@ -1251,7 +1254,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <article class="part" data-detail="d-face-turn"><img src="img/mfg-face-turn.jpg" alt="Face and Turn part model" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>Face and Turn</h3><p>Four stepped diameters, Ø0.950 to Ø0.675. Program: face, rough and finish turn, cut-off, with 80° and 55° inserts.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
       <article class="part" data-detail="d-cylinder"><img src="img/cam-cylinder-poster.jpg" alt="Simple Cylinder in the CAM simulation" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>Simple Cylinder</h3><p>Turned cylinder, first lathe exercise.</p><span><span class="pill p-sim">simulated</span></span></div></article>
       <article class="part" data-detail="d-taper"><img src="img/mfg-taper.jpg" alt="OD and ID Taper part model" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>OD &amp; ID Taper</h3><p>Outside and inside tapers with a Ø1.200 bore held concentric to the OD. Program: 11 operations, from facing through drilling, boring and cut-off.</p><span><span class="pill p-app">CAM programmed</span></span></div></article>
-      <article class="part" data-detail="d-clamp-end"><img src="img/mfg-clamp-end.jpg" alt="C-Clamp End part model" loading="lazy"><div><span class="eyebrow">Lathe · Brass</span><h3>C-Clamp End</h3><p>Turned end for the C-clamp assembly.</p><span><span class="pill p-cw">modeled</span></span></div></article>
+      <article class="part" data-detail="d-clamp-end"><img src="img/mfg-clamp-end.jpg" alt="C-Clamp End part model" loading="lazy"><div><span class="eyebrow">Lathe · Brass</span><h3>C-Clamp End</h3><p>Ø.630 brass end with a 45° cone and a Ø.195 hole. Program: 7 operations, from facing through drilling and cut-off, with the cone finished by the grooving blade.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
       <article class="part" data-detail="d-cube"><img src="img/mfg-cube.jpg" alt="Reamed Cube part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>Reamed Cube</h3><p>0.900 in cube with Ø0.248 reamed holes on two faces. Two setups: end mill, spot drill, drill, reamer.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
       <article class="part" data-detail="d-step-bar"><img src="img/mfg-step-bar.jpg" alt="Milled Step Bar part model" loading="lazy"><div><span class="eyebrow">Mill · Aluminum</span><h3>Milled Step Bar</h3><p>Stepped bar with a reamed Ø0.250 hole. Two setups: end mill, center drill, drill, reamer.</p><span><span class="pill p-app">CAM programmed</span></span></div></article>
       <article class="part" data-detail="d-tslot"><img src="img/mfg-tslot.jpg" alt="T-Slot Nut part model" loading="lazy"><div><span class="eyebrow">Mill · Steel</span><h3>T-Slot Nut</h3><p>Milled T-profile with a tapped hole.</p><span><span class="pill p-cw">modeled</span></span></div></article>
@@ -2276,10 +2279,205 @@ M30
 
 <template id="d-clamp-end" data-title="C-Clamp End">
   <div class="dgrid"><div class="dtext">
-    <dl class="meta"><div><dt>Machine</dt><dd>Lathe</dd></div><div><dt>Material</dt><dd>Brass</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
-    <h3>What the part is</h3><p>The turned end of the C-clamp assembly: a chamfered head on a stepped shank that fits the clamp screw.</p>
+    <dl class="meta"><div><dt>Machine</dt><dd>Haas CNC lathe</dd></div><div><dt>Material</dt><dd>Brass</dd></div><div><dt>Program</dt><dd>7 operations, one setup</dd></div><div><dt>Spindle</dt><dd>Max 3,000 RPM</dd></div></dl>
+    <h3>What the part is</h3><p>The turned end of the C-clamp assembly: Ø.630 brass, .380 in long, half straight diameter and half 45° cone, with a Ø.195 through hole.</p>
+    <h3>My CAM program</h3><ol><li>Face the end: rough with the 80° insert, finish with the 55°.</li><li>Rough the neck behind the part with the 0.118 in blade, then use the same blade for the finish pass on the Ø.630 diameter and the 45° cone.</li><li>Center drill, peck drill the hole with a #10 drill, then plunge a 1/4 in end mill on center for the flat-bottom step.</li><li>Cut off at the small end of the cone.</li></ol>
+    <h3>Tools</h3><ul class="tools"><li>T01 · CNMG 431 80° holder</li><li>T03 · DNMG 431 55° holder</li><li>T10 · 0.118 in cut-off blade</li><li>T05 · #3 60° center drill</li><li>T06 · #10 screw-machine drill</li><li>T07 · 1/4 in carbide 2-flute end mill</li></ul>
+  <h3>Machine and programming techniques</h3><ul><li>Haas CNC lathe, one setup in the chuck, work offset G54, XZ plane (G18).</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96, capped by G50 at 3,000 RPM) for roughing and cut-off; fixed 1,800 RPM (G97) for finishing, grooving and drilling; feed per revolution (G99).</li><li>The hole is peck drilled in .100 in steps with a full retract after each peck to clear the chips.</li><li>One blade does the grooving, the finish profile and the cut-off, which keeps the cone and the diameter on the same tool and cuts tool changes.</li><li>Coolant on (M08) and an optional stop (M01) after each tool so the part can be checked.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-clamp-end.jpg" target="_blank" rel="noopener"><img src="img/dwg-clamp-end.jpg" alt="Drawing RS-2004" loading="lazy"></a><figcaption><span class="fn">RS-2004 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2004-clamp-end.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 191 lines</span><a href="prog/c-clamp-end.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
+O0001
+G00 G18 G40 G80 G97 G99
+
+N1 ( Face Rough1 )
+G54
+T0101 (CNMG 431 80DEG SQR HOLDER)
+G97 S1000 M03
+G99 G18 G00 Z3.0971
+M08
+G50 S3000
+G96 S1800
+X.962
+G01 X.7479 Z2.99 F.0161
+X-.0314
+X-.0455 Z2.9971
+G00 Z3.0971
+X.7641
+Z2.8971
+G01 X.75 Z2.89
+X-.0314
+X-.0455 Z2.8971
+G00 Z3.0843
+Z2.9971
+X.9141
+G01 X.7 Z2.89 F.0161
+Z2.6743
+G03 X.6992 Z2.6681 R.0507
+G01 X.6681 Z2.5414
+Z2.5093
+X.75
+X.7641 Z2.5164
+X.7941
+G00 X.9641
+Z2.5414
+X.7125
+G01 X.6681
+X.6602 Z2.5093
+X.6681
+X.6823 Z2.5164
+G00 X.7837
+Z2.8971
+X.6641
+G01 X.65 Z2.89
+Z2.6743
+G03 X.6496 Z2.6712 R.0257
+G01 X.6037 Z2.4843
+X.7186
+X.7327 Z2.4914
+G00 X.9327
+X20. Z5. M09
+M01
+
+N2 ( Face Finish1 )
+G54
+T0303 (DNMG 431 55DEG SQR HOLDER)
+G97 S1800 M03
+G99 G18 G00 Z2.9871
+M08
+X.8327
+G01 X.6186 Z2.88 F.005
+X-.0314
+X-.0455 Z2.8871
+G00 X20. Z5. M09
+M01
+
+N3 ( Groove Rough2 )
+G54
+T1010 (0.118W CUT-OFF BLADE)
+G97 S1800 M03
+G99 G18 G00 Z3.0534
+M08
+X1.15
+G01 X.95 Z2.9534 F.0025
+X.65
+G00 X.95
+Z2.9068
+G01 X.65
+G00 X.95
+Z2.8602
+G01 X.65
+G00 X.95
+Z2.8136
+G01 X.65
+G00 X.95
+Z2.7671
+G01 X.65
+G00 X.95
+Z2.7205
+G01 X.65
+G00 X.95
+Z2.6739
+G01 X.65
+G00 X.95
+Z2.6273
+G01 X.65
+G00 X.95
+Z2.5807
+G01 X.65
+G00 X.95
+Z2.5341
+G01 X.5731
+G00 X.95
+Z2.4875
+G01 X.48
+G00 X.95
+Z2.4409
+G01 X.3868
+G00 X.95
+Z2.3943
+G01 X.2936
+X.95
+G00 X20. Z5.
+Z2.9281
+X.8441
+G01 X.63 Z2.821 F.0036
+Z2.5767
+X.2453 Z2.3843
+X.75
+X.7641 Z2.3914
+G00 X.9641
+X20. Z5. M09
+M01
+
+N4 ( Center Drill1 )
+G54
+T0505 (#3 60DEG HSS CENTERDRILL)
+G97 S1800 M03
+G99 G18 G00 Z2.98
+M08
+X0
+G01 Z2.78 F.0024
+G00 Z2.98
+X20. Z5. M09
+M01
+
+N5 ( Drill1 )
+G54
+T0606 (#10 SCREW MACH DRILL)
+G97 S1800 M03
+G99 G18 G00 Z2.98
+M08
+X0
+G01 Z2.78 F.0036
+G00 Z2.98
+Z2.88
+G01 Z2.68
+G00 Z2.98
+Z2.78
+G01 Z2.58
+G00 Z2.98
+Z2.68
+G01 Z2.48
+G00 Z2.98
+Z2.58
+G01 Z2.42
+G00 Z2.98
+X20. Z5. M09
+M01
+
+N6 ( Drill2 )
+G54
+T0707 (1/4 EM CRB 2FL 3/4  LOC)
+G97 S1800 M03
+G99 G18 G00 Z2.98
+M08
+X0
+G01 Z2.69 F.006
+G00 Z2.98
+X20. Z5. M09
+M01
+
+N7 ( Cut Off1 )
+G54
+T1010 (0.118W CUT-OFF BLADE)
+G97 S1000 M03
+G99 G18 G00 Z2.482
+M08
+G50 S3000
+G96 S1037
+X.666
+G01 Z2.382 F.0036
+X.074
+G00 X.65
+X20. Z5. M09
+M01
+
+M05
+/ M99
+M30
+%</pre></div>
+    <figure class="fig"><video src="img/cam-clamp-end.mp4" poster="img/cam-clamp-end-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
 
