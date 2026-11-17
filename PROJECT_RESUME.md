@@ -2,7 +2,7 @@
 
 Next action: None pending; change content in the private mock and rebuild.
 
-Last update: 2026-11-16, Claude Code.
+Last update: 2026-11-17, Claude Code.
 
 ## Status
 
@@ -26,6 +26,9 @@ Last update: 2026-11-16, Claude Code.
 - 2026-11-16: C-Clamp End drawing RS-2004 Rev B: counterbore callout with position
   tolerance, hole limits .195/.189 with datum A, hidden-line profile; panel text
   and caption updated, built from the mock.
+- 2026-11-17: milling drawings RS-2005..2009 replaced by the ASME Y14.5-2018
+  versions (PDFs and drawing images); Milled Step Bar text now says two reamed
+  holes and the T-Slot Nut panel says profile of a surface .005, built from the mock.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
