@@ -1237,22 +1237,6 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
-    <h2 style="margin-bottom:18px">Toolpath simulations</h2>
-    <div class="fig-pair grid-2x2">
-      <figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none"></video>
-        <figcaption><span class="fn">Video 1</span>Face and Turn, lathe: face, rough and finish turn, cut-off.</figcaption></figure>
-      <figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none"></video>
-        <figcaption><span class="fn">Video 2</span>Reamed Cube, mill: square the block, then spot, drill and ream on two faces.</figcaption></figure>
-      <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video>
-        <figcaption><span class="fn">Video 3</span>Simple Cylinder, lathe.</figcaption></figure>
-      <figure class="fig"><video src="img/cam-clamp-end.mp4" poster="img/cam-clamp-end-poster.jpg" controls muted playsinline preload="none"></video>
-        <figcaption><span class="fn">Video 4</span>C-Clamp End, lathe: face, profile the cone with the grooving blade, drill, cut off.</figcaption></figure>
-      <figure class="fig"><video src="img/cam-taper.mp4" poster="img/cam-taper-poster.jpg" controls muted playsinline preload="none"></video>
-        <figcaption><span class="fn">Video 5</span>OD &amp; ID Taper, lathe: face and turn the 4° taper, center drill, peck drill 19/32 and 1-3/16, bore the 8° taper and Ø1.200, cut off.</figcaption></figure>
-    </div>
-  </div></section>
-
-  <section class="band"><div class="wrap">
     <h2 style="margin-bottom:18px">The parts</h2>
     <div class="parts">
       <article class="part" data-detail="d-face-turn"><img src="img/mfg-face-turn.jpg" alt="Face and Turn part model" loading="lazy"><div><span class="eyebrow">Lathe · Aluminum</span><h3>Face and Turn</h3><p>Four stepped diameters, Ø0.950 to Ø0.675. Program: face, rough and finish turn, cut-off, with 80° and 55° inserts.</p><span><span class="pill p-app">CAM programmed</span> <span class="pill p-sim">simulated</span></span></div></article>
@@ -1810,6 +1794,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   <h3>Machine and programming techniques</h3><ul><li>Haas TL CNC lathe, one setup in the chuck, work offset G54.</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96) with the spindle capped by G50 at 1,800 RPM; feed per revolution (G99).</li><li>Roughing and finishing split between two inserts: 80° for stock removal, 55° for the finish profile.</li><li>Coolant on (M08) and an optional stop (M01) after each tool so the part can be checked.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-face-turn.jpg" target="_blank" rel="noopener"><img src="img/dwg-face-turn.jpg" alt="Drawing RS-2001" loading="lazy"></a><figcaption><span class="fn">RS-2001 Rev A</span>My drawing, toleranced to ASME Y14.5-2018: 4.500 overall length, the three 1.000 steps measured from the front, and a 63 µin Ra surface finish. Click to open full size. <a href="pdf/RS-2001-face-turn.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">Toolpath simulation</h3><figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none" aria-label="SolidWorks CAM toolpath simulation"></video><figcaption><span class="fn">SolidWorks CAM</span>Face, rough and finish turn, cut-off.</figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 145 lines</span><a href="prog/face-and-turn.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">O0001
 (SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 1800 RPM - HAAS TL LATHE)
 N1 (CNMG 431 80DEG SQR HOLDER)
@@ -1955,7 +1940,6 @@ N126 G01 X-.016
 N127 G00 X1.34
 N128 X20. Z5. M09
 N129 M30</pre></div>
-    <figure class="fig"><video src="img/cam-face-turn.mp4" poster="img/cam-face-turn-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
 
@@ -1967,7 +1951,7 @@ N129 M30</pre></div>
   <h3>Machine and programming techniques</h3><ul><li>Lathe. The toolpaths are simulated in SolidWorks CAM; no program was posted for this part.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-cylinder.jpg" target="_blank" rel="noopener"><img src="img/dwg-cylinder.jpg" alt="Drawing RS-2002" loading="lazy"></a><figcaption><span class="fn">RS-2002 Rev A</span>My drawing: Section A-A, toleranced to ASME Y14.5-2018. Datum A is the Ø1.000 bore; circular runout on the Ø1.100 counterbore replaces concentricity, which the 2018 standard removed. Click to open full size. <a href="pdf/RS-2002-cylinder.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
-    <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
+    <h3 class="media-h">Toolpath simulation</h3><figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none" aria-label="SolidWorks CAM toolpath simulation"></video><figcaption><span class="fn">SolidWorks CAM</span>Lathe toolpaths for the turned cylinder.</figcaption></figure>
   </div></div>
 </template>
 
@@ -1982,6 +1966,7 @@ N129 M30</pre></div>
   <h3>Program review</h3><p>What I found and fixed in my earlier version:</p><ul><li>Corrected the model's bore depth from 1.51 to 1.30 to match the course drawing.</li><li>Removed a crash risk: there was no retract after the G74 center drill before the next tool change.</li><li>Deleted a 1/2 drill and a second center drill that cut only air.</li><li>Added pecking to the deep drill.</li><li>Stopped the boring bars from being asked to enter the Ø.594 hole.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-taper.jpg" target="_blank" rel="noopener"><img src="img/dwg-taper.jpg" alt="Drawing RS-2003" loading="lazy"></a><figcaption><span class="fn">RS-2003 Rev A</span>My drawing: Section A-A, toleranced to ASME Y14.5-2018. Circular runout replaces concentricity, which the 2018 standard removed. Click to open full size. <a href="pdf/RS-2003-taper.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">Toolpath simulation</h3><figure class="fig"><video src="img/cam-taper.mp4" poster="img/cam-taper-poster.jpg" controls muted playsinline preload="none" aria-label="SolidWorks CAM toolpath simulation"></video><figcaption><span class="fn">SolidWorks CAM</span>Face and turn the 4° taper, center drill, peck drill 19/32 and 1-3/16, bore the 8° taper and Ø1.200, cut off.</figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 249 lines</span><a href="prog/od-id-taper.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
 O0001
 G00 G18 G40 G80 G97 G99
@@ -2231,7 +2216,6 @@ M05
 / M99
 M30
 %</pre></div>
-    <figure class="fig"><video src="img/cam-taper.mp4" poster="img/cam-taper-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
 
@@ -2244,6 +2228,7 @@ M30
   <h3>Machine and programming techniques</h3><ul><li>Haas CNC lathe, one setup in the chuck, work offset G54, XZ plane (G18).</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96, capped by G50 at 3,000 RPM) for roughing and cut-off; fixed 1,800 RPM (G97) for finishing, grooving and drilling; feed per revolution (G99).</li><li>The hole is peck drilled in .100 in steps with a full retract after each peck to clear the chips.</li><li>One blade does the grooving, the finish profile and the cut-off, which keeps the cone and the diameter on the same tool and cuts tool changes.</li><li>Coolant on (M08) and an optional stop (M01) after each tool so the part can be checked.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-clamp-end.jpg" target="_blank" rel="noopener"><img src="img/dwg-clamp-end.jpg" alt="Drawing RS-2004" loading="lazy"></a><figcaption><span class="fn">RS-2004 Rev B</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2004-clamp-end.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">Toolpath simulation</h3><figure class="fig"><video src="img/cam-clamp-end.mp4" poster="img/cam-clamp-end-poster.jpg" controls muted playsinline preload="none" aria-label="SolidWorks CAM toolpath simulation"></video><figcaption><span class="fn">SolidWorks CAM</span>Face, profile the cone with the grooving blade, drill, cut off.</figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 191 lines</span><a href="prog/c-clamp-end.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
 O0001
 G00 G18 G40 G80 G97 G99
@@ -2435,7 +2420,6 @@ M05
 / M99
 M30
 %</pre></div>
-    <figure class="fig"><video src="img/cam-clamp-end.mp4" poster="img/cam-clamp-end-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
 
@@ -2448,6 +2432,7 @@ M30
   <h3>Machine and programming techniques</h3><ul><li>Haas vertical mill (TM-1, Mini Mill or VF-2), part held in a vise on parallels.</li><li>Program built in SolidWorks CAM and posted to Haas G-code, one program per setup.</li><li>A separate work offset for each setup: G54 for Setup 1, G55 for the flipped part in Setup 2.</li><li>Tool length compensation (G43 H) on every tool and cutter radius compensation (G41 D) on the profile, so size can be tuned at the machine.</li><li>Inch units (G20), absolute positioning (G90), feed per minute (G94); Z sent to machine home (G53) before each tool change.</li><li>Canned cycles: G82 spot drill with dwell, G81 drill, G85 ream (feeds in and out for a clean bore); G98 returns to the start plane between holes.</li></ul>
   </div><div class="dmedia">
     <figure class="fig"><a href="img/dwg-cube.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-cube.jpg?v=2" alt="Drawing RS-2005" loading="lazy"></a><figcaption><span class="fn">RS-2005 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2005-cube.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <h3 class="media-h">Toolpath simulation</h3><figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none" aria-label="SolidWorks CAM toolpath simulation"></video><figcaption><span class="fn">SolidWorks CAM</span>Square the block, then spot, drill and ream on two faces.</figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Setup 1 · 137 lines</span><a href="prog/reamed-cube-setup1.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
 O00001
 (SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
@@ -2673,7 +2658,6 @@ N415 G00 G90 G53 G49 H0 Z0 M05
 N420 G55 X0 Y0
 N425 M30
 %</pre></div>
-    <figure class="fig"><video src="img/cam-cube.mp4" poster="img/cam-cube-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
 
