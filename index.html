@@ -2447,7 +2447,7 @@ M30
     <h3>Tools</h3><ul class="tools"><li>T01 · 3/4 in carbide end mill, 2 flute</li><li>T03 · 1/4 in 90° spot drill</li><li>T04 · 6.1 mm drill</li><li>T05 · 0.2480 in reamer</li></ul>
   <h3>Machine and programming techniques</h3><ul><li>Haas vertical mill (TM-1, Mini Mill or VF-2), part held in a vise on parallels.</li><li>Program built in SolidWorks CAM and posted to Haas G-code, one program per setup.</li><li>A separate work offset for each setup: G54 for Setup 1, G55 for the flipped part in Setup 2.</li><li>Tool length compensation (G43 H) on every tool and cutter radius compensation (G41 D) on the profile, so size can be tuned at the machine.</li><li>Inch units (G20), absolute positioning (G90), feed per minute (G94); Z sent to machine home (G53) before each tool change.</li><li>Canned cycles: G82 spot drill with dwell, G81 drill, G85 ream (feeds in and out for a clean bore); G98 returns to the start plane between holes.</li></ul>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-cube.jpg" target="_blank" rel="noopener"><img src="img/dwg-cube.jpg" alt="Drawing RS-2005" loading="lazy"></a><figcaption><span class="fn">RS-2005 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2005-cube.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-cube.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-cube.jpg?v=2" alt="Drawing RS-2005" loading="lazy"></a><figcaption><span class="fn">RS-2005 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2005-cube.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Setup 1 · 137 lines</span><a href="prog/reamed-cube-setup1.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
 O00001
 (SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
@@ -2685,7 +2685,7 @@ N425 M30
     <h3>Tools</h3><ul class="tools"><li>T04 · 3/4 in carbide end mill, 2 flute</li><li>T05 · #3 60° center drill</li><li>T24 · letter B drill</li><li>T23 · 0.2500 in reamer</li></ul>
   <h3>Machine and programming techniques</h3><ul><li>Haas vertical mill (TM-1, Mini Mill or VF-2), part held in a vise on parallels.</li><li>Program built in SolidWorks CAM and posted to Haas G-code, one program per setup, both on work offset G54.</li><li>Tool length compensation (G43 H) on every tool and cutter radius compensation (G41 D) on the profile, so size can be tuned at the machine.</li><li>Inch units (G20), absolute positioning (G90), feed per minute (G94); Z sent to machine home (G53) before each tool change.</li><li>Canned cycles: G82 center drill with a 1-second dwell, G81 drill, G85 ream; G98 returns to the start plane.</li></ul>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-step-bar.jpg" target="_blank" rel="noopener"><img src="img/dwg-step-bar.jpg" alt="Drawing RS-2006" loading="lazy"></a><figcaption><span class="fn">RS-2006 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2006-step-bar.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-step-bar.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-step-bar.jpg?v=2" alt="Drawing RS-2006" loading="lazy"></a><figcaption><span class="fn">RS-2006 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2006-step-bar.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Setup 1 · 124 lines</span><a href="prog/milled-step-bar-setup1.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">%
 O00001
 (SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 4000 RPM - TM-1 / MINI MILL / VF-2)
@@ -2956,7 +2956,7 @@ N675 M30
     <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Plain carbon steel</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
     <h3>What the part is</h3><p>The T-slot nut of a work-stop clamp: a milled T-profile with a 5/16-18 tapped hole, profile of a surface .005 on the two shoulder faces and the hole positioned within Ø.020 to datums A, B and C.</p>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-tslot.jpg" target="_blank" rel="noopener"><img src="img/dwg-tslot.jpg" alt="Drawing RS-2007" loading="lazy"></a><figcaption><span class="fn">RS-2007 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2007-tslot.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-tslot.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-tslot.jpg?v=2" alt="Drawing RS-2007" loading="lazy"></a><figcaption><span class="fn">RS-2007 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2007-tslot.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
   </div></div>
 </template>
 
@@ -2965,7 +2965,7 @@ N675 M30
     <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Aluminum</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
     <h3>What the part is</h3><p>A 3.50 × 2.00 in U-body with R.125 inside corners and a 7/16-14 tapped hole held perpendicular to datum B within .005.</p>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-clamp-body.jpg" target="_blank" rel="noopener"><img src="img/dwg-clamp-body.jpg" alt="Drawing RS-2008" loading="lazy"></a><figcaption><span class="fn">RS-2008 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2008-clamp-body.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-clamp-body.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-clamp-body.jpg?v=2" alt="Drawing RS-2008" loading="lazy"></a><figcaption><span class="fn">RS-2008 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2008-clamp-body.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
   </div></div>
 </template>
 
@@ -2974,7 +2974,7 @@ N675 M30
     <dl class="meta"><div><dt>Machine</dt><dd>Mill</dd></div><div><dt>Material</dt><dd>Aluminum</dd></div><div><dt>Status</dt><dd>Modeled in SolidWorks</dd></div></dl>
     <h3>What the part is</h3><p>A block with a bored hole and a milled slot, both located from the datum edges, with edges deburred.</p>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-bore-slot.jpg" target="_blank" rel="noopener"><img src="img/dwg-bore-slot.jpg" alt="Drawing RS-2009" loading="lazy"></a><figcaption><span class="fn">RS-2009 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2009-bore-slot.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-bore-slot.jpg?v=2" target="_blank" rel="noopener"><img src="img/dwg-bore-slot.jpg?v=2" alt="Drawing RS-2009" loading="lazy"></a><figcaption><span class="fn">RS-2009 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2009-bore-slot.pdf?v=2" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
   </div></div>
 </template>
 
