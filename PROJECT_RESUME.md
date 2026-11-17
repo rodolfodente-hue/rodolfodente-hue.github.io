@@ -2,7 +2,7 @@
 
 Next action: None pending; change content in the private mock and rebuild.
 
-Last update: 2026-11-15, Claude Code.
+Last update: 2026-11-16, Claude Code.
 
 ## Status
 
@@ -14,6 +14,12 @@ Last update: 2026-11-15, Claude Code.
   rebuild, or the next build overwrites the edit.
 - 2026-11-15: C-Clamp End added as the sixth CAM-programmed part (program,
   toolpath video, details panel), built from the mock.
+- 2026-11-16: OD & ID Taper (RS-2003) updated from the mock: revised 10-operation
+  program, new drawing (circular runout to ASME Y14.5-2018), toolpath video as
+  Video 5 and in its panel, rewritten panel with a program review. The panel
+  says the part was machined on a manual lathe and the CNC program is programmed and
+  simulated in SolidWorks CAM; no measured values are shown. The video grid centers a fifth video under
+  the 2x2.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
