@@ -23,6 +23,9 @@ Last update: 2026-11-16, Claude Code.
 - 2026-11-16: Face and Turn (RS-2001) and Simple Cylinder (RS-2002) drawings
   updated from the mock: new Rev A sheets and PDFs to ASME Y14.5-2018 and new
   drawing captions in their panels.
+- 2026-11-16: C-Clamp End drawing RS-2004 Rev B: counterbore callout with position
+  tolerance, hole limits .195/.189 with datum A, hidden-line profile; panel text
+  and caption updated, built from the mock.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
