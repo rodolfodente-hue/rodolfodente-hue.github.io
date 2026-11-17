@@ -20,6 +20,9 @@ Last update: 2026-11-16, Claude Code.
   says the part was machined on a manual lathe and the CNC program is programmed and
   simulated in SolidWorks CAM; no measured values are shown. The video grid centers a fifth video under
   the 2x2.
+- 2026-11-16: Face and Turn (RS-2001) and Simple Cylinder (RS-2002) drawings
+  updated from the mock: new Rev A sheets and PDFs to ASME Y14.5-2018 and new
+  drawing captions in their panels.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 

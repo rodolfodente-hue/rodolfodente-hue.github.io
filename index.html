@@ -1809,7 +1809,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
     <h3>Tools</h3><ul class="tools"><li>T01 · CNMG 431 80° holder</li><li>T03 · DNMG 431 55° holder</li><li>T10 · 0.118 in cut-off blade</li></ul>
   <h3>Machine and programming techniques</h3><ul><li>Haas TL CNC lathe, one setup in the chuck, work offset G54.</li><li>Program built in SolidWorks CAM and posted to Haas G-code.</li><li>Constant surface speed (G96) with the spindle capped by G50 at 1,800 RPM; feed per revolution (G99).</li><li>Roughing and finishing split between two inserts: 80° for stock removal, 55° for the finish profile.</li><li>Coolant on (M08) and an optional stop (M01) after each tool so the part can be checked.</li></ul>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-face-turn.jpg" target="_blank" rel="noopener"><img src="img/dwg-face-turn.jpg" alt="Drawing RS-2001" loading="lazy"></a><figcaption><span class="fn">RS-2001 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2001-face-turn.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-face-turn.jpg" target="_blank" rel="noopener"><img src="img/dwg-face-turn.jpg" alt="Drawing RS-2001" loading="lazy"></a><figcaption><span class="fn">RS-2001 Rev A</span>My drawing, toleranced to ASME Y14.5-2018: 4.500 overall length, the three 1.000 steps measured from the front, and a 63 µin Ra surface finish. Click to open full size. <a href="pdf/RS-2001-face-turn.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
     <h3 class="media-h">CNC program</h3><div class="prog"><div class="prog-head"><span>Lathe program · 145 lines</span><a href="prog/face-and-turn.nc" target="_blank" rel="noopener">Open in a new tab</a></div><pre class="code">O0001
 (SPEEDS CHECKED FOR 6061 ALUMINUM - MAX 1800 RPM - HAAS TL LATHE)
 N1 (CNMG 431 80DEG SQR HOLDER)
@@ -1966,7 +1966,7 @@ N129 M30</pre></div>
     <h3>Process</h3><ol><li>Saw the bar to length.</li><li>Face and turn the outside diameter.</li><li>Drill from the tailstock, then bore the inside diameter to size.</li></ol>
   <h3>Machine and programming techniques</h3><ul><li>Lathe. The toolpaths are simulated in SolidWorks CAM; no program was posted for this part.</li></ul>
   </div><div class="dmedia">
-    <figure class="fig"><a href="img/dwg-cylinder.jpg" target="_blank" rel="noopener"><img src="img/dwg-cylinder.jpg" alt="Drawing RS-2002" loading="lazy"></a><figcaption><span class="fn">RS-2002 Rev A</span>My drawing, made from the SolidWorks model the part was machined to. Click to open full size. <a href="pdf/RS-2002-cylinder.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
+    <figure class="fig"><a href="img/dwg-cylinder.jpg" target="_blank" rel="noopener"><img src="img/dwg-cylinder.jpg" alt="Drawing RS-2002" loading="lazy"></a><figcaption><span class="fn">RS-2002 Rev A</span>My drawing: Section A-A, toleranced to ASME Y14.5-2018. Datum A is the Ø1.000 bore; circular runout on the Ø1.100 counterbore replaces concentricity, which the 2018 standard removed. Click to open full size. <a href="pdf/RS-2002-cylinder.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption></figure>
     <figure class="fig"><video src="img/cam-cylinder.mp4" poster="img/cam-cylinder-poster.jpg" controls muted playsinline preload="none"></video><figcaption>Toolpath simulation in SolidWorks CAM.</figcaption></figure>
   </div></div>
 </template>
