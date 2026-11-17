@@ -29,6 +29,8 @@ Last update: 2026-11-17, Claude Code.
 - 2026-11-17: milling drawings RS-2005..2009 replaced by the ASME Y14.5-2018
   versions (PDFs and drawing images); Milled Step Bar text now says two reamed
   holes and the T-Slot Nut panel says profile of a surface .005, built from the mock.
+  The drawing image and PDF links carry `?v=2` so browsers fetch the new files
+  instead of cached copies (commit `8904d2b`).
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
