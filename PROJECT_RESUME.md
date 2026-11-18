@@ -31,6 +31,10 @@ Last update: 2026-11-17, Claude Code.
   holes and the T-Slot Nut panel says profile of a surface .005, built from the mock.
   The drawing image and PDF links carry `?v=2` so browsers fetch the new files
   instead of cached copies (commit `8904d2b`).
+- 2026-11-17: toolpath videos moved into each part's details panel, under the
+  drawing; the separate video grid on the machining page is removed (commit
+  `c236646`). Part counts ("9 parts, 6 programmed" and similar) removed from the
+  site on Rodolfo's instruction (commit `5ab6b30`). Both built from the mock.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
