@@ -1,2 +1,5 @@
 # PDFs are binary: no line-ending conversion.
 *.pdf binary
+
+# CNC programs keep LF line endings on every machine.
+*.nc text eol=lf
