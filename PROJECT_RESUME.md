@@ -35,6 +35,12 @@ Last update: 2026-11-17, Claude Code.
   drawing; the separate video grid on the machining page is removed (commit
   `c236646`). Part counts ("9 parts, 6 programmed" and similar) removed from the
   site on Rodolfo's instruction (commit `5ab6b30`). Both built from the mock.
+- 2026-11-17: site review published (built from the work-samples branch
+  `site-review-2026-11`): headline "Mechanical Engineer | Manufacturing & Quality
+  Engineering", role tags on the Work cards, a KPI row and a "Skills and tools"
+  footer on all 11 case studies, the unsupported Defect Tracking "Every case" result
+  removed, Production Line Flow stations numbered S1-S13 and the defect reason cards
+  lettered A-H (no shop names). `.gitattributes` marks PDFs binary.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
