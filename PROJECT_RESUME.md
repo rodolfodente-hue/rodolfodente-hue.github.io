@@ -45,6 +45,10 @@ Last update: 2026-11-18, Claude Code.
   page sources (commit `60b09d3`). Repo cleanup: `.gitattributes` keeps `.nc`
   programs at LF so they no longer show as modified, and `.gitignore` keeps
   private copies out of the public site.
+- 2026-11-18: Experience page: job entries no longer link to case studies (so no
+  employer is tied to a published sample there), and two bullets under the first
+  job are reworded (interruption Pareto; visual management standard). Built from
+  the mock.
 - `cert/` holds the certificate and diploma copies linked from the Education page.
 - `job-bot/` holds the two pages required by Google's app settings.
 
