@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Rodolfo Silva · Manufacturing Engineer</title>
+<title>Rodolfo Silva · Mechanical Engineer | Manufacturing &amp; Quality Engineering</title>
 <meta name="description" content="Manufacturing engineering portfolio of Rodolfo Silva: production flow, quality and reliability, CNC machining and CAM, CAD drawings and analysis, each backed by the evidence behind it.">
 <meta name="author" content="Rodolfo Silva">
 <link rel="canonical" href="https://rodolfosilva.engineer/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231D5C88'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3ERS%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rodolfo Silva · Manufacturing Engineer">
+<meta property="og:title" content="Rodolfo Silva · Mechanical Engineer | Manufacturing &amp; Quality Engineering">
 <meta property="og:description" content="Manufacturing engineering portfolio of Rodolfo Silva: production flow, quality and reliability, CNC machining and CAM, CAD drawings and analysis, each backed by the evidence behind it.">
 <meta property="og:url" content="https://rodolfosilva.engineer/">
 <meta property="og:image" content="https://rodolfosilva.engineer/img/cam-face-turn-poster.jpg">
@@ -189,6 +189,22 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .lessons div{border-top:3px solid var(--line);padding-top:10px}
 .lessons h3{font-size:18px;margin-bottom:6px}
 .lessons p{font-size:14px;color:var(--muted)}
+/* role tags, KPI rows, skills/tools footers (site review 2026-11) */
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.role{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border:1px solid var(--ink);border-radius:2px;color:var(--ink);white-space:nowrap}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line);margin:0}
+.kpis.k3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpi{padding:14px 14px 14px 0;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.kpi + .kpi{padding-left:14px;border-left:1px solid var(--line)}
+.kpi b{font:600 28px/1.05 var(--display);letter-spacing:.01em;color:var(--ink)}
+.kpi span.k{font-size:14px;line-height:1.35;color:var(--muted)}
+@media (max-width:720px){.kpis,.kpis.k3{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi + .kpi{border-left:0;padding-left:0}.kpi:nth-child(2n){padding-left:14px;border-left:1px solid var(--line)}}
+.cs-foot{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin:0}
+.cs-foot div{padding:10px 16px 12px 0}
+.cs-foot dt{font:500 11px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cs-foot dd{margin:0;font-size:15px}
+@media (max-width:720px){.cs-foot{grid-template-columns:1fr}}
+
 .closenav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
 .titleblock{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:2px solid var(--ink);margin-top:40px;font-family:var(--mono);font-size:12px}
 .titleblock div{padding:8px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -302,7 +318,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
 <header class="site">
   <div class="wrap">
-    <a class="mark" href="#home"><strong>RODOLFO SILVA</strong><span>Manufacturing Engineer</span></a>
+    <a class="mark" href="#home"><strong>RODOLFO SILVA</strong><span>Mechanical Engineer</span></a>
     <nav class="main" aria-label="Main">
       <a href="#work" data-nav="work">Work Samples</a>
       <a href="#skills" data-nav="skills">Skills &amp; Evidence</a>
@@ -323,7 +339,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div>
         <p class="eyebrow">Manufacturing · Quality · Reliability</p>
         <h1>Rodolfo Silva</h1>
-        <p class="title">Manufacturing Engineer</p>
+        <p class="title">Mechanical Engineer | Manufacturing &amp; Quality Engineering</p>
         <p class="lede">I go to the floor, measure where the time and material are going, and fix what the data points to. Each project here starts with a problem I found, the engineering tool I used to prove it, and what changed afterward.</p>
         <div class="btns">
           <a class="btn primary" href="#work">Explore Work Samples</a>
@@ -433,7 +449,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="personal design machining">
         <a class="thumb" href="#p-machining" aria-label="CNC machining and CAM programming"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="8" y1="50" x2="104" y2="50" class="s-mut" stroke-dasharray="8 2 2 2" stroke-width=".8"/><path d="M14 32 H44 V37 H64 V41 H84 V45 H98 V55 H84 V59 H64 V63 H44 V68 H14 Z" class="f-accs s-acc" stroke-width="1.2"/><rect x="112" y="40" width="38" height="34" class="f-accs s-acc" stroke-width="1.2"/><circle cx="131" cy="57" r="5" class="f-bg s-acc" stroke-width="1.2"/><rect x="125" y="12" width="12" height="22" class="f-saf"/><text x="80" y="84" font-size="6" text-anchor="middle" class="t-ink">LATHE · MILL · CAM</text></svg></a>
-        <div class="body"><span class="badge b-pro">Training + personal project</span><h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-pro">Training + personal project</span><span class="role">Manufacturing</span></div><h3><a href="#p-machining">Machined Parts and CAM Programming</a></h3>
           <dl class="story"><dt>Found</dt><dd>Making parts on manual, ProtoTRAK and CNC machines showed me how much of the result is decided by the setup plan.</dd><dt>Why</dt><dd>A manufacturing engineer has to judge a CNC program: its setups, tools and operations, not just the print.</dd><dt>Did</dt><dd>At home, I model each training part in SolidWorks and program it in SolidWorks CAM, then simulate the toolpaths.</dd><dt class="out">Outcome</dt><dd>Training parts modeled and programmed in SolidWorks CAM; programs run on Haas CNC</dd></dl>
           <div class="skills"><a href="#skill-cam">CNC / CAM</a><a href="#skill-solidworks">SolidWorks</a><a href="#skill-gdt">GD&amp;T prints</a></div>
           <div class="media"><span>programs · drawings · simulations</span><a class="go" href="#p-machining">Read the story →</a></div></div>
@@ -441,7 +457,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="professional flow">
         <a class="thumb" href="#flow-study" aria-label="Production line flow study"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="12" y="38" width="56" height="14" class="f-line"/><rect x="68" y="38" width="36" height="14" class="f-accs"/><rect x="104" y="38" width="44" height="14" class="f-line"/><rect x="68" y="34" width="2" height="22" class="f-saf"/><line x1="12" y1="26" x2="148" y2="26" class="s-ink" stroke-width=".6"/><text x="80" y="22" font-size="6" text-anchor="middle" class="t-ink">5.00 D</text><text x="70" y="66" font-size="6" class="t-saf">VA 0.26%</text></svg></a>
-        <div class="body"><span class="badge b-pro">Professional project</span><h3><a href="#flow-study">Production Line Flow and Capacity Improvement</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-pro">Professional project</span><span class="role">Manufacturing</span></div><h3><a href="#flow-study">Production Line Flow and Capacity Improvement</a></h3>
           <dl class="story"><dt>Found</dt><dd>Mapping the line showed 0.26% of the lead time was real work. One finishing station set the pace.</dd><dt>Why</dt><dd>The line kept missing its daily plan, and adding people would not fix a queue problem.</dd><dt>Did</dt><dd>Counted queues daily, logged every stop, simulated the line, then rebalanced labor with painted floor zones.</dd><dt class="out">Outcome</dt><dd>Daily output +24% <span class="pill p-meas">measured</span></dd></dl>
           <div class="skills"><a href="#skill-vsm">Value stream mapping</a><a href="#skill-time">Time study</a><a href="#skill-wip">WIP analysis</a><a href="#skill-sim">Simulation</a></div>
           <div class="media"><span>6 figures</span><a class="go" href="#flow-study">Read the story →</a></div></div>
@@ -449,7 +465,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="professional quality">
         <a class="thumb" href="#p-defects" aria-label="Defect tracking"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><rect x="20" y="24" width="16" height="50" class="f-acc"/><rect x="40" y="40" width="16" height="34" class="f-acc"/><rect x="60" y="52" width="16" height="22" class="f-acc"/><rect x="80" y="60" width="16" height="14" class="f-acc"/><rect x="100" y="64" width="16" height="10" class="f-acc"/><rect x="120" y="68" width="16" height="6" class="f-acc"/><polyline points="28,24 48,14 68,9 88,6 108,4 128,3" fill="none" class="s-saf" stroke-width="2"/></svg></a>
-        <div class="body"><span class="badge b-dep">In daily production use</span><h3><a href="#p-defects">Defect Tracking and Production Visibility</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-dep">In daily production use</span><span class="role">Quality</span></div><h3><a href="#p-defects">Defect Tracking and Production Visibility</a></h3>
           <dl class="story"><dt>Found</dt><dd>Rework and scrap had no traceability. Defective units went to a rework cart, and 78% of kickbacks had no reason recorded.</dd><dt>Why</dt><dd>Rework is non-value-added: it takes labor, floor space, material and capacity that could go to good product.</dd><dt>Did</dt><dd>Defined 8 defect categories as picture cards. Every rework is logged by type and station where it's found, and followed until it's closed.</dd><dt class="out">Outcome</dt><dd>Every rework logged; trends show before problems reach the customer <span class="pill p-meas">measured</span></dd></dl>
           <div class="skills"><a href="#skill-trace">Defect traceability</a><a href="#skill-pareto">Pareto</a><a href="#skill-datacol">Data collection</a><a href="#skill-training">Training</a></div>
           <div class="media"><span>process diagram · card set</span><a class="go" href="#p-defects">Read the story →</a></div></div>
@@ -457,7 +473,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="professional flow">
         <a class="thumb" href="#p-breaks" aria-label="Break-time standardization"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="12" y1="34" x2="148" y2="34" class="s-line"/><line x1="12" y1="62" x2="148" y2="62" class="s-line"/><rect x="50" y="26" width="8" height="16" class="f-saf"/><rect x="86" y="26" width="16" height="16" class="f-saf"/><rect x="120" y="26" width="8" height="16" class="f-saf"/><rect x="60" y="54" width="8" height="16" class="f-saf"/><rect x="100" y="54" width="16" height="16" class="f-saf"/><rect x="130" y="54" width="8" height="16" class="f-saf"/><text x="12" y="24" font-size="6" class="t-mut">LINE A</text><text x="12" y="52" font-size="6" class="t-mut">LINE B</text><text x="12" y="84" font-size="6" class="t-ink">−50% BREAK LOSS</text></svg></a>
-        <div class="body"><span class="badge b-dep">In daily production use</span><h3><a href="#p-breaks">Break-Time Standardization</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-dep">In daily production use</span><span class="role">Manufacturing</span></div><h3><a href="#p-breaks">Break-Time Standardization</a></h3>
           <dl class="story"><dt>Found</dt><dd>My time study showed the line stopping early and restarting late around breaks: about 14% of all interruption loss.</dd><dt>Why</dt><dd>It was one of the top three losses and almost free to fix.</dd><dt>Did</dt><dd>Brought the numbers to the team. We agreed on a scheduled call at the start and end of each break, and I set it up on both lines.</dd><dt class="out">Outcome</dt><dd>Break-related loss cut in half, and still falling <span class="pill p-meas">measured</span></dd></dl>
           <div class="skills"><a href="#skill-time">Loss measurement</a><a href="#skill-lean">Visual management</a><a href="#skill-training">Team problem-solving</a></div>
           <div class="media"><span>break timeline</span><a class="go" href="#p-breaks">Read the story →</a></div></div>
@@ -465,7 +481,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="professional quality">
         <a class="thumb" href="#p-shaft" aria-label="Aircraft shaft reliability"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="30" y1="12" x2="30" y2="78" class="s-mut" stroke-dasharray="3 2"/><line x1="130" y1="12" x2="130" y2="78" class="s-mut" stroke-dasharray="3 2"/><path d="M14 76 C 50 76, 60 30, 80 30 S 110 76, 146 76" fill="none" class="s-mut" stroke-width="1.5"/><path d="M50 76 C 70 76, 72 16, 80 16 S 90 76, 110 76" fill="none" class="s-acc" stroke-width="2"/><text x="30" y="86" font-size="6" text-anchor="middle" class="t-mut">LSL</text><text x="130" y="86" font-size="6" text-anchor="middle" class="t-mut">USL</text></svg></a>
-        <div class="body"><span class="badge b-pro">Professional · UMass Lowell</span><h3><a href="#p-shaft">Aircraft Shaft Reliability and Process Capability</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-pro">Professional · UMass Lowell</span><span class="role">Quality</span></div><h3><a href="#p-shaft">Aircraft Shaft Reliability and Process Capability</a></h3>
           <dl class="story"><dt>Found</dt><dd>A series reliability model of 9 operations put the line at 0.71. Moving final-inspection catches back to their source showed Grind caused 41% of failures.</dd><dt>Why</dt><dd>One shaft in three needed scrap or rework.</dd><dt>Did</dt><dd>FMEA and a capability study (Cp 0.50) showed the problem was variation, not the spec. Added in-process air gauging, a drift reaction plan, SOPs and training.</dd><dt class="out">Outcome</dt><dd>First-pass yield 84.4% → 97.75%; Cp 0.50 → 1.10</dd></dl>
           <div class="skills"><a href="#skill-cap">Process capability</a><a href="#skill-fmea">FMEA</a><a href="#skill-rca">Root cause</a><a href="#skill-pareto">Pareto</a></div>
           <div class="media"><span>reliability chain · capability</span><a class="go" href="#p-shaft">Read the story →</a></div></div>
@@ -473,7 +489,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="professional quality">
         <a class="thumb" href="#p-fmea" aria-label="Forestry harvester hose FMEA"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g><rect x="40" y="14" width="18" height="14" class="f-line"/><rect x="60" y="14" width="18" height="14" class="f-accs"/><rect x="80" y="14" width="18" height="14" class="f-saf"/><rect x="100" y="14" width="18" height="14" class="f-bad"/><rect x="40" y="30" width="18" height="14" class="f-line"/><rect x="60" y="30" width="18" height="14" class="f-line"/><rect x="80" y="30" width="18" height="14" class="f-accs"/><rect x="100" y="30" width="18" height="14" class="f-saf"/><rect x="40" y="46" width="18" height="14" class="f-line"/><rect x="60" y="46" width="18" height="14" class="f-line"/><rect x="80" y="46" width="18" height="14" class="f-line"/><rect x="100" y="46" width="18" height="14" class="f-accs"/><rect x="40" y="62" width="18" height="14" class="f-line"/><rect x="60" y="62" width="18" height="14" class="f-line"/><rect x="80" y="62" width="18" height="14" class="f-line"/><rect x="100" y="62" width="18" height="14" class="f-line"/></g><text x="34" y="48" font-size="6" text-anchor="end" class="t-mut">SEV</text><text x="79" y="86" font-size="6" text-anchor="middle" class="t-mut">DETECTION →</text></svg></a>
-        <div class="body"><span class="badge b-pro">Internship · professional</span><h3><a href="#p-fmea">Forestry Harvester Hose FMEA</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-pro">Internship · professional</span><span class="role">Quality</span></div><h3><a href="#p-fmea">Forestry Harvester Hose FMEA</a></h3>
           <dl class="story"><dt>Found</dt><dd>In the field, the crane's rotator hoses burst with no warning and stopped the machine.</dd><dt>Why</dt><dd>Every rupture meant unplanned downtime and oil on the ground, far from a shop.</dd><dt>Did</dt><dd>Ran the FMEA, scored every failure mode and traced the top risks to hose routing and poor detectability. Recommended rerouting, guards, a shift inspection item and operator retraining.</dd><dt class="out">Outcome</dt><dd>Completed FMEA with the critical components identified and ranked</dd></dl>
           <div class="skills"><a href="#skill-fmea">FMEA</a><a href="#skill-rca">Root cause</a><a href="#skill-trace">Corrective action</a></div>
           <div class="media"><span>FMEA table · field photo</span><a class="go" href="#p-fmea">Read the story →</a></div></div>
@@ -482,7 +498,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="academic quality">
         <a class="thumb" href="#p-stent" aria-label="Medical stent DOE"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g fill="none" class="s-acc" stroke-width="1.5"><rect x="50" y="30" width="44" height="44"/><rect x="66" y="16" width="44" height="44"/><line x1="50" y1="30" x2="66" y2="16"/><line x1="94" y1="30" x2="110" y2="16"/><line x1="50" y1="74" x2="66" y2="60"/><line x1="94" y1="74" x2="110" y2="60"/></g><g class="f-saf"><circle cx="50" cy="30" r="3"/><circle cx="94" cy="30" r="3"/><circle cx="66" cy="16" r="3"/><circle cx="110" cy="16" r="3"/><circle cx="50" cy="74" r="3"/><circle cx="94" cy="74" r="3"/><circle cx="66" cy="60" r="3"/><circle cx="110" cy="60" r="3"/></g><circle cx="80" cy="45" r="3" class="f-ink"/></svg></a>
-        <div class="body"><span class="badge b-aca">Graduate · manufacturer data</span><h3><a href="#p-stent">Medical Stent DOE and Six Sigma Project</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-aca">Graduate · manufacturer data</span><span class="role">Quality</span></div><h3><a href="#p-stent">Medical Stent DOE and Six Sigma Project</a></h3>
           <dl class="story"><dt>Found</dt><dd>A designed experiment on manufacturer data showed barb retention was the weakest of three requirements.</dd><dt>Why</dt><dd>Retention keeps a stent from moving after it's placed, so it's a patient-safety requirement.</dd><dt>Did</dt><dd>Ran a 2⁴ factorial with center points, then carried it through a full DMAIC project: measurement plan, capability baseline, FMEA, control plan.</dd><dt class="out">Outcome</dt><dd>Two settings meet all three targets <span class="pill p-calc">predicted</span></dd></dl>
           <div class="skills"><a href="#skill-doe">DOE</a><a href="#skill-lean">DMAIC</a><a href="#skill-minitab">Minitab</a></div>
           <div class="media"><span>effects plots · optimizer</span><a class="go" href="#p-stent">Read the story →</a></div></div>
@@ -490,7 +506,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="academic flow">
         <a class="thumb" href="#p-gvr" aria-label="Production flow and lead time"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g class="f-acc"><rect x="16" y="44" width="14" height="30"/><rect x="36" y="38" width="14" height="36"/><rect x="56" y="48" width="14" height="26"/><rect x="76" y="40" width="14" height="34"/><rect x="116" y="46" width="14" height="28"/></g><rect x="96" y="20" width="14" height="54" class="f-saf"/><line x1="10" y1="32" x2="150" y2="32" class="s-ink" stroke-dasharray="4 3"/><text x="150" y="28" font-size="6" text-anchor="end" class="t-ink">TAKT</text></svg></a>
-        <div class="body"><span class="badge b-aca">Graduate case · modeled</span><h3><a href="#p-gvr">Production Flow, Line Balancing and Lead Time</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-aca">Graduate case · modeled</span><span class="role">Manufacturing</span></div><h3><a href="#p-gvr">Production Flow, Line Balancing and Lead Time</a></h3>
           <dl class="story"><dt>Found</dt><dd>Takt math showed two stations over takt, one by 40%.</dd><dt>Why</dt><dd>The line needed overtime every day and lead time was about 9 weeks.</dd><dt>Did</dt><dd>Rebalanced the stations, compared cutting machining time against cutting its variation, and moved molding to daily batches.</dd><dt class="out">Outcome</dt><dd>No overtime needed; lead time −64% <span class="pill p-calc">projected</span></dd></dl>
           <div class="skills"><a href="#skill-bottleneck">Line balancing</a><a href="#skill-wip">Batch &amp; WIP</a><a href="#skill-time">Takt time</a></div>
           <div class="media"><span>balance chart · batch comparison</span><a class="go" href="#p-gvr">Read the story →</a></div></div>
@@ -498,7 +514,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="academic design">
         <a class="thumb" href="#p-bracket" aria-label="Steel shelf bracket FEA"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><line x1="30" y1="8" x2="30" y2="84" class="s-ink" stroke-width="2"/><path d="M40 22 Q40 14 48 14 L132 14 L132 26 L58 26 Q52 26 52 32 L52 80 L40 80 Z" class="f-accs s-acc" stroke-width="1.2"/><circle cx="56" cy="30" r="5" class="f-saf"/><path d="M110 2 V11 M106 7 L110 11 L114 7" fill="none" class="s-ink" stroke-width="1.2"/><text x="64" y="46" font-size="6" class="t-saf">σ max · FoS 3.9</text></svg></a>
-        <div class="body"><span class="badge b-aca">Graduate project</span><h3><a href="#p-bracket">Steel Shelf Bracket FEA and Verification</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-aca">Graduate project</span><span class="role">Mechanical</span></div><h3><a href="#p-bracket">Steel Shelf Bracket FEA and Verification</a></h3>
           <dl class="story"><dt>Found</dt><dd>In the mesh study, one stress peak kept climbing every time I refined the mesh, while deflection didn't move.</dd><dt>Why</dt><dd>Trusting that peak would have failed a part that was actually fine.</dd><dt>Did</dt><dd>Traced it to a rigid support edge, modeled the real screw supports, and checked the answer against hand calculations.</dd><dt class="out">Outcome</dt><dd>Factor of safety 3.9 vs 2 target, within 0.9% of theory</dd></dl>
           <div class="skills"><a href="#skill-fea">FEA</a><a href="#skill-rca">Root cause</a><a href="#skill-gdt">ASME Y14.5 drawing</a></div>
           <div class="media"><span>model · V&amp;V table</span><a class="go" href="#p-bracket">Read the story →</a></div></div>
@@ -506,7 +522,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="academic design">
         <a class="thumb" href="#p-cad" aria-label="CAD models and drawings"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g fill="none" class="s-ink" stroke-width="1.4"><rect x="30" y="30" width="30" height="30"/><rect x="60" y="38" width="60" height="14"/></g><line x1="20" y1="45" x2="130" y2="45" stroke-dasharray="8 2 2 2" class="s-mut" stroke-width=".8"/><line x1="30" y1="72" x2="120" y2="72" class="s-acc"/><line x1="30" y1="68" x2="30" y2="76" class="s-acc"/><line x1="120" y1="68" x2="120" y2="76" class="s-acc"/><text x="75" y="82" font-size="6" text-anchor="middle" class="t-acc">Ø / LENGTH</text></svg></a>
-        <div class="body"><span class="badge b-aca">Coursework</span><h3><a href="#p-cad">CAD Models and Manufacturing Drawings</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-aca">Coursework</span><span class="role">Mechanical</span></div><h3><a href="#p-cad">CAD Models and Manufacturing Drawings</a></h3>
           <dl class="story"><dt>Did</dt><dd>Four parts taken from 3D model to dimensioned drawing in SolidWorks and Fusion 360.</dd><dt class="out">Outcome</dt><dd>All 4 drawings released at Rev A</dd></dl>
           <div class="skills"><a href="#skill-solidworks">SolidWorks</a><a href="#skill-fusion">Fusion 360</a><a href="#skill-cad">Drawings</a></div>
           <div class="media"><span>4 drawings</span><a class="go" href="#p-cad">Read the story →</a></div></div>
@@ -514,7 +530,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
 
       <article class="card" data-tags="academic">
         <a class="thumb" href="#p-schedule" aria-label="Product launch schedule"><svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" class="f-bg"/><g class="f-line"><rect x="14" y="16" width="30" height="8"/><rect x="40" y="30" width="44" height="8"/><rect x="60" y="58" width="40" height="8"/></g><g class="f-acc"><rect x="14" y="44" width="24" height="8"/><rect x="38" y="72" width="34" height="8"/><rect x="72" y="16" width="30" height="8"/><rect x="102" y="44" width="44" height="8"/></g><path d="M38 48 L38 76 M72 76 L72 20 M102 20 L102 48" fill="none" class="s-saf" stroke-width="1.5"/></svg></a>
-        <div class="body"><span class="badge b-aca">Coursework</span><h3><a href="#p-schedule">Product Launch Schedule: Critical Path</a></h3>
+        <div class="body"><div class="chips"><span class="badge b-aca">Coursework</span><span class="role">Manufacturing</span></div><h3><a href="#p-schedule">Product Launch Schedule: Critical Path</a></h3>
           <dl class="story"><dt>Did</dt><dd>Built the network and Gantt chart for a 52-week launch across three departments, then found the critical path and the cheapest weeks to cut.</dd><dt class="out">Outcome</dt><dd>Critical path and crash plan <span class="pill p-calc">calculated</span></dd></dl>
           <div class="skills"><a href="#skill-pm">Critical path</a><a href="#skill-excel">Excel</a></div>
           <div class="media"><span>network · Gantt</span><a class="go" href="#p-schedule">Read the story →</a></div></div>
@@ -536,6 +552,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Stopwatch time study, Excel, Siemens Plant Simulation</dd></div>
       <div><dt>Where</dt><dd>Fully custom, made-to-order production line, Massachusetts</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>+24%</b><span class="k">Daily output after rebalancing</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>0.26%</b><span class="k">Share of lead time that adds value</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>2.9×</b><span class="k">Queue before Prep sanding vs what it needs</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>+48%</b><span class="k">Long-term future state</span><span class="pill p-sim">simulated</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -699,6 +716,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Value stream mapping · time study · takt and capacity · bottleneck · WIP / Little's Law · line balancing · discrete-event simulation · visual management · standard work</dd></div><div><dt>Tools</dt><dd>Stopwatch, Microsoft Excel, Siemens Tecnomatix Plant Simulation</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-defects">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -725,6 +747,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Defect categories, station logging, Pareto and trend reports</dd></div>
       <div><dt>Status</dt><dd>In daily use on the production line</dd></div>
     </dl>
+    <div class="kpis k3" aria-label="Key results"><div class="kpi"><b>78%</b><span class="k">Kickbacks with no reason, before</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>8 + Other</b><span class="k">Defect categories in use</span><span class="pill p-qual">implemented</span></div><div class="kpi"><b>Live</b><span class="k">Rework and waste dashboard for supervisors</span><span class="pill p-qual">implemented</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -733,7 +756,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><span class="step">1 · How I found it</span><h3>Rework with no record</h3><p>While mapping the line I followed the rework cart. 78% of kickbacks had no reason written down, and scrap wasn't traced at all.</p></div>
       <div><span class="step">2 · Why it mattered</span><h3>Hidden non-value-added work</h3><p>Every rework repeats labor, holds floor space and uses material and capacity that should go to good product. Without data, nobody could say how much, or which problem to attack first.</p></div>
       <div><span class="step">3 · What I did</span><h3>Log every rework at the source</h3><p>I grouped the defects into 8 categories plus "Other" as picture cards. The station that finds a defect scans the card, then the unit, and the case is followed until it's repaired or shipped.</p></div>
-      <div class="out"><span class="step">4 · What changed</span><h3>Rework is visible and measured</h3><p>Every rework is now logged with its type, station and time. Supervisors follow the trends and act on variation in the line before a problem reaches the customer.</p></div>
+      <div class="out"><span class="step">4 · What changed</span><h3>Rework is visible and measured</h3><p>Supervisors follow the trends and act on variation in the line before a problem reaches the customer.</p></div>
     </div>
   </div></section>
 
@@ -772,7 +795,6 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <tbody>
         <tr><td>Kickbacks with no reason, before</td><td class="num">78%</td><td>Case records before the cards</td><td><span class="pill p-meas">measured</span></td></tr>
         <tr><td>Defect categories in use</td><td class="num">8 + Other</td><td>Card set on every scan station and at QC</td><td><span class="pill p-qual">implemented</span></td></tr>
-        <tr><td><b>Rework logged with type and station, after</b></td><td class="num"><b>Every case</b></td><td>Same case records, after the cards</td><td><span class="pill p-meas">measured</span></td></tr>
         <tr><td>Rework and material waste visible to supervisors</td><td class="num">In use</td><td>Live dashboard and trend reports</td><td><span class="pill p-qual">implemented</span></td></tr>
       </tbody>
     </table></div>
@@ -799,6 +821,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Traceability · corrective action · Pareto / KPI dashboards · data collection · visual management · operator training</dd></div><div><dt>Tools</dt><dd>QR/OCR label scanning, Raspberry Pi station screens, cordless barcode scanners, iPad camera reader, Python / FastAPI / SQLite web app</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-breaks">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -820,6 +847,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Time study, interruption log, scheduled break calls</dd></div>
       <div><dt>Status</dt><dd>In daily use on two lines</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>~14%</b><span class="k">Interruption loss from breaks, before</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>−50%</b><span class="k">Break-related loss after the change</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>Still falling</b><span class="k">Trend since the change</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>2 lines</b><span class="k">Break calls in daily use</span><span class="pill p-qual">implemented</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -878,6 +906,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Time-loss measurement · Pareto · team problem-solving · standard work · visual management</dd></div><div><dt>Tools</dt><dd>Shop PA system, Raspberry Pi station screens</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-shaft">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -899,6 +932,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Series reliability, Pareto, FMEA, Cp/Cpk, SPC</dd></div>
       <div><dt>Fix</dt><dd>In-process air gauging, reaction plan, SOPs, training</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>84.4% → 97.75%</b><span class="k">First-pass yield at Grind</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>Cp 0.50 → 1.10</b><span class="k">Process capability</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>−54%</b><span class="k">Grind variation (σ)</span><span class="pill p-meas">measured</span></div><div class="kpi"><b>0.71 → 0.80</b><span class="k">Line reliability</span><span class="pill p-calc">calculated</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1125,6 +1159,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Series reliability · Pareto · PFMEA · process capability (Cp/Cpk) · root cause analysis · corrective action · cost-benefit</dd></div><div><dt>Tools</dt><dd>Air gauge</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-fmea">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1146,6 +1185,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>FMEA, RPN scoring, root-cause analysis, field data</dd></div>
       <div><dt>Context</dt><dd>John Deere internship and senior project in reliability-centered maintenance</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>RPN 160</b><span class="k">Top risk: impact from the head and from trees</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>4</b><span class="k">Failure modes scored</span><span class="pill p-cw">scope</span></div><div class="kpi"><b>Detection 8</b><span class="k">The score behind the top risks</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>4</b><span class="k">Controls recommended</span><span class="pill p-qual">recommended</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1203,6 +1243,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>FMEA · RPN prioritization · root cause analysis · corrective action · reliability-centered maintenance · field data</dd></div><div><dt>Tools</dt><dd>FMEA worksheet, field inspection data</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-machining">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1224,6 +1269,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>At home</dt><dd>SolidWorks models and SolidWorks CAM programs</dd></div>
       <div><dt>Materials</dt><dd>Aluminum, brass and steel</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>Y14.5-2018</b><span class="k">ASME part drawings</span><span class="pill p-cw">scope</span></div><div class="kpi"><b>SolidWorks CAM</b><span class="k">CNC programs</span><span class="pill p-app">CAM programmed</span></div><div class="kpi"><b>Toolpaths</b><span class="k">Checked in simulation</span><span class="pill p-sim">simulated</span></div><div class="kpi"><b>Haas</b><span class="k">G-code posted for Haas CNC</span><span class="pill p-cw">scope</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1262,6 +1308,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>GD&amp;T (ASME Y14.5-2018) · setup planning · CNC programming · metrology</dd></div><div><dt>Tools</dt><dd>SOLIDWORKS, SOLIDWORKS CAM, Haas TL / VF, ProtoTRAK</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-stent">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1283,6 +1334,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Minitab, ANOVA, regression, desirability</dd></div>
       <div><dt>Framework</dt><dd>Six Sigma DMAIC</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>1.00</b><span class="k">Composite desirability</span><span class="pill p-calc">predicted</span></div><div class="kpi"><b>0.327</b><span class="k">Barb retention vs 0.250 target</span><span class="pill p-calc">predicted</span></div><div class="kpi"><b>98.3%</b><span class="k">Tensile model R²</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>20</b><span class="k">Runs: 2⁴ factorial + 4 center points</span><span class="pill p-cw">scope</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1331,6 +1383,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>DOE / ANOVA · regression · multi-response optimization · DMAIC · process capability · FMEA</dd></div><div><dt>Tools</dt><dd>Minitab</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-gvr">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1352,6 +1409,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Takt time, line balancing, variation analysis, batch sizing</dd></div>
       <div><dt>Result type</dt><dd>Modeled and projected</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>−64%</b><span class="k">Total lead time, ~9 to ~3.2 weeks</span><span class="pill p-calc">projected</span></div><div class="kpi"><b>No overtime</b><span class="k">Assembly at 28 units per day</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>7.0 → 2.2 wk</b><span class="k">Molding inventory lead time</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>10</b><span class="k">Operators, same as before</span><span class="pill p-calc">calculated</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1409,6 +1467,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Takt time · line balancing · variation reduction · batch sizing · Lean</dd></div><div><dt>Tools</dt><dd>Microsoft Excel</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-bracket">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1430,6 +1493,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Tools</dt><dd>Abaqus/Standard, SOLIDWORKS, hand calculations</dd></div>
       <div><dt>Drawing</dt><dd>ASME Y14.5-2018, third-angle</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>3.9</b><span class="k">Factor of safety, target 2</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>0.9%</b><span class="k">From curved-beam theory</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>0.7%</b><span class="k">Spread across three meshes</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>50 lbf</b><span class="k">Design load</span><span class="pill p-cw">scope</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1487,6 +1551,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
   </div></section>
 
   <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>FEA · verification and validation · mesh convergence · root cause analysis · GD&amp;T drawing · topology optimization</dd></div><div><dt>Tools</dt><dd>Abaqus/CAE, SOLIDWORKS, Python (Abaqus scripting)</dd></div></dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
     <div class="closenav">
       <div class="btns"><a class="btn tertiary" href="#work">← All work</a><a class="btn tertiary" href="#p-cad">Next project →</a></div>
       <div class="btns"><a class="btn secondary" href="#resume">Request My Résumé</a><a class="btn primary" href="https://www.linkedin.com/in/rodolfo-silva-uml/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
@@ -1508,6 +1577,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Standards</dt><dd>ASME Y14.5 dimensioning and tolerancing</dd></div>
       <div><dt>Status</dt><dd>All four released at Rev A</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>4</b><span class="k">Drawings</span><span class="pill p-cw">scope</span></div><div class="kpi"><b>Rev A</b><span class="k">All four released</span><span class="pill p-cw">scope</span></div><div class="kpi"><b>ASME Y14.5</b><span class="k">Dimensioning and tolerancing</span><span class="pill p-cw">scope</span></div><div class="kpi"><b>SOLIDWORKS + Fusion</b><span class="k">3D models</span><span class="pill p-cw">scope</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1518,6 +1588,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <figure class="fig" data-detail="d-cad-hub"><img src="img/cad-hub.jpg" alt="Hub drawing" loading="lazy"><figcaption><span class="fn">Sheet 3</span>Hub: six holes equally spaced on a Ø88 bolt circle, section C-C and a detail of the relief grooves. SolidWorks, Rev A.</figcaption></figure>
       <figure class="fig" data-detail="d-cad-fitting"><img src="img/cad-fitting.jpg" alt="Hydraulic fitting drawing" loading="lazy"><figcaption><span class="fn">Sheet 4</span>Hydraulic fitting: section A-A and detail B of the seal groove. SolidWorks, Rev A.</figcaption></figure>
     </div>  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>3D CAD · GD&amp;T (ASME Y14.5) · section and detail views · drawing release</dd></div><div><dt>Tools</dt><dd>SOLIDWORKS, Fusion</dd></div></dl>
+  </div></section>
 
   <section class="band"><div class="wrap">
     <div class="closenav">
@@ -1541,6 +1616,7 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
       <div><dt>Schedule</dt><dd>52 weeks, earliest finish</dd></div>
       <div><dt>Result type</dt><dd>Calculated</dd></div>
     </dl>
+    <div class="kpis" aria-label="Key results"><div class="kpi"><b>52 wk</b><span class="k">Earliest-finish schedule</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>11</b><span class="k">Zero-slack activities on the critical path</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>−6 wk</b><span class="k">Maximum crash, $14,200 added</span><span class="pill p-calc">calculated</span></div><div class="kpi"><b>25</b><span class="k">Activities across three departments</span><span class="pill p-cw">scope</span></div></div>
   </div>
 
   <section class="band"><div class="wrap">
@@ -1572,6 +1648,11 @@ dialog.detail::backdrop{background:rgba(10,15,20,.6)}
         <tr><td>Crash 6 weeks (maximum)</td><td class="num">46 weeks</td><td class="num">$14,200</td><td><span class="pill p-calc">calculated</span></td></tr>
       </tbody>
     </table></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2 style="margin-bottom:18px">Skills and tools</h2>
+    <dl class="cs-foot"><div><dt>Skills</dt><dd>Critical path · crash analysis · project scheduling</dd></div><div><dt>Tools</dt><dd>Microsoft Excel</dd></div></dl>
   </div></section>
 
   <section class="band"><div class="wrap">
