@@ -2,7 +2,7 @@
 
 Next action: None pending; change content in the private mock and rebuild.
 
-Last update: 2026-11-18, Claude Code.
+Last update: 2026-11-21, Claude Code.
 
 ## Status
 
@@ -41,6 +41,9 @@ Last update: 2026-11-18, Claude Code.
   footer on all 11 case studies, the unsupported Defect Tracking "Every case" result
   removed, Production Line Flow stations numbered S1-S13 and the defect reason cards
   lettered A-H (no shop names). `.gitattributes` marks PDFs binary.
+- 2026-11-21: machining wording fixed from the mock: CAM programs are
+  modeled and simulated only (not run on a machine); on the Haas Rodolfo does the
+  setups and runs the school's programs.
 - 2026-11-18: `AGENTS.md` points agents to the private work-samples project for
   page sources (commit `60b09d3`). Repo cleanup: `.gitattributes` keeps `.nc`
   programs at LF so they no longer show as modified, and `.gitignore` keeps
