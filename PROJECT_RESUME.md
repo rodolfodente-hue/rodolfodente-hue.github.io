@@ -44,6 +44,10 @@ Last update: 2026-11-21, Claude Code.
 - 2026-11-21: machining wording fixed from the mock: CAM programs are
   modeled and simulated only (not run on a machine); on the Haas Rodolfo does the
   setups and runs the school's programs.
+- 2026-11-21: "Break-Time Standardization" renamed "Production Interruption Loss
+  Analysis" (method first: interruption log, Pareto, team choice; Pareto is its
+  Fig. 1). The loss-by-cause chart removed from Production Line Flow, whose figures
+  are now Fig. 2-5. Built from the mock (commit `7ee196f`); checked live.
 - 2026-11-18: `AGENTS.md` points agents to the private work-samples project for
   page sources (commit `60b09d3`). Repo cleanup: `.gitattributes` keeps `.nc`
   programs at LF so they no longer show as modified, and `.gitignore` keeps
